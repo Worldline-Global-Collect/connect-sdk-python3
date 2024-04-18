@@ -20,7 +20,7 @@ class LineItemInvoiceData(DataObject):
     def description(self) -> Optional[str]:
         """
         | Shopping cart item description
-        
+
         Type: str
         """
         return self.__description
@@ -34,7 +34,7 @@ class LineItemInvoiceData(DataObject):
         """
         | Line number for printed invoice or order of items in the cart
         | Should be a numeric string
-        
+
         Type: str
         """
         return self.__merchant_linenumber
@@ -48,7 +48,7 @@ class LineItemInvoiceData(DataObject):
         """
         | Page number for printed invoice
         | Should be a numeric string
-        
+
         Type: str
         """
         return self.__merchant_pagenumber
@@ -61,7 +61,7 @@ class LineItemInvoiceData(DataObject):
     def nr_of_items(self) -> Optional[str]:
         """
         | Quantity of the item
-        
+
         Type: str
         """
         return self.__nr_of_items
@@ -74,7 +74,7 @@ class LineItemInvoiceData(DataObject):
     def price_per_item(self) -> Optional[int]:
         """
         | Price per item
-        
+
         Type: int
         """
         return self.__price_per_item

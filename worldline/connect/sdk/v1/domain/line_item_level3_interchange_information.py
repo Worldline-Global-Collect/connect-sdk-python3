@@ -23,7 +23,7 @@ class LineItemLevel3InterchangeInformation(DataObject):
     def discount_amount(self) -> Optional[int]:
         """
         | Discount on the line item, with the last two digits are implied decimal places
-        
+
         Type: int
         """
         return self.__discount_amount
@@ -36,7 +36,7 @@ class LineItemLevel3InterchangeInformation(DataObject):
     def line_amount_total(self) -> Optional[int]:
         """
         | Total amount for the line item
-        
+
         Type: int
         """
         return self.__line_amount_total
@@ -50,7 +50,7 @@ class LineItemLevel3InterchangeInformation(DataObject):
         """
         | Product or UPC Code, left justified
         | Note: Must not be all spaces or all zeros
-        
+
         Type: str
         """
         return self.__product_code
@@ -63,7 +63,7 @@ class LineItemLevel3InterchangeInformation(DataObject):
     def product_price(self) -> Optional[int]:
         """
         | The price of one unit of the product, the value should be zero or greater
-        
+
         Type: int
         """
         return self.__product_price
@@ -77,7 +77,7 @@ class LineItemLevel3InterchangeInformation(DataObject):
         """
         | Code used to classify items that are purchased
         | Note: Must not be all spaces or all zeros
-        
+
         Type: str
         """
         return self.__product_type
@@ -91,7 +91,7 @@ class LineItemLevel3InterchangeInformation(DataObject):
         """
         | Quantity of the units being purchased, should be greater than zero
         | Note: Must not be all spaces or all zeros
-        
+
         Type: int
         """
         return self.__quantity
@@ -104,7 +104,7 @@ class LineItemLevel3InterchangeInformation(DataObject):
     def tax_amount(self) -> Optional[int]:
         """
         | Tax on the line item, with the last two digits are implied decimal places
-        
+
         Type: int
         """
         return self.__tax_amount
@@ -117,7 +117,7 @@ class LineItemLevel3InterchangeInformation(DataObject):
     def unit(self) -> Optional[str]:
         """
         | Indicates the line item unit of measure; for example: each, kit, pair, gallon, month, etc.
-        
+
         Type: str
         """
         return self.__unit

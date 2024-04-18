@@ -16,7 +16,7 @@ class MerchantRiskAssessment(DataObject):
     def website_url(self) -> Optional[str]:
         """
         | The website from which the purchase was made
-        
+
         Type: str
         """
         return self.__website_url

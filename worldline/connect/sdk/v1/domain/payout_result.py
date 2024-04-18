@@ -20,7 +20,7 @@ class PayoutResult(AbstractOrderStatus):
     def payout_output(self) -> Optional[OrderOutput]:
         """
         | Object containing payout details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.order_output.OrderOutput`
         """
         return self.__payout_output
@@ -45,7 +45,7 @@ class PayoutResult(AbstractOrderStatus):
         
         
         | Please see Statuses <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/statuses.html> for a full overview of possible values.
-        
+
         Type: str
         """
         return self.__status
@@ -59,7 +59,7 @@ class PayoutResult(AbstractOrderStatus):
         """
         | This object has the numeric representation of the current payout status, timestamp of last status change and performable action on the current payout resource.
         | In case of a rejected payout, detailed error information is listed.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.order_status_output.OrderStatusOutput`
         """
         return self.__status_output

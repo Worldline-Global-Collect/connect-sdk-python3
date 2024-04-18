@@ -18,7 +18,7 @@ class FraugsterResults(DataObject):
         """
         | Result of the Fraugster check
         | Contains the investigation points used during the evaluation
-        
+
         Type: str
         """
         return self.__fraud_investigation_points
@@ -32,7 +32,7 @@ class FraugsterResults(DataObject):
         """
         | Result of the Fraugster check
         | Contains the overall Fraud score which is an integer between 0 and 99
-        
+
         Type: int
         """
         return self.__fraud_score

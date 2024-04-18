@@ -23,7 +23,7 @@ class InstallmentOptions(DataObject):
     def display_hints(self) -> Optional[InstallmentDisplayHints]:
         """
         | Object containing information for the client on how best to display the installment options
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.installment_display_hints.InstallmentDisplayHints`
         """
         return self.__display_hints
@@ -36,7 +36,7 @@ class InstallmentOptions(DataObject):
     def id(self) -> Optional[str]:
         """
         | The ID of the installment option in our system
-        
+
         Type: str
         """
         return self.__id
@@ -49,7 +49,7 @@ class InstallmentOptions(DataObject):
     def installment_plans(self) -> Optional[List[Installments]]:
         """
         | Object containing information about installment plans
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.installments.Installments`]
         """
         return self.__installment_plans

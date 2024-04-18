@@ -21,7 +21,7 @@ class ProtectionEligibility(DataObject):
         *  Eligible 
         *  PartiallyEligible 
         *  Ineligible
-        
+
         Type: str
         """
         return self.__eligibility
@@ -38,7 +38,7 @@ class ProtectionEligibility(DataObject):
         *  ItemNotReceivedEligible 
         *  UnauthorizedPaymentEligible 
         *  Ineligible
-        
+
         Type: str
         """
         return self.__type

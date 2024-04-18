@@ -16,7 +16,7 @@ class PaymentProductNetworksResponse(DataObject):
     def networks(self) -> Optional[List[str]]:
         """
         | Array containing network entries for a payment product. The strings that represent the networks in the array are identical to the strings that the payment product vendors use in their documentation.For instance: "Visa" for Google Pay <https://developer.apple.com/reference/passkit/pkpaymentnetwork>.
-        
+
         Type: list[str]
         """
         return self.__networks

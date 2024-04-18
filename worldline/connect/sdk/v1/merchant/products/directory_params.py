@@ -12,7 +12,7 @@ from worldline.connect.sdk.communication.request_param import RequestParam
 class DirectoryParams(ParamRequest):
     """
     Query parameters for Get payment product directory
-    
+
     See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/products/directory.html
     """
 
@@ -23,7 +23,7 @@ class DirectoryParams(ParamRequest):
     def country_code(self) -> Optional[str]:
         """
         | ISO 3166-1 alpha-2 country code
-        
+
         Type: str
         """
         return self.__country_code
@@ -36,7 +36,7 @@ class DirectoryParams(ParamRequest):
     def currency_code(self) -> Optional[str]:
         """
         | Three-letter ISO currency code representing the currency of the transaction
-        
+
         Type: str
         """
         return self.__currency_code

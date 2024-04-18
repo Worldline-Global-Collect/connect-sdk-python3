@@ -17,7 +17,7 @@ class Card(CardWithoutCvv):
     def cvv(self) -> Optional[str]:
         """
         | Card Verification Value, a 3 or 4 digit code used as an additional security feature for card not present transactions.
-        
+
         Type: str
         """
         return self.__cvv
@@ -30,7 +30,7 @@ class Card(CardWithoutCvv):
     def partial_pin(self) -> Optional[str]:
         """
         | The first 2 digits of the card's PIN code. May be optionally submitted for South Korean cards (paymentProductIds 180, 181, 182, 183, 184, 185 and 186). Submitting this property may improve your authorization rate.
-        
+
         Type: str
         """
         return self.__partial_pin

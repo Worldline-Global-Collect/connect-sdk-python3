@@ -35,7 +35,7 @@ class Customer(CustomerBase):
     def account(self) -> Optional[CustomerAccount]:
         """
         | Object containing data related to the account the customer has with you
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.customer_account.CustomerAccount`
         """
         return self.__account
@@ -52,7 +52,7 @@ class Customer(CustomerBase):
         * none - The account that was used to place the order with is a guest account or no account was used at all
         * created - The customer account was created during this transaction
         * existing - The customer account was an already existing account prior to this transaction
-        
+
         Type: str
         """
         return self.__account_type
@@ -65,7 +65,7 @@ class Customer(CustomerBase):
     def billing_address(self) -> Optional[Address]:
         """
         | Object containing billing address details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.address.Address`
         """
         return self.__billing_address
@@ -78,7 +78,7 @@ class Customer(CustomerBase):
     def contact_details(self) -> Optional[ContactDetails]:
         """
         | Object containing contact details like email address and phone number
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.contact_details.ContactDetails`
         """
         return self.__contact_details
@@ -91,7 +91,7 @@ class Customer(CustomerBase):
     def device(self) -> Optional[CustomerDevice]:
         """
         | Object containing information on the device and browser of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.customer_device.CustomerDevice`
         """
         return self.__device
@@ -123,7 +123,7 @@ class Customer(CustomerBase):
         * Uruguay - Consumer (CI) with a length of 8 digits
         * Uruguay - Consumer (NIE) with a length of 9 digits
         * Uruguay - Company (RUT) with a length of 12 digits
-        
+
         Type: str
         """
         return self.__fiscal_number
@@ -139,7 +139,7 @@ class Customer(CustomerBase):
         
         * true =  This is a company
         * false = This is an individual
-        
+
         Type: bool
         """
         return self.__is_company
@@ -155,7 +155,7 @@ class Customer(CustomerBase):
         
         * true - The customer is a known returning customer
         * false - The customer is new/unknown customer
-        
+
         Type: bool
         """
         return self.__is_previous_customer
@@ -168,7 +168,7 @@ class Customer(CustomerBase):
     def locale(self) -> Optional[str]:
         """
         | The locale that the customer should be addressed in (for 3rd parties). Note that some 3rd party providers only support the languageCode part of the locale, in those cases we will only use part of the locale provided.
-        
+
         Type: str
         """
         return self.__locale
@@ -181,7 +181,7 @@ class Customer(CustomerBase):
     def personal_information(self) -> Optional[PersonalInformation]:
         """
         | Object containing personal information like name, date of birth and gender.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.personal_information.PersonalInformation`
         """
         return self.__personal_information
@@ -194,9 +194,9 @@ class Customer(CustomerBase):
     def shipping_address(self) -> Optional[AddressPersonal]:
         """
         | Object containing shipping address details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.address_personal.AddressPersonal`
-        
+
         Deprecated; Use Order.shipping.address instead
         """
         return self.__shipping_address

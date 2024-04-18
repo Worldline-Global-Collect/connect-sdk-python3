@@ -19,7 +19,7 @@ class PaymentProductFieldDataRestrictions(DataObject):
         """
         * true - Indicates that this field is required
         * false - Indicates that this field is optional
-        
+
         Type: bool
         """
         return self.__is_required
@@ -32,7 +32,7 @@ class PaymentProductFieldDataRestrictions(DataObject):
     def validators(self) -> Optional[PaymentProductFieldValidators]:
         """
         | Object containing the details of the validations on the field
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product_field_validators.PaymentProductFieldValidators`
         """
         return self.__validators

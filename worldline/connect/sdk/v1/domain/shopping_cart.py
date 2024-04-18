@@ -24,7 +24,7 @@ class ShoppingCart(DataObject):
     def amount_breakdown(self) -> Optional[List[AmountBreakdown]]:
         """
         | Determines the type of the amount.
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.amount_breakdown.AmountBreakdown`]
         """
         return self.__amount_breakdown
@@ -37,7 +37,7 @@ class ShoppingCart(DataObject):
     def gift_card_purchase(self) -> Optional[GiftCardPurchase]:
         """
         | Object containing information on purchased gift card(s)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.gift_card_purchase.GiftCardPurchase`
         """
         return self.__gift_card_purchase
@@ -50,7 +50,7 @@ class ShoppingCart(DataObject):
     def is_pre_order(self) -> Optional[bool]:
         """
         | The customer is pre-ordering one or more items
-        
+
         Type: bool
         """
         return self.__is_pre_order
@@ -63,7 +63,7 @@ class ShoppingCart(DataObject):
     def items(self) -> Optional[List[LineItem]]:
         """
         | Shopping cart data
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.line_item.LineItem`]
         """
         return self.__items
@@ -76,7 +76,7 @@ class ShoppingCart(DataObject):
     def pre_order_item_availability_date(self) -> Optional[str]:
         """
         | Date (YYYYMMDD) when the preordered item becomes available
-        
+
         Type: str
         """
         return self.__pre_order_item_availability_date
@@ -93,7 +93,7 @@ class ShoppingCart(DataObject):
         | true = the customer is re-ordering at least one of the items again
         
         | false = this is the first time the customer is ordering these items
-        
+
         Type: bool
         """
         return self.__re_order_indicator

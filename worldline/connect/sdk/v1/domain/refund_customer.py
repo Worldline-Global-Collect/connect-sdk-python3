@@ -22,7 +22,7 @@ class RefundCustomer(DataObject):
     def address(self) -> Optional[AddressPersonal]:
         """
         | Object containing address details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.address_personal.AddressPersonal`
         """
         return self.__address
@@ -35,7 +35,7 @@ class RefundCustomer(DataObject):
     def company_information(self) -> Optional[CompanyInformation]:
         """
         | Object containing company information
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.company_information.CompanyInformation`
         """
         return self.__company_information
@@ -48,7 +48,7 @@ class RefundCustomer(DataObject):
     def contact_details(self) -> Optional[ContactDetailsBase]:
         """
         | Object containing contact details like email address and phone number
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.contact_details_base.ContactDetailsBase`
         """
         return self.__contact_details
@@ -80,7 +80,7 @@ class RefundCustomer(DataObject):
         * Uruguay - Consumer (CI) with a length of 8 digits
         * Uruguay - Consumer (NIE) with a length of 9 digits
         * Uruguay - Company (RUT) with a length of 12 digits
-        
+
         Type: str
         """
         return self.__fiscal_number

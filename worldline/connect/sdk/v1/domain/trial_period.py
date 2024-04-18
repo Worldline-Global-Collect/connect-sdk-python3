@@ -20,7 +20,7 @@ class TrialPeriod(DataObject):
     def duration(self) -> Optional[int]:
         """
         | The number of days, weeks, months, or years before the trial period ends.
-        
+
         Type: int
         """
         return self.__duration
@@ -33,7 +33,7 @@ class TrialPeriod(DataObject):
     def interval(self) -> Optional[str]:
         """
         | The interval for the trial period to finish specified as days, weeks, months, quarters, or years.
-        
+
         Type: str
         """
         return self.__interval

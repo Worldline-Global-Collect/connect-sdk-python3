@@ -17,7 +17,7 @@ class Directory(DataObject):
     def entries(self) -> Optional[List[DirectoryEntry]]:
         """
         | List of entries in the directory
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.directory_entry.DirectoryEntry`]
         """
         return self.__entries

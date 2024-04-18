@@ -47,7 +47,7 @@ class PaymentProduct(DataObject):
     def accounts_on_file(self) -> Optional[List[AccountOnFile]]:
         """
         | List of tokens for that payment product
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.account_on_file.AccountOnFile`]
         """
         return self.__accounts_on_file
@@ -60,7 +60,7 @@ class PaymentProduct(DataObject):
     def acquirer_country(self) -> Optional[str]:
         """
         | ISO 3166-1 alpha-2 country code which indicates the most likely country code of the acquirer that will process the transaction. For Google Pay (paymentProductId 320) transactions this acquirerCountry is should be provided in the https://developers.google.com/pay/api/web/guides/resources/sca <https://developers.google.com/pay/api/web/reference/request-objects#TransactionInfo>
-        
+
         Type: str
         """
         return self.__acquirer_country
@@ -76,7 +76,7 @@ class PaymentProduct(DataObject):
         
         * true - This payment supports installments
         * false - This payment does not support installments
-        
+
         Type: bool
         """
         return self.__allows_installments
@@ -92,7 +92,7 @@ class PaymentProduct(DataObject):
         
         * true - This payment product supports recurring payments
         * false - This payment product does not support recurring transactions and can only be used for one-off payments
-        
+
         Type: bool
         """
         return self.__allows_recurring
@@ -108,7 +108,7 @@ class PaymentProduct(DataObject):
         
         * true - Payment details from payments done with this payment product can be tokenized for future re-use
         * false - Payment details from payments done with this payment product can not be tokenized
-        
+
         Type: bool
         """
         return self.__allows_tokenization
@@ -121,7 +121,7 @@ class PaymentProduct(DataObject):
     def authentication_indicator(self) -> Optional[AuthenticationIndicator]:
         """
         | Indicates if the payment product supports 3D Security (mandatory, optional or not needed).
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.authentication_indicator.AuthenticationIndicator`
         """
         return self.__authentication_indicator
@@ -137,7 +137,7 @@ class PaymentProduct(DataObject):
         
         * true - Payment details from payments done with this payment product can be automatically tokenized for future re-use
         * false - Payment details from payments done with this payment product can not be automatically tokenized
-        
+
         Type: bool
         """
         return self.__auto_tokenized
@@ -153,7 +153,7 @@ class PaymentProduct(DataObject):
         
         * true - the third party allows their payment pages to be embedded in an iframe.
         * false - the third party disallows their payment pages to be embedded in an iframe.
-        
+
         Type: bool
         """
         return self.__can_be_iframed
@@ -169,7 +169,7 @@ class PaymentProduct(DataObject):
         
         * true
         * false
-        
+
         Type: bool
         """
         return self.__device_fingerprint_enabled
@@ -182,7 +182,7 @@ class PaymentProduct(DataObject):
     def display_hints(self) -> Optional[PaymentProductDisplayHints]:
         """
         | Object containing display hints like the order in which the product should be shown, the name of the product and the logo
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product_display_hints.PaymentProductDisplayHints`
         """
         return self.__display_hints
@@ -195,7 +195,7 @@ class PaymentProduct(DataObject):
     def fields(self) -> Optional[List[PaymentProductField]]:
         """
         | Object containing all the fields and their details that are associated with this payment product. If you are not interested in the data in the fields you should have us filter them out (using filter=fields in the query-string)
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.payment_product_field.PaymentProductField`]
         """
         return self.__fields
@@ -208,7 +208,7 @@ class PaymentProduct(DataObject):
     def fields_warning(self) -> Optional[str]:
         """
         | If one or more of the payment product fields could not be constructed, no payment product fields will be returned and a message will be present in this property stating why.
-        
+
         Type: str
         """
         return self.__fields_warning
@@ -221,7 +221,7 @@ class PaymentProduct(DataObject):
     def id(self) -> Optional[int]:
         """
         | The ID of the payment product in our system
-        
+
         Type: int
         """
         return self.__id
@@ -234,7 +234,7 @@ class PaymentProduct(DataObject):
     def is_authentication_supported(self) -> Optional[bool]:
         """
         | Indicates if the payment product supports 3D-Secure.
-        
+
         Type: bool
         """
         return self.__is_authentication_supported
@@ -250,7 +250,7 @@ class PaymentProduct(DataObject):
         
         * true - the payment product requires JavaScript to be enabled.
         * false - the payment product does not require JavaScript to be enabled. This is the default value if the property is not present.
-        
+
         Type: bool
         """
         return self.__is_java_script_required
@@ -263,7 +263,7 @@ class PaymentProduct(DataObject):
     def max_amount(self) -> Optional[int]:
         """
         | Maximum amount in cents (using 2 decimals, so 1 EUR becomes 100 cents) for transactions done with this payment product
-        
+
         Type: int
         """
         return self.__max_amount
@@ -276,7 +276,7 @@ class PaymentProduct(DataObject):
     def min_amount(self) -> Optional[int]:
         """
         | Minimum amount in cents (using 2 decimals, so 1 EUR becomes 100 cents) for transactions done with this payment product
-        
+
         Type: int
         """
         return self.__min_amount
@@ -293,7 +293,7 @@ class PaymentProduct(DataObject):
         * NO_SUPPORT - The payment product does not work at all on a mobile device
         * BASIC_SUPPORT - The payment product has not optimized its user experience for devices with smaller screens
         * OPTIMISED_SUPPORT - The payment product offers a user experience that has been optimized for devices with smaller screens
-        
+
         Type: str
         """
         return self.__mobile_integration_level
@@ -314,7 +314,7 @@ class PaymentProduct(DataObject):
         * eInvoice
         * invoice
         * redirect
-        
+
         Type: str
         """
         return self.__payment_method
@@ -327,7 +327,7 @@ class PaymentProduct(DataObject):
     def payment_product302_specific_data(self) -> Optional[PaymentProduct302SpecificData]:
         """
         | Apple Pay (payment product 302) specific details.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product302_specific_data.PaymentProduct302SpecificData`
         """
         return self.__payment_product302_specific_data
@@ -340,7 +340,7 @@ class PaymentProduct(DataObject):
     def payment_product320_specific_data(self) -> Optional[PaymentProduct320SpecificData]:
         """
         | Google Pay (payment product 320) specific details.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product320_specific_data.PaymentProduct320SpecificData`
         """
         return self.__payment_product320_specific_data
@@ -353,7 +353,7 @@ class PaymentProduct(DataObject):
     def payment_product863_specific_data(self) -> Optional[PaymentProduct863SpecificData]:
         """
         | WeChat Pay (payment product 863) specific details.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product863_specific_data.PaymentProduct863SpecificData`
         """
         return self.__payment_product863_specific_data
@@ -368,7 +368,7 @@ class PaymentProduct(DataObject):
         | The payment product group that has this payment product, if there is any. Not populated otherwise. Currently only one payment product group is supported:
         
         * cards
-        
+
         Type: str
         """
         return self.__payment_product_group
@@ -381,7 +381,7 @@ class PaymentProduct(DataObject):
     def supports_mandates(self) -> Optional[bool]:
         """
         | Indicates whether the payment product supports mandates.
-        
+
         Type: bool
         """
         return self.__supports_mandates
@@ -397,7 +397,7 @@ class PaymentProduct(DataObject):
         
         * true - Redirection is required
         * false - No redirection is required
-        
+
         Type: bool
         """
         return self.__uses_redirection_to3rd_party

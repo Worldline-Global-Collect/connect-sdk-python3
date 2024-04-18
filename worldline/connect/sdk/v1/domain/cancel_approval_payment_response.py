@@ -17,7 +17,7 @@ class CancelApprovalPaymentResponse(DataObject):
     def payment(self) -> Optional[Payment]:
         """
         | Object that holds the payment related properties
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment.Payment`
         """
         return self.__payment

@@ -24,7 +24,7 @@ class CancelPaymentResponse(DataObject):
     def card_payment_method_specific_output(self) -> Optional[CancelPaymentCardPaymentMethodSpecificOutput]:
         """
         | Object that holds specific information on cancelled card payments
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.cancel_payment_card_payment_method_specific_output.CancelPaymentCardPaymentMethodSpecificOutput`
         """
         return self.__card_payment_method_specific_output
@@ -37,7 +37,7 @@ class CancelPaymentResponse(DataObject):
     def mobile_payment_method_specific_output(self) -> Optional[CancelPaymentMobilePaymentMethodSpecificOutput]:
         """
         | Object that holds specific information on cancelled mobile payments
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.cancel_payment_mobile_payment_method_specific_output.CancelPaymentMobilePaymentMethodSpecificOutput`
         """
         return self.__mobile_payment_method_specific_output
@@ -50,7 +50,7 @@ class CancelPaymentResponse(DataObject):
     def payment(self) -> Optional[Payment]:
         """
         | Object that holds the payment related properties
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment.Payment`
         """
         return self.__payment

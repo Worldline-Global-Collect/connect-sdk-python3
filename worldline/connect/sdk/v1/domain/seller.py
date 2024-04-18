@@ -28,7 +28,7 @@ class Seller(DataObject):
     def address(self) -> Optional[Address]:
         """
         | Object containing the seller address details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.address.Address`
         """
         return self.__address
@@ -41,7 +41,7 @@ class Seller(DataObject):
     def channel_code(self) -> Optional[str]:
         """
         | This property is specific to Visa Argentina. Channelcode according to Prisma. Please contact the acquirer to get the full list you need to use.
-        
+
         Type: str
         """
         return self.__channel_code
@@ -54,7 +54,7 @@ class Seller(DataObject):
     def description(self) -> Optional[str]:
         """
         | Description of the seller
-        
+
         Type: str
         """
         return self.__description
@@ -67,7 +67,7 @@ class Seller(DataObject):
     def external_reference_id(self) -> Optional[str]:
         """
         | Seller ID assigned by the Merchant Aggregator
-        
+
         Type: str
         """
         return self.__external_reference_id
@@ -80,7 +80,7 @@ class Seller(DataObject):
     def geocode(self) -> Optional[str]:
         """
         | The sellers geocode
-        
+
         Type: str
         """
         return self.__geocode
@@ -93,7 +93,7 @@ class Seller(DataObject):
     def id(self) -> Optional[str]:
         """
         | The sellers identifier
-        
+
         Type: str
         """
         return self.__id
@@ -106,7 +106,7 @@ class Seller(DataObject):
     def invoice_number(self) -> Optional[str]:
         """
         | Invoice number of the payment
-        
+
         Type: str
         """
         return self.__invoice_number
@@ -122,7 +122,7 @@ class Seller(DataObject):
         
         * true - The retailer is considered foreign because they are located in a different country than the marketplace. For marketplaces located in the European Economic Area (EEA) and UK (and Gibraltar), this includes transactions where the marketplace is within the EEA and UK (and Gibraltar), but the retailer is located outside of the EEA and UK (and Gibraltar)
         * false - The retailer is considered domestic because they are located in the same country as the marketplace. For marketplaces located in the European Economic Area (EEA) and UK (and Gibraltar), this includes transactions where the retailer is also located within the EEA and UK (and Gibraltar).
-        
+
         Type: bool
         """
         return self.__is_foreign_retailer
@@ -135,7 +135,7 @@ class Seller(DataObject):
     def mcc(self) -> Optional[str]:
         """
         | Merchant category code
-        
+
         Type: str
         """
         return self.__mcc
@@ -148,7 +148,7 @@ class Seller(DataObject):
     def name(self) -> Optional[str]:
         """
         | Name of the seller
-        
+
         Type: str
         """
         return self.__name
@@ -161,7 +161,7 @@ class Seller(DataObject):
     def phone_number(self) -> Optional[str]:
         """
         | Main Phone Number
-        
+
         Type: str
         """
         return self.__phone_number
@@ -190,7 +190,7 @@ class Seller(DataObject):
         * citizen-ship
         * col-identity-card
         * alien-registration
-        
+
         Type: str
         """
         return self.__type

@@ -30,7 +30,7 @@ class InAuth(DataObject):
         * PDA 
         * OTHER 
         * UNKNOWN
-        
+
         Type: str
         """
         return self.__device_category
@@ -43,7 +43,7 @@ class InAuth(DataObject):
     def device_id(self) -> Optional[str]:
         """
         | This is the device fingerprint value. Based on the amount of data that the device fingerprint collector script was able to collect, this will be a proxy ID for the device used by the customer.
-        
+
         Type: str
         """
         return self.__device_id
@@ -56,7 +56,7 @@ class InAuth(DataObject):
     def risk_score(self) -> Optional[str]:
         """
         | The score calculated on the basis of Anomalies, Velocity, Location, Integrity, List-Based, and Device Reputation. Range of the score is between 0 and 100. A lower value is better.
-        
+
         Type: str
         """
         return self.__risk_score
@@ -69,7 +69,7 @@ class InAuth(DataObject):
     def true_ip_address(self) -> Optional[str]:
         """
         | The true IP address as determined by inAuth. This might be different from the IP address that you are seeing on your side due to the proxy piercing technology deployed by inAuth.
-        
+
         Type: str
         """
         return self.__true_ip_address
@@ -82,7 +82,7 @@ class InAuth(DataObject):
     def true_ip_address_country(self) -> Optional[str]:
         """
         | The country of the customer based on the location of the True IP Address determined by inAuth.
-        
+
         Type: str
         """
         return self.__true_ip_address_country

@@ -22,7 +22,7 @@ class Dispute(DataObject):
     def dispute_output(self) -> Optional[DisputeOutput]:
         """
         | This property contains the creationDetails and default information regarding a dispute.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.dispute_output.DisputeOutput`
         """
         return self.__dispute_output
@@ -35,7 +35,7 @@ class Dispute(DataObject):
     def id(self) -> Optional[str]:
         """
         | Dispute ID for a given merchant.
-        
+
         Type: str
         """
         return self.__id
@@ -48,7 +48,7 @@ class Dispute(DataObject):
     def payment_id(self) -> Optional[str]:
         """
         | The ID of the payment that is being disputed.
-        
+
         Type: str
         """
         return self.__payment_id
@@ -61,7 +61,7 @@ class Dispute(DataObject):
     def status(self) -> Optional[str]:
         """
         | Current dispute status.
-        
+
         Type: str
         """
         return self.__status
@@ -74,7 +74,7 @@ class Dispute(DataObject):
     def status_output(self) -> Optional[DisputeStatusOutput]:
         """
         | This property contains the output for a dispute regarding the status of the dispute.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.dispute_status_output.DisputeStatusOutput`
         """
         return self.__status_output

@@ -29,7 +29,7 @@ class ExternalCardholderAuthenticationData(DataObject):
     def acs_transaction_id(self) -> Optional[str]:
         """
         | Identifier of the authenticated transaction at the ACS/Issuer.
-        
+
         Type: str
         """
         return self.__acs_transaction_id
@@ -42,7 +42,7 @@ class ExternalCardholderAuthenticationData(DataObject):
     def applied_exemption(self) -> Optional[str]:
         """
         | Exemption code from Carte Bancaire (130) (unknown possible values so far -free format).
-        
+
         Type: str
         """
         return self.__applied_exemption
@@ -55,7 +55,7 @@ class ExternalCardholderAuthenticationData(DataObject):
     def cavv(self) -> Optional[str]:
         """
         | The CAVV (cardholder authentication verification value) or AAV (accountholder authentication value) provides an authentication validation value.
-        
+
         Type: str
         """
         return self.__cavv
@@ -68,7 +68,7 @@ class ExternalCardholderAuthenticationData(DataObject):
     def cavv_algorithm(self) -> Optional[str]:
         """
         | The algorithm, from your 3D Secure provider, used to generate the authentication CAVV.
-        
+
         Type: str
         """
         return self.__cavv_algorithm
@@ -81,7 +81,7 @@ class ExternalCardholderAuthenticationData(DataObject):
     def directory_server_transaction_id(self) -> Optional[str]:
         """
         | The 3-D Secure Directory Server transaction ID that is used for the 3D Authentication
-        
+
         Type: str
         """
         return self.__directory_server_transaction_id
@@ -102,7 +102,7 @@ class ExternalCardholderAuthenticationData(DataObject):
         * 6 = Authentication attempted (Visa, Diners Club, Amex)
         * 7 = No authentication, Internet (no liability shift, not a 3D Secure transaction)
         * (empty) = Not checked or not enrolled
-        
+
         Type: int
         """
         return self.__eci
@@ -115,7 +115,7 @@ class ExternalCardholderAuthenticationData(DataObject):
     def scheme_risk_score(self) -> Optional[int]:
         """
         | Global score calculated by the Carte Bancaire (130) Scoring platform. Possible values from 0 to 99.
-        
+
         Type: int
         """
         return self.__scheme_risk_score
@@ -134,7 +134,7 @@ class ExternalCardholderAuthenticationData(DataObject):
         * 1.0.2
         * 2.1.0
         * 2.2.0
-        
+
         Type: str
         """
         return self.__three_d_secure_version
@@ -147,9 +147,9 @@ class ExternalCardholderAuthenticationData(DataObject):
     def three_d_server_transaction_id(self) -> Optional[str]:
         """
         | The 3-D Secure Server transaction ID that is used for the 3-D Secure version 2 Authentication.
-        
+
         Type: str
-        
+
         Deprecated; No replacement
         """
         return self.__three_d_server_transaction_id
@@ -162,7 +162,7 @@ class ExternalCardholderAuthenticationData(DataObject):
     def validation_result(self) -> Optional[str]:
         """
         | The 3D Secure authentication result from your 3D Secure provider.
-        
+
         Type: str
         """
         return self.__validation_result
@@ -175,7 +175,7 @@ class ExternalCardholderAuthenticationData(DataObject):
     def xid(self) -> Optional[str]:
         """
         | The transaction ID that is used for the 3D Authentication
-        
+
         Type: str
         """
         return self.__xid

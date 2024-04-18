@@ -23,7 +23,7 @@ class BankDetailsResponse(DataObject):
     def bank_account_bban(self) -> Optional[BankAccountBban]:
         """
         | Object that holds the Basic Bank Account Number (BBAN) data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_bban.BankAccountBban`
         """
         return self.__bank_account_bban
@@ -36,7 +36,7 @@ class BankDetailsResponse(DataObject):
     def bank_account_iban(self) -> Optional[BankAccountIban]:
         """
         | Object that holds the International Bank Account Number (IBAN) data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_iban.BankAccountIban`
         """
         return self.__bank_account_iban
@@ -49,7 +49,7 @@ class BankDetailsResponse(DataObject):
     def bank_data(self) -> Optional[BankData]:
         """
         | Object that holds the reformatted bank account data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_data.BankData`
         """
         return self.__bank_data
@@ -62,7 +62,7 @@ class BankDetailsResponse(DataObject):
     def swift(self) -> Optional[Swift]:
         """
         | Object that holds all the SWIFT routing information
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.swift.Swift`
         """
         return self.__swift

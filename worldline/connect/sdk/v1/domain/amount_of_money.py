@@ -17,7 +17,7 @@ class AmountOfMoney(DataObject):
     def amount(self) -> Optional[int]:
         """
         | Amount in cents and always having 2 decimals
-        
+
         Type: int
         """
         return self.__amount
@@ -30,7 +30,7 @@ class AmountOfMoney(DataObject):
     def currency_code(self) -> Optional[str]:
         """
         | Three-letter ISO currency code representing the currency for the amount
-        
+
         Type: str
         """
         return self.__currency_code

@@ -23,7 +23,7 @@ class MobilePaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def authorisation_code(self) -> Optional[str]:
         """
         | Card Authorization code as returned by the acquirer
-        
+
         Type: str
         """
         return self.__authorisation_code
@@ -36,7 +36,7 @@ class MobilePaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def fraud_results(self) -> Optional[CardFraudResults]:
         """
         | Fraud results contained in the CardFraudResults object
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.card_fraud_results.CardFraudResults`
         """
         return self.__fraud_results
@@ -49,7 +49,7 @@ class MobilePaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def network(self) -> Optional[str]:
         """
         | The network that was used for the refund
-        
+
         Type: str
         """
         return self.__network
@@ -62,7 +62,7 @@ class MobilePaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def payment_data(self) -> Optional[MobilePaymentData]:
         """
         | Object containing payment details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mobile_payment_data.MobilePaymentData`
         """
         return self.__payment_data
@@ -75,7 +75,7 @@ class MobilePaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def three_d_secure_results(self) -> Optional[ThreeDSecureResults]:
         """
         | 3D Secure results object
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.three_d_secure_results.ThreeDSecureResults`
         """
         return self.__three_d_secure_results

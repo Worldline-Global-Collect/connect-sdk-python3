@@ -17,7 +17,7 @@ class BankTransferPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutpu
     def fraud_results(self) -> Optional[FraudResults]:
         """
         | Object containing the results of the fraud screening
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.fraud_results.FraudResults`
         """
         return self.__fraud_results

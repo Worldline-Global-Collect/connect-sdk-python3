@@ -19,7 +19,7 @@ class ContactDetails(ContactDetailsBase):
     def fax_number(self) -> Optional[str]:
         """
         | Fax number of the customer
-        
+
         Type: str
         """
         return self.__fax_number
@@ -32,7 +32,7 @@ class ContactDetails(ContactDetailsBase):
     def mobile_phone_number(self) -> Optional[str]:
         """
         | International version of the mobile phone number of the customer including the leading + (i.e. +16127779311).
-        
+
         Type: str
         """
         return self.__mobile_phone_number
@@ -45,7 +45,7 @@ class ContactDetails(ContactDetailsBase):
     def phone_number(self) -> Optional[str]:
         """
         | Phone number of the customer. The '+' character is not allowed in this property for transactions that are processed by TechProcess Payment Platform.
-        
+
         Type: str
         """
         return self.__phone_number
@@ -58,7 +58,7 @@ class ContactDetails(ContactDetailsBase):
     def work_phone_number(self) -> Optional[str]:
         """
         | International version of the work phone number of the customer including the leading + (i.e. +31235671500)
-        
+
         Type: str
         """
         return self.__work_phone_number

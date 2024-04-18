@@ -12,7 +12,7 @@ from worldline.connect.sdk.communication.request_param import RequestParam
 class FindPaymentsParams(ParamRequest):
     """
     Query parameters for Find payments
-    
+
     See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payments/find.html
     """
 
@@ -26,7 +26,7 @@ class FindPaymentsParams(ParamRequest):
     def hosted_checkout_id(self) -> Optional[str]:
         """
         | Your hosted checkout identifier to filter on.
-        
+
         Type: str
         """
         return self.__hosted_checkout_id
@@ -39,7 +39,7 @@ class FindPaymentsParams(ParamRequest):
     def merchant_reference(self) -> Optional[str]:
         """
         | Your unique transaction reference to filter on. The maximum length is 52 characters for payments that are processed by WL Online Payment Acceptance platform.
-        
+
         Type: str
         """
         return self.__merchant_reference
@@ -52,7 +52,7 @@ class FindPaymentsParams(ParamRequest):
     def merchant_order_id(self) -> Optional[int]:
         """
         | Your order identifier to filter on.
-        
+
         Type: int
         """
         return self.__merchant_order_id
@@ -65,7 +65,7 @@ class FindPaymentsParams(ParamRequest):
     def offset(self) -> Optional[int]:
         """
         | The zero-based index of the first payment in the result. If omitted, the offset will be 0.
-        
+
         Type: int
         """
         return self.__offset
@@ -78,7 +78,7 @@ class FindPaymentsParams(ParamRequest):
     def limit(self) -> Optional[int]:
         """
         | The maximum number of payments to return, with a maximum of 100. If omitted, the limit will be 10.
-        
+
         Type: int
         """
         return self.__limit

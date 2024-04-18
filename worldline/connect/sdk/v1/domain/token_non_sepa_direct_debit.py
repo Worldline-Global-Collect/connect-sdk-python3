@@ -19,7 +19,7 @@ class TokenNonSepaDirectDebit(AbstractToken):
     def customer(self) -> Optional[CustomerToken]:
         """
         | Object containing the details of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.customer_token.CustomerToken`
         """
         return self.__customer
@@ -32,7 +32,7 @@ class TokenNonSepaDirectDebit(AbstractToken):
     def mandate(self) -> Optional[MandateNonSepaDirectDebit]:
         """
         | Object containing the mandate details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mandate_non_sepa_direct_debit.MandateNonSepaDirectDebit`
         """
         return self.__mandate

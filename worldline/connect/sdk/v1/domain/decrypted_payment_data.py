@@ -27,9 +27,9 @@ class DecryptedPaymentData(DataObject):
         * For Google Pay, maps to the paymentMethodDetails.authMethod property in the encrypted payment data.
         
         | .
-        
+
         Type: str
-        
+
         Deprecated; Use decryptedPaymentData.paymentMethod instead
         """
         return self.__auth_method
@@ -45,7 +45,7 @@ class DecryptedPaymentData(DataObject):
         
         * For Apple Pay, maps to the cardholderName property in the encrypted payment data.
         * For Google Pay this is not available in the encrypted payment data, and can be omitted.
-        
+
         Type: str
         """
         return self.__cardholder_name
@@ -63,7 +63,7 @@ class DecryptedPaymentData(DataObject):
         * For Google Pay, maps to the paymentMethodDetails.cryptogram property in the encrypted payment data.
         
         | Not allowed for Google Pay if the authMethod in the response of Google is PAN_ONLY.
-        
+
         Type: str
         """
         return self.__cryptogram
@@ -81,7 +81,7 @@ class DecryptedPaymentData(DataObject):
         * For Google Pay, maps to the paymentMethodDetails.dpan property in the encrypted payment data.
         
         | Not allowed for Google Pay if the authMethod in the response of Google is PAN_ONLY.
-        
+
         Type: str
         """
         return self.__dpan
@@ -97,7 +97,7 @@ class DecryptedPaymentData(DataObject):
         
         * For Apple Pay, maps to the paymentData.eciIndicator property in the encrypted payment data.
         * For Google Pay, maps to the paymentMethodDetails.eciIndicator property in the encrypted payment data.
-        
+
         Type: int
         """
         return self.__eci
@@ -114,7 +114,7 @@ class DecryptedPaymentData(DataObject):
         
         * For Apple Pay, maps to the applicationExpirationDate property in the encrypted payment data. This property is formatted as YYMMDD, so this needs to be converted to get a correctly formatted expiry date.
         * For Google Pay, maps to the paymentMethodDetails.expirationMonth and paymentMethodDetails.expirationYear properties in the encrypted payment data. These need to be combined to get a correctly formatted expiry date.
-        
+
         Type: str
         """
         return self.__expiry_date
@@ -132,7 +132,7 @@ class DecryptedPaymentData(DataObject):
         * For Google Pay, maps to the paymentMethodDetails.pan property in the encrypted payment data.
         
         | Not allowed for Google Pay if the authMethod in the response of Google is CRYPTOGRAM_3DS.
-        
+
         Type: str
         """
         return self.__pan
@@ -148,7 +148,7 @@ class DecryptedPaymentData(DataObject):
         * In case Google provides in the response as authMethod: PAN_ONLY send in as value of this property CARD.
         
         | For Apple Pay this is not available in the encrypted payment data, and must be omitted.
-        
+
         Type: str
         """
         return self.__payment_method

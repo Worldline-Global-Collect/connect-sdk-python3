@@ -24,7 +24,7 @@ class MandateResponse(DataObject):
         | An alias for the mandate. This can be used to visually represent the mandate.
         | Do not include any unobfuscated sensitive data in the alias.
         | Default value if not provided is the obfuscated IBAN of the customer.
-        
+
         Type: str
         """
         return self.__alias
@@ -37,7 +37,7 @@ class MandateResponse(DataObject):
     def customer(self) -> Optional[MandateCustomer]:
         """
         | Customer object containing customer specific inputs
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mandate_customer.MandateCustomer`
         """
         return self.__customer
@@ -50,7 +50,7 @@ class MandateResponse(DataObject):
     def customer_reference(self) -> Optional[str]:
         """
         | The unique identifier of the customer to which this mandate is applicable
-        
+
         Type: str
         """
         return self.__customer_reference
@@ -63,7 +63,7 @@ class MandateResponse(DataObject):
     def recurrence_type(self) -> Optional[str]:
         """
         | Specifieds whether the mandate is for one-off or recurring payments.
-        
+
         Type: str
         """
         return self.__recurrence_type
@@ -84,7 +84,7 @@ class MandateResponse(DataObject):
         * WAITING_FOR_REFERENCE
         * BLOCKED
         * USED
-        
+
         Type: str
         """
         return self.__status
@@ -97,7 +97,7 @@ class MandateResponse(DataObject):
     def unique_mandate_reference(self) -> Optional[str]:
         """
         | The unique identifier of the mandate
-        
+
         Type: str
         """
         return self.__unique_mandate_reference

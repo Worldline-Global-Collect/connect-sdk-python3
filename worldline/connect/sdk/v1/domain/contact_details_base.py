@@ -17,7 +17,7 @@ class ContactDetailsBase(DataObject):
     def email_address(self) -> Optional[str]:
         """
         | Email address of the customer
-        
+
         Type: str
         """
         return self.__email_address
@@ -33,7 +33,7 @@ class ContactDetailsBase(DataObject):
         
         * plain-text
         * html
-        
+
         Type: str
         """
         return self.__email_message_type

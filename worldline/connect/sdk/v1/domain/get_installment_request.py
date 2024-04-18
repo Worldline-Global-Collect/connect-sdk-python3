@@ -23,7 +23,7 @@ class GetInstallmentRequest(DataObject):
     def amount_of_money(self) -> Optional[AmountOfMoney]:
         """
         | Object containing amount and ISO currency code attributes
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
         """
         return self.__amount_of_money
@@ -36,7 +36,7 @@ class GetInstallmentRequest(DataObject):
     def bin(self) -> Optional[str]:
         """
         | The first digits of the card number from left to right with a minimum of 6 digits
-        
+
         Type: str
         """
         return self.__bin
@@ -49,7 +49,7 @@ class GetInstallmentRequest(DataObject):
     def country_code(self) -> Optional[str]:
         """
         | ISO 3166-1 alpha-2 country code
-        
+
         Type: str
         """
         return self.__country_code
@@ -63,7 +63,7 @@ class GetInstallmentRequest(DataObject):
         """
         | Payment product identifier 
         | Please see payment products <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/paymentproducts.html> for a full overview of possible values.
-        
+
         Type: int
         """
         return self.__payment_product_id

@@ -22,7 +22,7 @@ class NonSepaDirectDebitPaymentProduct705SpecificInput(DataObject):
     def authorisation_id(self) -> Optional[str]:
         """
         | Core reference number for the direct debit instruction in UK
-        
+
         Type: str
         """
         return self.__authorisation_id
@@ -35,7 +35,7 @@ class NonSepaDirectDebitPaymentProduct705SpecificInput(DataObject):
     def bank_account_bban(self) -> Optional[BankAccountBban]:
         """
         | Object containing account holder name and bank account information
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_bban.BankAccountBban`
         """
         return self.__bank_account_bban
@@ -54,7 +54,7 @@ class NonSepaDirectDebitPaymentProduct705SpecificInput(DataObject):
         * new-or-reinstated - (zero N) New or reinstated direct debit instruction
         * cancellation - (zero C) Cancellation of direct debit instruction
         * conversion-of-paper-DDI-to-electronic-DDI - (zero S) Conversion of paper DDI to electronic DDI (only used once, when migrating from traditional direct debit to AUDDIS
-        
+
         Type: str
         """
         return self.__transaction_type

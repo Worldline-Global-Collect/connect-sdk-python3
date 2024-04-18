@@ -16,7 +16,7 @@ class ConvertAmount(DataObject):
     def converted_amount(self) -> Optional[int]:
         """
         | Converted amount in cents and having 2 decimal
-        
+
         Type: int
         """
         return self.__converted_amount

@@ -18,7 +18,7 @@ class BankAccountBbanRefund(BankAccountBban):
     def bank_city(self) -> Optional[str]:
         """
         | City of the bank to refund to
-        
+
         Type: str
         """
         return self.__bank_city
@@ -31,7 +31,7 @@ class BankAccountBbanRefund(BankAccountBban):
     def patronymic_name(self) -> Optional[str]:
         """
         | Every Russian has three names: a first name, a patronymic, and a surname. The second name is a patronymic. Russian patronymic is a name derived from the father's first name by adding -ович/-евич (son of) for male, or -овна/-евна (daughter of) for females.
-        
+
         Type: str
         """
         return self.__patronymic_name
@@ -44,7 +44,7 @@ class BankAccountBbanRefund(BankAccountBban):
     def swift_code(self) -> Optional[str]:
         """
         | The BIC is the Business Identifier Code, also known as SWIFT or Bank Identifier code. It is a code with an internationally agreed format to Identify a specific bank. The BIC contains 8 or 11 positions: the first 4 contain the bank code, followed by the country code and location code.
-        
+
         Type: str
         """
         return self.__swift_code

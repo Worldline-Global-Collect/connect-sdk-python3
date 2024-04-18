@@ -18,7 +18,7 @@ class MandatePersonalInformation(DataObject):
     def name(self) -> Optional[MandatePersonalName]:
         """
         | Object containing the name details of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mandate_personal_name.MandatePersonalName`
         """
         return self.__name
@@ -31,7 +31,7 @@ class MandatePersonalInformation(DataObject):
     def title(self) -> Optional[str]:
         """
         | Object containing the title of the customer (Mr, Miss or Mrs)
-        
+
         Type: str
         """
         return self.__title

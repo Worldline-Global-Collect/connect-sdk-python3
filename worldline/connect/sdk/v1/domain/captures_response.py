@@ -17,7 +17,7 @@ class CapturesResponse(DataObject):
     def captures(self) -> Optional[List[Capture]]:
         """
         | The list of all captures performed on the requested payment.
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.capture.Capture`]
         """
         return self.__captures

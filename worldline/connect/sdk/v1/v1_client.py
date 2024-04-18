@@ -11,7 +11,7 @@ from worldline.connect.sdk.v1.merchant.merchant_client import MerchantClient
 class V1Client(ApiResource):
     """
     V1 client.
-    
+
     Thread-safe.
     """
     def __init__(self, parent: ApiResource, path_context: Optional[Mapping[str, str]]):

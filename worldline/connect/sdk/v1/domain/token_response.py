@@ -26,7 +26,7 @@ class TokenResponse(DataObject):
     def card(self) -> Optional[TokenCard]:
         """
         | Object containing card details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_card.TokenCard`
         """
         return self.__card
@@ -39,7 +39,7 @@ class TokenResponse(DataObject):
     def e_wallet(self) -> Optional[TokenEWallet]:
         """
         | Object containing eWallet details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_e_wallet.TokenEWallet`
         """
         return self.__e_wallet
@@ -52,7 +52,7 @@ class TokenResponse(DataObject):
     def id(self) -> Optional[str]:
         """
         | ID of the token
-        
+
         Type: str
         """
         return self.__id
@@ -65,7 +65,7 @@ class TokenResponse(DataObject):
     def non_sepa_direct_debit(self) -> Optional[TokenNonSepaDirectDebit]:
         """
         | Object containing the non SEPA Direct Debit details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_non_sepa_direct_debit.TokenNonSepaDirectDebit`
         """
         return self.__non_sepa_direct_debit
@@ -78,7 +78,7 @@ class TokenResponse(DataObject):
     def original_payment_id(self) -> Optional[str]:
         """
         | The initial Payment ID of the transaction from which the token has been created
-        
+
         Type: str
         """
         return self.__original_payment_id
@@ -92,7 +92,7 @@ class TokenResponse(DataObject):
         """
         | Payment product identifier
         | Please see payment products <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/paymentproducts.html> for a full overview of possible values.
-        
+
         Type: int
         """
         return self.__payment_product_id
@@ -105,7 +105,7 @@ class TokenResponse(DataObject):
     def sepa_direct_debit(self) -> Optional[TokenSepaDirectDebit]:
         """
         | Object containing the SEPA Direct Debit details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_sepa_direct_debit.TokenSepaDirectDebit`
         """
         return self.__sepa_direct_debit

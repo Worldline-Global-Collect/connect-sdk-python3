@@ -16,7 +16,7 @@ class RefundMobileMethodSpecificOutput(RefundMethodSpecificOutput):
     def network(self) -> Optional[str]:
         """
         | The network that was used for the refund. The string that represents the network is identical to the strings that the payment product vendors use in their documentation.For instance: "Visa" for Google Pay <https://developer.apple.com/reference/passkit/pkpaymentnetwork>.
-        
+
         Type: str
         """
         return self.__network

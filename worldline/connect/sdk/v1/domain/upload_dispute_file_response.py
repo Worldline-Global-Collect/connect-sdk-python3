@@ -20,7 +20,7 @@ class UploadDisputeFileResponse(DataObject):
     def dispute_id(self) -> Optional[str]:
         """
         | Dispute ID that is associated with the created dispute.
-        
+
         Type: str
         """
         return self.__dispute_id
@@ -33,7 +33,7 @@ class UploadDisputeFileResponse(DataObject):
     def file_id(self) -> Optional[str]:
         """
         | The file ID that is associated with the uploaded file. This ID can be used for further communication regarding the file and retrieval of aforementioned property.
-        
+
         Type: str
         """
         return self.__file_id

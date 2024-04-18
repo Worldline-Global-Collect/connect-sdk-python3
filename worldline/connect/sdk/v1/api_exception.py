@@ -40,14 +40,14 @@ class ApiException(RuntimeError):
     @property
     def error_id(self) -> Optional[str]:
         """
-        :return: The error ID received from the Worldline Global Collect platform if available.
+        :return: The errorId received from the Worldline Global Collect platform if available.
         """
         return self.__error_id
 
     @property
     def errors(self) -> Sequence[APIError]:
         """
-        :return: The error list received from the Worldline Global Collect platform if available. Never None.
+        :return: The errors received from the Worldline Global Collect platform if available. Never None.
         """
         return self.__errors
 

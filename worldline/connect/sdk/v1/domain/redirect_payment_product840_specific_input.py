@@ -20,9 +20,9 @@ class RedirectPaymentProduct840SpecificInput(AbstractRedirectPaymentProduct840Sp
     def custom(self) -> Optional[str]:
         """
         | A free text string that you can send to PayPal. With a special agreement between PayPal and you, PayPal uses the data in that property, for custom services they offer to you.
-        
+
         Type: str
-        
+
         Deprecated; Use Order.references.descriptor instead
         """
         return self.__custom
@@ -41,7 +41,7 @@ class RedirectPaymentProduct840SpecificInput(AbstractRedirectPaymentProduct840Sp
         * false = Regular PayPal payment 
         
         | For payments processed by Worldline's Ogone Payment Platform, please see the addressSelectionAtPayPal property for more information.
-        
+
         Type: bool
         """
         return self.__is_shortcut

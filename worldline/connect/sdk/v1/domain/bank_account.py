@@ -16,7 +16,7 @@ class BankAccount(DataObject):
     def account_holder_name(self) -> Optional[str]:
         """
         | Name in which the account is held.
-        
+
         Type: str
         """
         return self.__account_holder_name

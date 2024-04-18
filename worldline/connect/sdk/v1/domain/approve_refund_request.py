@@ -16,7 +16,7 @@ class ApproveRefundRequest(DataObject):
     def amount(self) -> Optional[int]:
         """
         | Refund amount to be approved
-        
+
         Type: int
         """
         return self.__amount

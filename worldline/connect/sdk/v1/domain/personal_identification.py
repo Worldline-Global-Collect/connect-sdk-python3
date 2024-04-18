@@ -18,7 +18,7 @@ class PersonalIdentification(DataObject):
     def id_issuing_country_code(self) -> Optional[str]:
         """
         | ISO 3166-1 alpha-2 country code of the country that issued the identification document
-        
+
         Type: str
         """
         return self.__id_issuing_country_code
@@ -40,7 +40,7 @@ class PersonalIdentification(DataObject):
         * alienRegistrationNumber = The provided idValue is an alien registration number, provided by immigration services of a country.
         * lawEnforcementIdentification = The provided idValue is an alien registration number, provided by immigration services of a country.
         * militaryIdentification = The provided idValue is an identification issued to military personnel of a country.
-        
+
         Type: str
         """
         return self.__id_type
@@ -53,7 +53,7 @@ class PersonalIdentification(DataObject):
     def id_value(self) -> Optional[str]:
         """
         | The value of the identification
-        
+
         Type: str
         """
         return self.__id_value

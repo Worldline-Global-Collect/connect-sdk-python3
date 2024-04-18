@@ -17,7 +17,7 @@ class PaymentProduct320SpecificData(DataObject):
     def gateway(self) -> Optional[str]:
         """
         | The GlobalCollect gateway identifier. You should use this when creating a tokenization specification <https://developers.google.com/pay/api/android/reference/object#Gateway>.
-        
+
         Type: str
         """
         return self.__gateway
@@ -30,7 +30,7 @@ class PaymentProduct320SpecificData(DataObject):
     def networks(self) -> Optional[List[str]]:
         """
         | The networks that can be used in the current payment context. The strings that represent the networks in the array are identical to the strings that Google uses in their documentation <https://developers.google.com/pay/api/android/reference/object#CardParameters>.For instance: "VISA".
-        
+
         Type: list[str]
         """
         return self.__networks

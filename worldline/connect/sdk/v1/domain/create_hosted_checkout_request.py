@@ -37,7 +37,7 @@ class CreateHostedCheckoutRequest(DataObject):
     def bank_transfer_payment_method_specific_input(self) -> Optional[BankTransferPaymentMethodSpecificInputBase]:
         """
         | Object containing the specific input details for bank transfer payments
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_transfer_payment_method_specific_input_base.BankTransferPaymentMethodSpecificInputBase`
         """
         return self.__bank_transfer_payment_method_specific_input
@@ -50,7 +50,7 @@ class CreateHostedCheckoutRequest(DataObject):
     def card_payment_method_specific_input(self) -> Optional[CardPaymentMethodSpecificInputBase]:
         """
         | Object containing the specific input details for card payments
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.card_payment_method_specific_input_base.CardPaymentMethodSpecificInputBase`
         """
         return self.__card_payment_method_specific_input
@@ -63,7 +63,7 @@ class CreateHostedCheckoutRequest(DataObject):
     def cash_payment_method_specific_input(self) -> Optional[CashPaymentMethodSpecificInputBase]:
         """
         | Object containing the specific input details for cash payments
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.cash_payment_method_specific_input_base.CashPaymentMethodSpecificInputBase`
         """
         return self.__cash_payment_method_specific_input
@@ -76,7 +76,7 @@ class CreateHostedCheckoutRequest(DataObject):
     def e_invoice_payment_method_specific_input(self) -> Optional[EInvoicePaymentMethodSpecificInputBase]:
         """
         | Object containing the specific input details for eInvoice payments
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.e_invoice_payment_method_specific_input_base.EInvoicePaymentMethodSpecificInputBase`
         """
         return self.__e_invoice_payment_method_specific_input
@@ -89,7 +89,7 @@ class CreateHostedCheckoutRequest(DataObject):
     def fraud_fields(self) -> Optional[FraudFields]:
         """
         | Object containing additional data that will be used to assess the risk of fraud
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.fraud_fields.FraudFields`
         """
         return self.__fraud_fields
@@ -102,7 +102,7 @@ class CreateHostedCheckoutRequest(DataObject):
     def hosted_checkout_specific_input(self) -> Optional[HostedCheckoutSpecificInput]:
         """
         | Object containing hosted checkout specific data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.hosted_checkout_specific_input.HostedCheckoutSpecificInput`
         """
         return self.__hosted_checkout_specific_input
@@ -115,7 +115,7 @@ class CreateHostedCheckoutRequest(DataObject):
     def merchant(self) -> Optional[Merchant]:
         """
         | Object containing information on you, the merchant
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.merchant.Merchant`
         """
         return self.__merchant
@@ -128,7 +128,7 @@ class CreateHostedCheckoutRequest(DataObject):
     def mobile_payment_method_specific_input(self) -> Optional[MobilePaymentMethodSpecificInputHostedCheckout]:
         """
         | Object containing reference data for Google Pay (paymentProductId 320) and Apple Pay (paymentProductID 302).
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input_hosted_checkout.MobilePaymentMethodSpecificInputHostedCheckout`
         """
         return self.__mobile_payment_method_specific_input
@@ -141,7 +141,7 @@ class CreateHostedCheckoutRequest(DataObject):
     def order(self) -> Optional[Order]:
         """
         | Order object containing order related data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.order.Order`
         """
         return self.__order
@@ -154,7 +154,7 @@ class CreateHostedCheckoutRequest(DataObject):
     def redirect_payment_method_specific_input(self) -> Optional[RedirectPaymentMethodSpecificInputBase]:
         """
         | Object containing the specific input details for payments that involve redirects to 3rd parties to complete, like iDeal and PayPal
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_method_specific_input_base.RedirectPaymentMethodSpecificInputBase`
         """
         return self.__redirect_payment_method_specific_input
@@ -167,7 +167,7 @@ class CreateHostedCheckoutRequest(DataObject):
     def sepa_direct_debit_payment_method_specific_input(self) -> Optional[SepaDirectDebitPaymentMethodSpecificInputBase]:
         """
         | Object containing the specific input details for SEPA direct debit payments
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.sepa_direct_debit_payment_method_specific_input_base.SepaDirectDebitPaymentMethodSpecificInputBase`
         """
         return self.__sepa_direct_debit_payment_method_specific_input

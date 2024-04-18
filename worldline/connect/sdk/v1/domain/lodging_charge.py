@@ -22,7 +22,7 @@ class LodgingCharge(DataObject):
         """
         | Amount of additional charges associated with the stay of the guest.
         | Note: The currencyCode is presumed to be identical to the order.amountOfMoney.currencyCode.
-        
+
         Type: int
         """
         return self.__charge_amount
@@ -35,7 +35,7 @@ class LodgingCharge(DataObject):
     def charge_amount_currency_code(self) -> Optional[str]:
         """
         | Currency for Charge amount. The code should be in 3 letter ISO format.
-        
+
         Type: str
         """
         return self.__charge_amount_currency_code
@@ -65,7 +65,7 @@ class LodgingCharge(DataObject):
         * roomService
         * loungeBar
         * other
-        
+
         Type: str
         """
         return self.__charge_type

@@ -18,7 +18,7 @@ class GetHostedCheckoutResponse(DataObject):
     def created_payment_output(self) -> Optional[CreatedPaymentOutput]:
         """
         | When a payment has been created during the hosted checkout session this object will return the details.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.created_payment_output.CreatedPaymentOutput`
         """
         return self.__created_payment_output
@@ -39,7 +39,7 @@ class GetHostedCheckoutResponse(DataObject):
         
         
         | Please see Statuses <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/statuses.html> for a full overview of possible values.
-        
+
         Type: str
         """
         return self.__status

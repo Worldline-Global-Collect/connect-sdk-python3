@@ -12,7 +12,7 @@ from worldline.connect.sdk.communication.request_param import RequestParam
 class NetworksParams(ParamRequest):
     """
     Query parameters for Get payment product networks
-    
+
     See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/products/networks.html
     """
 
@@ -25,7 +25,7 @@ class NetworksParams(ParamRequest):
     def country_code(self) -> Optional[str]:
         """
         | ISO 3166-1 alpha-2 country code
-        
+
         Type: str
         """
         return self.__country_code
@@ -38,7 +38,7 @@ class NetworksParams(ParamRequest):
     def currency_code(self) -> Optional[str]:
         """
         | Three-letter ISO currency code representing the currency for the amount
-        
+
         Type: str
         """
         return self.__currency_code
@@ -51,7 +51,7 @@ class NetworksParams(ParamRequest):
     def amount(self) -> Optional[int]:
         """
         | Amount in cents and always having 2 decimals
-        
+
         Type: int
         """
         return self.__amount
@@ -67,7 +67,7 @@ class NetworksParams(ParamRequest):
         
         * true
         * false
-        
+
         Type: bool
         """
         return self.__is_recurring

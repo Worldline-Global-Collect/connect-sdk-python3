@@ -21,7 +21,7 @@ class GetCustomerDetailsRequest(DataObject):
     def country_code(self) -> Optional[str]:
         """
         | The code of the country where the customer should reside.
-        
+
         Type: str
         """
         return self.__country_code
@@ -34,7 +34,7 @@ class GetCustomerDetailsRequest(DataObject):
     def values(self) -> Optional[List[KeyValuePair]]:
         """
         | A list of keys with a value used to retrieve the details of a customer. Depending on the country code, different keys are required. These can be determined with a getPaymentProduct call and using payment product properties with the property usedForLookup set to true.
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.key_value_pair.KeyValuePair`]
         """
         return self.__values

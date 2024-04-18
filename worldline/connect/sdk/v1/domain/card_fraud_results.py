@@ -49,7 +49,7 @@ class CardFraudResults(FraudResults):
         * Y - Address (Street) and 5 digit Zip match
         * Z - 5 digit Zip matches, Address (Street) does not
         * 0 - No service available
-        
+
         Type: str
         """
         return self.__avs_result
@@ -70,7 +70,7 @@ class CardFraudResults(FraudResults):
         * U - Issuer not certified for CVV2
         * Y - Server provider did not respond
         * 0 - No service available
-        
+
         Type: str
         """
         return self.__cvv_result
@@ -83,7 +83,7 @@ class CardFraudResults(FraudResults):
     def fraugster(self) -> Optional[FraugsterResults]:
         """
         | Results of Fraugster fraud prevention check. Fraugster collects transaction data points such as name, email address, billing, etc. to analyze whether or not the transaction is fraudulent.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.fraugster_results.FraugsterResults`
         """
         return self.__fraugster
@@ -96,7 +96,7 @@ class CardFraudResults(FraudResults):
     def retail_decisions(self) -> Optional[FraudResultsRetailDecisions]:
         """
         | Additional response data returned by RetailDecisions
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.fraud_results_retail_decisions.FraudResultsRetailDecisions`
         """
         return self.__retail_decisions

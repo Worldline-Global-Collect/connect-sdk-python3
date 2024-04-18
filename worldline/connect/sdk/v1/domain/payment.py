@@ -22,7 +22,7 @@ class Payment(AbstractOrderStatus):
     def hosted_checkout_specific_output(self) -> Optional[HostedCheckoutSpecificOutput]:
         """
         | Hosted Checkout specific information. Populated if the payment was created on the GlobalCollect platform through a Hosted Checkout.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.hosted_checkout_specific_output.HostedCheckoutSpecificOutput`
         """
         return self.__hosted_checkout_specific_output
@@ -35,7 +35,7 @@ class Payment(AbstractOrderStatus):
     def payment_output(self) -> Optional[PaymentOutput]:
         """
         | Object containing payment details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_output.PaymentOutput`
         """
         return self.__payment_output
@@ -71,7 +71,7 @@ class Payment(AbstractOrderStatus):
         
         
         | Please see Statuses <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/statuses.html> for a full overview of possible values.
-        
+
         Type: str
         """
         return self.__status
@@ -85,7 +85,7 @@ class Payment(AbstractOrderStatus):
         """
         | This object has the numeric representation of the current payment status, timestamp of last status change and performable action on the current payment resource.
         | In case of failed payments and negative scenarios, detailed error information is listed.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_status_output.PaymentStatusOutput`
         """
         return self.__status_output

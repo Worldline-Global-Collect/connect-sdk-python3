@@ -29,20 +29,21 @@ class HostedcheckoutsClient(ApiResource):
     def create(self, body: CreateHostedCheckoutRequest, context: Optional[CallContext] = None) -> CreateHostedCheckoutResponse:
         """
         Resource /{merchantId}/hostedcheckouts - Create hosted checkout
-        
+
         See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/hostedcheckouts/create.html
 
         :param body:     :class:`worldline.connect.sdk.v1.domain.create_hosted_checkout_request.CreateHostedCheckoutRequest`
         :param context:  :class:`worldline.connect.sdk.call_context.CallContext`
         :return: :class:`worldline.connect.sdk.v1.domain.create_hosted_checkout_response.CreateHostedCheckoutResponse`
-        :raise: ValidationException if the request was not correct and couldn't be processed (HTTP status code 400)
-        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)
-        :raise: ReferenceException if an object was attempted to be referenced that doesn't exist or has been removed,
+        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)
+        :raise ValidationException: if the request was not correct and couldn't be processed (HTTP status code 400)
+        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)
+        :raise ReferenceException: if an object was attempted to be referenced that doesn't exist or has been removed,
                    or there was a conflict (HTTP status code 404, 409 or 410)
-        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,
+        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,
                    the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,
                    or the service that you're trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)
-        :raise: ApiException if the Worldline Global Collect platform returned any other error
+        :raise ApiException: if the Worldline Global Collect platform returned any other error
         """
         uri = self._instantiate_uri("/v1/{merchantId}/hostedcheckouts", None)
         try:
@@ -62,20 +63,21 @@ class HostedcheckoutsClient(ApiResource):
     def get(self, hosted_checkout_id: str, context: Optional[CallContext] = None) -> GetHostedCheckoutResponse:
         """
         Resource /{merchantId}/hostedcheckouts/{hostedCheckoutId} - Get hosted checkout status
-        
+
         See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/hostedcheckouts/get.html
 
         :param hosted_checkout_id:  str
         :param context:             :class:`worldline.connect.sdk.call_context.CallContext`
         :return: :class:`worldline.connect.sdk.v1.domain.get_hosted_checkout_response.GetHostedCheckoutResponse`
-        :raise: ValidationException if the request was not correct and couldn't be processed (HTTP status code 400)
-        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)
-        :raise: ReferenceException if an object was attempted to be referenced that doesn't exist or has been removed,
+        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)
+        :raise ValidationException: if the request was not correct and couldn't be processed (HTTP status code 400)
+        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)
+        :raise ReferenceException: if an object was attempted to be referenced that doesn't exist or has been removed,
                    or there was a conflict (HTTP status code 404, 409 or 410)
-        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,
+        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,
                    the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,
                    or the service that you're trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)
-        :raise: ApiException if the Worldline Global Collect platform returned any other error
+        :raise ApiException: if the Worldline Global Collect platform returned any other error
         """
         path_context = {
             "hostedCheckoutId": hosted_checkout_id,
@@ -97,20 +99,21 @@ class HostedcheckoutsClient(ApiResource):
     def delete(self, hosted_checkout_id: str, context: Optional[CallContext] = None) -> None:
         """
         Resource /{merchantId}/hostedcheckouts/{hostedCheckoutId} - Delete hosted checkout
-        
+
         See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/hostedcheckouts/delete.html
 
         :param hosted_checkout_id:  str
         :param context:             :class:`worldline.connect.sdk.call_context.CallContext`
         :return: None
-        :raise: ValidationException if the request was not correct and couldn't be processed (HTTP status code 400)
-        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)
-        :raise: ReferenceException if an object was attempted to be referenced that doesn't exist or has been removed,
+        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)
+        :raise ValidationException: if the request was not correct and couldn't be processed (HTTP status code 400)
+        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)
+        :raise ReferenceException: if an object was attempted to be referenced that doesn't exist or has been removed,
                    or there was a conflict (HTTP status code 404, 409 or 410)
-        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,
+        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,
                    the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,
                    or the service that you're trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)
-        :raise: ApiException if the Worldline Global Collect platform returned any other error
+        :raise ApiException: if the Worldline Global Collect platform returned any other error
         """
         path_context = {
             "hostedCheckoutId": hosted_checkout_id,

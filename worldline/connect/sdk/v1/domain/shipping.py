@@ -27,7 +27,7 @@ class Shipping(DataObject):
     def address(self) -> Optional[AddressPersonal]:
         """
         | Object containing address information
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.address_personal.AddressPersonal`
         """
         return self.__address
@@ -48,7 +48,7 @@ class Shipping(DataObject):
         * digital-goods = electronic delivery of digital goods
         * travel-and-event-tickets-not-shipped = travel and/or event tickets that are not shipped
         * other = other means of delivery
-        
+
         Type: str
         """
         return self.__address_indicator
@@ -61,7 +61,7 @@ class Shipping(DataObject):
     def comments(self) -> Optional[str]:
         """
         | Comments included during shipping
-        
+
         Type: str
         """
         return self.__comments
@@ -74,7 +74,7 @@ class Shipping(DataObject):
     def email_address(self) -> Optional[str]:
         """
         | Email address linked to the shipping
-        
+
         Type: str
         """
         return self.__email_address
@@ -87,7 +87,7 @@ class Shipping(DataObject):
     def first_usage_date(self) -> Optional[str]:
         """
         | Date (YYYYMMDD) when the shipping details for this transaction were first used.
-        
+
         Type: str
         """
         return self.__first_usage_date
@@ -104,7 +104,7 @@ class Shipping(DataObject):
         | true = the shipping details are used for the first time with this transaction
         
         | false = the shipping details have been used for other transactions in the past
-        
+
         Type: bool
         """
         return self.__is_first_usage
@@ -117,7 +117,7 @@ class Shipping(DataObject):
     def tracking_number(self) -> Optional[str]:
         """
         | Shipment tracking number
-        
+
         Type: str
         """
         return self.__tracking_number
@@ -139,7 +139,7 @@ class Shipping(DataObject):
         * priority = For prioritized deliveries for payments that are processed by the WL Online Payment Acceptance platform
         * ground = For deliveries via ground for payments that are processed by the WL Online Payment Acceptance platform
         * to-store = For deliveries to a store for payments that are processed by the WL Online Payment Acceptance platform
-        
+
         Type: str
         """
         return self.__type

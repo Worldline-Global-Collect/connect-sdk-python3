@@ -21,7 +21,7 @@ class ThreeDSecureData(DataObject):
     def acs_transaction_id(self) -> Optional[str]:
         """
         | The ACS Transaction ID for a prior 3-D Secure authenticated transaction (for example, the first recurring transaction that was authenticated with the customer)
-        
+
         Type: str
         """
         return self.__acs_transaction_id
@@ -39,7 +39,7 @@ class ThreeDSecureData(DataObject):
         * challenged = Cardholder was challenged
         * avs-verified = The authentication was verified by AVS
         * other = Another issuer method was used to authenticate this transaction
-        
+
         Type: str
         """
         return self.__method
@@ -52,7 +52,7 @@ class ThreeDSecureData(DataObject):
     def utc_timestamp(self) -> Optional[str]:
         """
         | Timestamp in UTC (YYYYMMDDHHmm) of the 3-D Secure authentication of this transaction
-        
+
         Type: str
         """
         return self.__utc_timestamp

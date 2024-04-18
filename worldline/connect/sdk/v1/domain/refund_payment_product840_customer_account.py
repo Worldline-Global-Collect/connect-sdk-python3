@@ -25,7 +25,7 @@ class RefundPaymentProduct840CustomerAccount(DataObject):
         
         * verified - PayPal has verified the funding means for this account
         * unverified - PayPal has not verified the funding means for this account
-        
+
         Type: str
         """
         return self.__customer_account_status
@@ -43,7 +43,7 @@ class RefundPaymentProduct840CustomerAccount(DataObject):
         * none - Status is unknown at PayPal
         * confirmed - The address has been confirmed
         * unconfirmed - The address has not been confirmed
-        
+
         Type: str
         """
         return self.__customer_address_status
@@ -56,7 +56,7 @@ class RefundPaymentProduct840CustomerAccount(DataObject):
     def payer_id(self) -> Optional[str]:
         """
         | The unique identifier of a PayPal account and will never change in the life cycle of a PayPal account
-        
+
         Type: str
         """
         return self.__payer_id

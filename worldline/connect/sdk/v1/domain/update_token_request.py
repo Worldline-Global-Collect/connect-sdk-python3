@@ -24,7 +24,7 @@ class UpdateTokenRequest(DataObject):
     def card(self) -> Optional[TokenCard]:
         """
         | Object containing card details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_card.TokenCard`
         """
         return self.__card
@@ -37,7 +37,7 @@ class UpdateTokenRequest(DataObject):
     def e_wallet(self) -> Optional[TokenEWallet]:
         """
         | Object containing eWallet details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_e_wallet.TokenEWallet`
         """
         return self.__e_wallet
@@ -50,7 +50,7 @@ class UpdateTokenRequest(DataObject):
     def non_sepa_direct_debit(self) -> Optional[TokenNonSepaDirectDebit]:
         """
         | Object containing the non SEPA Direct Debit details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_non_sepa_direct_debit.TokenNonSepaDirectDebit`
         """
         return self.__non_sepa_direct_debit
@@ -64,7 +64,7 @@ class UpdateTokenRequest(DataObject):
         """
         | Payment product identifier
         | Please see payment products <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/paymentproducts.html> for a full overview of possible values.
-        
+
         Type: int
         """
         return self.__payment_product_id
@@ -77,7 +77,7 @@ class UpdateTokenRequest(DataObject):
     def sepa_direct_debit(self) -> Optional[TokenSepaDirectDebitWithoutCreditor]:
         """
         | Object containing the SEPA Direct Debit details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_sepa_direct_debit_without_creditor.TokenSepaDirectDebitWithoutCreditor`
         """
         return self.__sepa_direct_debit

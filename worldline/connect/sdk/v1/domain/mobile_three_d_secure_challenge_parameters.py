@@ -19,7 +19,7 @@ class MobileThreeDSecureChallengeParameters(DataObject):
     def acs_reference_number(self) -> Optional[str]:
         """
         | The unique identifier assigned by the EMVCo Secretariat upon testing and approval.
-        
+
         Type: str
         """
         return self.__acs_reference_number
@@ -32,7 +32,7 @@ class MobileThreeDSecureChallengeParameters(DataObject):
     def acs_signed_content(self) -> Optional[str]:
         """
         | Contains the JWS object created by the ACS for the challenge (ARes).
-        
+
         Type: str
         """
         return self.__acs_signed_content
@@ -45,7 +45,7 @@ class MobileThreeDSecureChallengeParameters(DataObject):
     def acs_transaction_id(self) -> Optional[str]:
         """
         | The ACS Transaction ID for a prior 3-D Secure authenticated transaction (for example, the first recurring transaction that was authenticated with the customer).
-        
+
         Type: str
         """
         return self.__acs_transaction_id
@@ -58,7 +58,7 @@ class MobileThreeDSecureChallengeParameters(DataObject):
     def three_d_server_transaction_id(self) -> Optional[str]:
         """
         | The 3-D Secure version 2 transaction ID that is used for the 3D Authentication
-        
+
         Type: str
         """
         return self.__three_d_server_transaction_id

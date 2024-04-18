@@ -24,7 +24,7 @@ class PayoutCustomer(DataObject):
     def address(self) -> Optional[Address]:
         """
         | Object containing address details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.address.Address`
         """
         return self.__address
@@ -37,7 +37,7 @@ class PayoutCustomer(DataObject):
     def company_information(self) -> Optional[CompanyInformation]:
         """
         | Object containing company information
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.company_information.CompanyInformation`
         """
         return self.__company_information
@@ -50,7 +50,7 @@ class PayoutCustomer(DataObject):
     def contact_details(self) -> Optional[ContactDetailsBase]:
         """
         | Object containing contact details like email address and phone number
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.contact_details_base.ContactDetailsBase`
         """
         return self.__contact_details
@@ -63,7 +63,7 @@ class PayoutCustomer(DataObject):
     def merchant_customer_id(self) -> Optional[str]:
         """
         | Your identifier for the customer. It can be used as a search criteria in the GlobalCollect Payment Console and is also included in the GlobalCollect report files. It is used in the fraud-screening process for payments on the Ogone Payment Platform.
-        
+
         Type: str
         """
         return self.__merchant_customer_id
@@ -76,7 +76,7 @@ class PayoutCustomer(DataObject):
     def name(self) -> Optional[PersonalName]:
         """
         | Object containing PersonalName object
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.personal_name.PersonalName`
         """
         return self.__name

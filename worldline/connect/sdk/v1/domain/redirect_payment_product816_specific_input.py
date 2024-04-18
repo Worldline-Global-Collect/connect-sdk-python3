@@ -20,7 +20,7 @@ class RedirectPaymentProduct816SpecificInput(DataObject):
     def bank_account_iban(self) -> Optional[BankAccountIban]:
         """
         | Object containing the bank account details of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_iban.BankAccountIban`
         """
         return self.__bank_account_iban

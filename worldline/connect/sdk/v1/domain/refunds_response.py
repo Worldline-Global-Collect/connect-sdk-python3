@@ -17,7 +17,7 @@ class RefundsResponse(DataObject):
     def refunds(self) -> Optional[List[RefundResult]]:
         """
         | The list of all refunds performed on the requested payment.
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.refund_result.RefundResult`]
         """
         return self.__refunds

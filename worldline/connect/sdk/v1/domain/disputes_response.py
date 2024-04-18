@@ -17,7 +17,7 @@ class DisputesResponse(DataObject):
     def disputes(self) -> Optional[List[Dispute]]:
         """
         | Array containing disputes and their characteristics.
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.dispute.Dispute`]
         """
         return self.__disputes

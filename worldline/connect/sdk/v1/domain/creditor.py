@@ -26,7 +26,7 @@ class Creditor(DataObject):
     def additional_address_info(self) -> Optional[str]:
         """
         | Additional information about the creditor's address, like Suite II, Apartment 2a
-        
+
         Type: str
         """
         return self.__additional_address_info
@@ -39,7 +39,7 @@ class Creditor(DataObject):
     def city(self) -> Optional[str]:
         """
         | City of the creditor address
-        
+
         Type: str
         """
         return self.__city
@@ -52,7 +52,7 @@ class Creditor(DataObject):
     def country_code(self) -> Optional[str]:
         """
         | ISO 3166-1 alpha-2 country code
-        
+
         Type: str
         """
         return self.__country_code
@@ -65,7 +65,7 @@ class Creditor(DataObject):
     def house_number(self) -> Optional[str]:
         """
         | House number of the creditor address
-        
+
         Type: str
         """
         return self.__house_number
@@ -79,7 +79,7 @@ class Creditor(DataObject):
         """
         | Creditor IBAN number
         | The IBAN is the International Bank Account Number. It is an internationally agreed format for the bank account number and includes the ISO country code and two check digits.
-        
+
         Type: str
         """
         return self.__iban
@@ -92,7 +92,7 @@ class Creditor(DataObject):
     def id(self) -> Optional[str]:
         """
         | Creditor identifier
-        
+
         Type: str
         """
         return self.__id
@@ -105,7 +105,7 @@ class Creditor(DataObject):
     def name(self) -> Optional[str]:
         """
         | Name of the collecting creditor
-        
+
         Type: str
         """
         return self.__name
@@ -118,7 +118,7 @@ class Creditor(DataObject):
     def reference_party(self) -> Optional[str]:
         """
         | Creditor type of the legal reference of the collecting entity
-        
+
         Type: str
         """
         return self.__reference_party
@@ -131,7 +131,7 @@ class Creditor(DataObject):
     def reference_party_id(self) -> Optional[str]:
         """
         | Legal reference of the collecting creditor
-        
+
         Type: str
         """
         return self.__reference_party_id
@@ -144,7 +144,7 @@ class Creditor(DataObject):
     def street(self) -> Optional[str]:
         """
         | Street of the creditor address
-        
+
         Type: str
         """
         return self.__street
@@ -157,7 +157,7 @@ class Creditor(DataObject):
     def zip(self) -> Optional[str]:
         """
         | ZIP code of the creditor address
-        
+
         Type: str
         """
         return self.__zip

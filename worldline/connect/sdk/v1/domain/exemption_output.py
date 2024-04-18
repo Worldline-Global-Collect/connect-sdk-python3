@@ -21,7 +21,7 @@ class ExemptionOutput(DataObject):
     def exemption_raised(self) -> Optional[str]:
         """
         | Type of strong customer authentication (SCA) exemption that was raised towards the acquirer for this transaction.
-        
+
         Type: str
         """
         return self.__exemption_raised
@@ -34,7 +34,7 @@ class ExemptionOutput(DataObject):
     def exemption_rejection_reason(self) -> Optional[str]:
         """
         | The request exemption could not be granted. The reason why is returned in this property.
-        
+
         Type: str
         """
         return self.__exemption_rejection_reason
@@ -47,7 +47,7 @@ class ExemptionOutput(DataObject):
     def exemption_request(self) -> Optional[str]:
         """
         | Type of strong customer authentication (SCA) exemption requested by you for this transaction.
-        
+
         Type: str
         """
         return self.__exemption_request

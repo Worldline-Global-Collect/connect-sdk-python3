@@ -36,7 +36,7 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
         """
         * true
         * false
-        
+
         Type: bool
         """
         return self.__is_recurring
@@ -49,7 +49,7 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
     def payment_product4101_specific_input(self) -> Optional[RedirectPaymentProduct4101SpecificInput]:
         """
         | Object containing specific input required for UPI (Payment product ID 4101)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_product4101_specific_input.RedirectPaymentProduct4101SpecificInput`
         """
         return self.__payment_product4101_specific_input
@@ -62,7 +62,7 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
     def payment_product809_specific_input(self) -> Optional[RedirectPaymentProduct809SpecificInput]:
         """
         | Object containing specific input required for Dutch iDeal payments (Payment product ID 809)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_product809_specific_input.RedirectPaymentProduct809SpecificInput`
         """
         return self.__payment_product809_specific_input
@@ -75,7 +75,7 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
     def payment_product816_specific_input(self) -> Optional[RedirectPaymentProduct816SpecificInput]:
         """
         | Object containing specific input required for German giropay payments (Payment product ID 816)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_product816_specific_input.RedirectPaymentProduct816SpecificInput`
         """
         return self.__payment_product816_specific_input
@@ -88,7 +88,7 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
     def payment_product840_specific_input(self) -> Optional[RedirectPaymentProduct840SpecificInput]:
         """
         | Object containing specific input required for PayPal payments (Payment product ID 840)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_product840_specific_input.RedirectPaymentProduct840SpecificInput`
         """
         return self.__payment_product840_specific_input
@@ -101,7 +101,7 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
     def payment_product861_specific_input(self) -> Optional[RedirectPaymentProduct861SpecificInput]:
         """
         | Object containing specific input required for AliPay payments (Payment product ID 861)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_product861_specific_input.RedirectPaymentProduct861SpecificInput`
         """
         return self.__payment_product861_specific_input
@@ -114,7 +114,7 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
     def payment_product863_specific_input(self) -> Optional[RedirectPaymentProduct863SpecificInput]:
         """
         | Object containing specific input required for We Chat Pay payments (Payment product ID 863)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_product863_specific_input.RedirectPaymentProduct863SpecificInput`
         """
         return self.__payment_product863_specific_input
@@ -127,7 +127,7 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
     def payment_product869_specific_input(self) -> Optional[RedirectPaymentProduct869SpecificInput]:
         """
         | Object containing specific input required for China UnionPay payments (Payment product ID 869)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_product869_specific_input.RedirectPaymentProduct869SpecificInput`
         """
         return self.__payment_product869_specific_input
@@ -140,7 +140,7 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
     def payment_product882_specific_input(self) -> Optional[RedirectPaymentProduct882SpecificInput]:
         """
         | Object containing specific input required for Indian Net Banking payments (Payment product ID 882)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_product882_specific_input.RedirectPaymentProduct882SpecificInput`
         """
         return self.__payment_product882_specific_input
@@ -153,7 +153,7 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
     def redirection_data(self) -> Optional[RedirectionData]:
         """
         | Object containing browser specific redirection related data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirection_data.RedirectionData`
         """
         return self.__redirection_data
@@ -168,9 +168,9 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
         | The URL that the customer is redirect to after the payment flow has finished. You can add any number of key value pairs in the query string that, for instance help you to identify the customer when they return to your site. Please note that we will also append some additional key value pairs that will also help you with this identification process.
         | Note: The provided URL should be absolute and contain the protocol to use, e.g. http:// or https://. For use on mobile devices a custom protocol can be used in the form of *protocol*://. This protocol must be registered on the device first.
         | URLs without a protocol will be rejected.
-        
+
         Type: str
-        
+
         Deprecated; Use redirectionData.returnUrl instead
         """
         return self.__return_url

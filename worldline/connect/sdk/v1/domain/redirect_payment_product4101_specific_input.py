@@ -21,7 +21,7 @@ class RedirectPaymentProduct4101SpecificInput(DataObject):
     def display_name(self) -> Optional[str]:
         """
         | The merchant name as shown to the customer in some payment applications.
-        
+
         Type: str
         """
         return self.__display_name
@@ -34,7 +34,7 @@ class RedirectPaymentProduct4101SpecificInput(DataObject):
     def integration_type(self) -> Optional[str]:
         """
         | The value of this property must be 'vpa', 'desktopQRCode', or 'urlIntent'.
-        
+
         Type: str
         """
         return self.__integration_type
@@ -47,7 +47,7 @@ class RedirectPaymentProduct4101SpecificInput(DataObject):
     def virtual_payment_address(self) -> Optional[str]:
         """
         | The Virtual Payment Address (VPA) of the customer. The '+' character is not allowed in this property for transactions that are processed by TechProcess Payment Platform.
-        
+
         Type: str
         """
         return self.__virtual_payment_address

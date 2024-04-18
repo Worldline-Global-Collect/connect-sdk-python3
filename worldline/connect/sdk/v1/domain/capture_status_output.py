@@ -22,7 +22,7 @@ class CaptureStatusOutput(DataObject):
         
         * true
         * false
-        
+
         Type: bool
         """
         return self.__is_retriable
@@ -35,7 +35,7 @@ class CaptureStatusOutput(DataObject):
     def provider_raw_output(self) -> Optional[List[KeyValuePair]]:
         """
         | This is the raw response returned by the acquirer. This property contains unprocessed data directly returned by the acquirer. It's recommended for data analysis only due to its dynamic nature, which may undergo future changes.
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.key_value_pair.KeyValuePair`]
         """
         return self.__provider_raw_output
@@ -48,7 +48,7 @@ class CaptureStatusOutput(DataObject):
     def status_code(self) -> Optional[int]:
         """
         | Numeric status code of the legacy API. It is returned to ease the migration from the legacy APIs to Worldline Connect. You should not write new business logic based on this property as it will be deprecated in a future version of the API. The value can also be found in the GlobalCollect Payment Console, in the Ogone BackOffice and in report files.
-        
+
         Type: int
         """
         return self.__status_code

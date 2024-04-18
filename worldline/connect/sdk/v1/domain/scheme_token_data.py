@@ -20,7 +20,7 @@ class SchemeTokenData(DataObject):
     def cardholder_name(self) -> Optional[str]:
         """
         | The cardholder's name on the card
-        
+
         Type: str
         """
         return self.__cardholder_name
@@ -33,7 +33,7 @@ class SchemeTokenData(DataObject):
     def cryptogram(self) -> Optional[str]:
         """
         | The Token Cryptogram is a dynamic one-time use value that is used to verify the authenticity of the transaction and the integrity of the data used in the generation of the Token Cryptogram. Visa calls this the Token Authentication Verification Value (TAVV) cryptogram.
-        
+
         Type: str
         """
         return self.__cryptogram
@@ -46,7 +46,7 @@ class SchemeTokenData(DataObject):
     def eci(self) -> Optional[str]:
         """
         | The Electronic Commerce Indicator you got with the Token Cryptogram
-        
+
         Type: str
         """
         return self.__eci
@@ -59,7 +59,7 @@ class SchemeTokenData(DataObject):
     def network_token(self) -> Optional[str]:
         """
         | The network token. Note: This is called Payment Token in the EMVCo documentation
-        
+
         Type: str
         """
         return self.__network_token
@@ -72,7 +72,7 @@ class SchemeTokenData(DataObject):
     def token_expiry_date(self) -> Optional[str]:
         """
         | The expiry date of the network token
-        
+
         Type: str
         """
         return self.__token_expiry_date

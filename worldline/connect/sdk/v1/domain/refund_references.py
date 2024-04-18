@@ -16,7 +16,7 @@ class RefundReferences(DataObject):
     def merchant_reference(self) -> Optional[str]:
         """
         | Note that the maximum length of this field for transactions processed on the GlobalCollect platform is 30. Your unique reference of the transaction that is also returned in our report files. This is almost always used for your reconciliation of our report files.
-        
+
         Type: str
         """
         return self.__merchant_reference

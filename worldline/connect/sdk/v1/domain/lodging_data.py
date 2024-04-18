@@ -36,7 +36,7 @@ class LodgingData(DataObject):
     def charges(self) -> Optional[List[LodgingCharge]]:
         """
         | Object that holds lodging related charges
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.lodging_charge.LodgingCharge`]
         """
         return self.__charges
@@ -50,7 +50,7 @@ class LodgingData(DataObject):
         """
         | The date the guest checks into (or plans to check in to) the facility. 
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__check_in_date
@@ -64,7 +64,7 @@ class LodgingData(DataObject):
         """
         | The date the guest checks out of (or plans to check out of) the facility. 
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__check_out_date
@@ -77,7 +77,7 @@ class LodgingData(DataObject):
     def folio_number(self) -> Optional[str]:
         """
         | The Lodging Folio Number assigned to the itemized statement of charges and credits associated with this lodging stay, which can be any combination of characters and numerals defined by the Merchant or authorized Third Party Processor.
-        
+
         Type: str
         """
         return self.__folio_number
@@ -93,7 +93,7 @@ class LodgingData(DataObject):
         
         * true - The room reservation is confirmed
         * false - The room reservation is not confirmed
-        
+
         Type: bool
         """
         return self.__is_confirmed_reservation
@@ -109,7 +109,7 @@ class LodgingData(DataObject):
         
         * true - The facility conform to the requirements
         * false - The facility doesn't conform to the requirements
-        
+
         Type: bool
         """
         return self.__is_facility_fire_safety_conform
@@ -125,7 +125,7 @@ class LodgingData(DataObject):
         
         * true - The customer is a no show
         * false - Not applicable
-        
+
         Type: bool
         """
         return self.__is_no_show
@@ -141,7 +141,7 @@ class LodgingData(DataObject):
         
         * true - A smoking room is preferred
         * false - A non-smoking room is preferred
-        
+
         Type: bool
         """
         return self.__is_preference_smoking_room
@@ -154,7 +154,7 @@ class LodgingData(DataObject):
     def number_of_adults(self) -> Optional[int]:
         """
         | The total number of adult guests staying (or planning to stay) at the facility (i.e., all booked rooms)
-        
+
         Type: int
         """
         return self.__number_of_adults
@@ -167,7 +167,7 @@ class LodgingData(DataObject):
     def number_of_nights(self) -> Optional[int]:
         """
         | The number of nights for the lodging stay
-        
+
         Type: int
         """
         return self.__number_of_nights
@@ -180,7 +180,7 @@ class LodgingData(DataObject):
     def number_of_rooms(self) -> Optional[int]:
         """
         | The number of rooms rented for the lodging stay
-        
+
         Type: int
         """
         return self.__number_of_rooms
@@ -199,7 +199,7 @@ class LodgingData(DataObject):
         * advancedDeposit - Submitted charges are for an Advanced Deposit to reserve one or more rooms
         
         | If no value is submitted the default value lodging is used.
-        
+
         Type: str
         """
         return self.__program_code
@@ -212,7 +212,7 @@ class LodgingData(DataObject):
     def property_customer_service_phone_number(self) -> Optional[str]:
         """
         | The international customer service phone number of the facility
-        
+
         Type: str
         """
         return self.__property_customer_service_phone_number
@@ -225,7 +225,7 @@ class LodgingData(DataObject):
     def property_phone_number(self) -> Optional[str]:
         """
         | The local phone number of the facility in an international phone number format
-        
+
         Type: str
         """
         return self.__property_phone_number
@@ -238,7 +238,7 @@ class LodgingData(DataObject):
     def renter_name(self) -> Optional[str]:
         """
         | Name of the person or business entity charged for the reservation and/or lodging stay
-        
+
         Type: str
         """
         return self.__renter_name
@@ -251,7 +251,7 @@ class LodgingData(DataObject):
     def rooms(self) -> Optional[List[LodgingRoom]]:
         """
         | Object that holds lodging related room data
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.lodging_room.LodgingRoom`]
         """
         return self.__rooms

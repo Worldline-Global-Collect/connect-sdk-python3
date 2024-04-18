@@ -17,7 +17,7 @@ class KeyValuePair(DataObject):
     def key(self) -> Optional[str]:
         """
         | Name of the key or property
-        
+
         Type: str
         """
         return self.__key
@@ -30,7 +30,7 @@ class KeyValuePair(DataObject):
     def value(self) -> Optional[str]:
         """
         | Value of the key or property
-        
+
         Type: str
         """
         return self.__value

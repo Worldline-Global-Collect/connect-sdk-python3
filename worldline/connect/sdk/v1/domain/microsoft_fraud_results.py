@@ -22,7 +22,7 @@ class MicrosoftFraudResults(DataObject):
     def clause_name(self) -> Optional[str]:
         """
         | Name of the clause within the applied policy that was triggered during the evaluation of this transaction.
-        
+
         Type: str
         """
         return self.__clause_name
@@ -35,7 +35,7 @@ class MicrosoftFraudResults(DataObject):
     def device_country_code(self) -> Optional[str]:
         """
         | The country of the customer determined by Microsoft Device Fingerprinting.
-        
+
         Type: str
         """
         return self.__device_country_code
@@ -48,7 +48,7 @@ class MicrosoftFraudResults(DataObject):
     def device_id(self) -> Optional[str]:
         """
         | This is the device fingerprint value. Based on the amount of data that the device fingerprint collector script was able to collect, this will be a proxy ID for the device used by the customer. 
-        
+
         Type: str
         """
         return self.__device_id
@@ -61,7 +61,7 @@ class MicrosoftFraudResults(DataObject):
     def fraud_score(self) -> Optional[int]:
         """
         | Result of the Microsoft Fraud Protection check. This contains the normalized fraud score from a scale of 0 to 100. A higher score indicates an increased risk of fraud.
-        
+
         Type: int
         """
         return self.__fraud_score
@@ -74,7 +74,7 @@ class MicrosoftFraudResults(DataObject):
     def policy_applied(self) -> Optional[str]:
         """
         | Name of the policy that was applied on during the evaluation of this transaction.
-        
+
         Type: str
         """
         return self.__policy_applied
@@ -87,7 +87,7 @@ class MicrosoftFraudResults(DataObject):
     def true_ip_address(self) -> Optional[str]:
         """
         | The true IP address as determined by Microsoft Device Fingerprinting.
-        
+
         Type: str
         """
         return self.__true_ip_address
@@ -100,7 +100,7 @@ class MicrosoftFraudResults(DataObject):
     def user_device_type(self) -> Optional[str]:
         """
         | The type of device used by the customer.
-        
+
         Type: str
         """
         return self.__user_device_type

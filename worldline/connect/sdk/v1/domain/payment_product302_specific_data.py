@@ -16,7 +16,7 @@ class PaymentProduct302SpecificData(DataObject):
     def networks(self) -> Optional[List[str]]:
         """
         | The networks that can be used in the current payment context. The strings that represent the networks in the array are identical to the strings that Apple uses in their documentation <https://developer.apple.com/reference/passkit/pkpaymentnetwork>.For instance: "Visa".
-        
+
         Type: list[str]
         """
         return self.__networks

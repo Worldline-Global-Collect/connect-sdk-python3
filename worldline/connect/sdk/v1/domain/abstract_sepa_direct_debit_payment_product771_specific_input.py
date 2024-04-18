@@ -16,7 +16,7 @@ class AbstractSepaDirectDebitPaymentProduct771SpecificInput(DataObject):
     def mandate_reference(self) -> Optional[str]:
         """
         Type: str
-        
+
         Deprecated; Use existingUniqueMandateReference or mandate.uniqueMandateReference instead
         """
         return self.__mandate_reference

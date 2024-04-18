@@ -18,7 +18,7 @@ class TokenNonSepaDirectDebitPaymentProduct705SpecificData(DataObject):
     def authorisation_id(self) -> Optional[str]:
         """
         | Core reference number for the direct debit instruction in UK
-        
+
         Type: str
         """
         return self.__authorisation_id
@@ -31,7 +31,7 @@ class TokenNonSepaDirectDebitPaymentProduct705SpecificData(DataObject):
     def bank_account_bban(self) -> Optional[BankAccountBban]:
         """
         | Object containing account holder name and bank account information
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_bban.BankAccountBban`
         """
         return self.__bank_account_bban

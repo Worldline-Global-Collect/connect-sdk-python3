@@ -22,7 +22,7 @@ class CustomerBase(DataObject):
     def company_information(self) -> Optional[CompanyInformation]:
         """
         | Object containing company information
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.company_information.CompanyInformation`
         """
         return self.__company_information
@@ -35,7 +35,7 @@ class CustomerBase(DataObject):
     def merchant_customer_id(self) -> Optional[str]:
         """
         | Your identifier for the customer. It can be used as a search criteria in the GlobalCollect Payment Console and is also included in the GlobalCollect report files. It is used in the fraud-screening process for payments on the Ogone Payment Platform.
-        
+
         Type: str
         """
         return self.__merchant_customer_id
@@ -48,9 +48,9 @@ class CustomerBase(DataObject):
     def vat_number(self) -> Optional[str]:
         """
         | Local VAT number of the company
-        
+
         Type: str
-        
+
         Deprecated; Use companyInformation.vatNumber instead
         """
         return self.__vat_number

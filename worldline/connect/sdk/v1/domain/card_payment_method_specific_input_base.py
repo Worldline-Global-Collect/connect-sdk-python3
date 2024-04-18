@@ -17,7 +17,7 @@ class CardPaymentMethodSpecificInputBase(AbstractCardPaymentMethodSpecificInput)
     def three_d_secure(self) -> Optional[ThreeDSecureBase]:
         """
         | Object containing specific data regarding 3-D Secure
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.three_d_secure_base.ThreeDSecureBase`
         """
         return self.__three_d_secure

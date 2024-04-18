@@ -32,7 +32,7 @@ class PaymentProductFieldValidators(DataObject):
     def boleto_bancario_requiredness(self) -> Optional[BoletoBancarioRequirednessValidator]:
         """
         | Indicates the requiredness of the field based on the fiscalnumber for Boleto Bancario
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.boleto_bancario_requiredness_validator.BoletoBancarioRequirednessValidator`
         """
         return self.__boleto_bancario_requiredness
@@ -45,7 +45,7 @@ class PaymentProductFieldValidators(DataObject):
     def email_address(self) -> Optional[EmptyValidator]:
         """
         | Indicates that the content should be validated against the rules for an email address
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.empty_validator.EmptyValidator`
         """
         return self.__email_address
@@ -58,7 +58,7 @@ class PaymentProductFieldValidators(DataObject):
     def expiration_date(self) -> Optional[EmptyValidator]:
         """
         | Indicates that the content should be validated against the rules for an expiration date (it should be in the future)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.empty_validator.EmptyValidator`
         """
         return self.__expiration_date
@@ -71,7 +71,7 @@ class PaymentProductFieldValidators(DataObject):
     def fixed_list(self) -> Optional[FixedListValidator]:
         """
         | Indicates that content should be one of the, in this object, listed items
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.fixed_list_validator.FixedListValidator`
         """
         return self.__fixed_list
@@ -84,7 +84,7 @@ class PaymentProductFieldValidators(DataObject):
     def iban(self) -> Optional[EmptyValidator]:
         """
         | Indicates that the content of this (iban) field needs to validated against format checks and modulo check (as described in ISO 7064)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.empty_validator.EmptyValidator`
         """
         return self.__iban
@@ -97,7 +97,7 @@ class PaymentProductFieldValidators(DataObject):
     def length(self) -> Optional[LengthValidator]:
         """
         | Indicates that the content needs to be validated against length criteria defined in this object
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.length_validator.LengthValidator`
         """
         return self.__length
@@ -110,7 +110,7 @@ class PaymentProductFieldValidators(DataObject):
     def luhn(self) -> Optional[EmptyValidator]:
         """
         | Indicates that the content needs to be validated using a LUHN check
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.empty_validator.EmptyValidator`
         """
         return self.__luhn
@@ -123,7 +123,7 @@ class PaymentProductFieldValidators(DataObject):
     def range(self) -> Optional[RangeValidator]:
         """
         | Indicates that the content needs to be validated against a, in this object, defined range
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.range_validator.RangeValidator`
         """
         return self.__range
@@ -136,7 +136,7 @@ class PaymentProductFieldValidators(DataObject):
     def regular_expression(self) -> Optional[RegularExpressionValidator]:
         """
         | A string representing the regular expression to check
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.regular_expression_validator.RegularExpressionValidator`
         """
         return self.__regular_expression
@@ -149,7 +149,7 @@ class PaymentProductFieldValidators(DataObject):
     def resident_id_number(self) -> Optional[EmptyValidator]:
         """
         | Indicates that the content needs to be validated as per the Chinese resident identity number format
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.empty_validator.EmptyValidator`
         """
         return self.__resident_id_number
@@ -162,7 +162,7 @@ class PaymentProductFieldValidators(DataObject):
     def terms_and_conditions(self) -> Optional[EmptyValidator]:
         """
         | Indicates that the content should be validated as such that the customer has accepted the field as if they were terms and conditions of a service
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.empty_validator.EmptyValidator`
         """
         return self.__terms_and_conditions

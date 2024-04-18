@@ -27,7 +27,7 @@ class CustomerDevice(DataObject):
     def accept_header(self) -> Optional[str]:
         """
         | The accept-header of the customer client from the HTTP Headers.
-        
+
         Type: str
         """
         return self.__accept_header
@@ -40,7 +40,7 @@ class CustomerDevice(DataObject):
     def browser_data(self) -> Optional[BrowserData]:
         """
         | Object containing information regarding the browser of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.browser_data.BrowserData`
         """
         return self.__browser_data
@@ -57,7 +57,7 @@ class CustomerDevice(DataObject):
         * automatically - All fields filled automatically
         * automatically-but-modified - All fields filled automatically, but some fields were modified manually
         * manually - All fields were entered manually
-        
+
         Type: str
         """
         return self.__default_form_fill
@@ -70,7 +70,7 @@ class CustomerDevice(DataObject):
     def device_fingerprint_transaction_id(self) -> Optional[str]:
         """
         | One must set the deviceFingerprintTransactionId received by the response of the endpoint /{merchant}/products/{paymentProductId}/deviceFingerprint
-        
+
         Type: str
         """
         return self.__device_fingerprint_transaction_id
@@ -83,7 +83,7 @@ class CustomerDevice(DataObject):
     def ip_address(self) -> Optional[str]:
         """
         | The IP address of the customer client from the HTTP Headers.
-        
+
         Type: str
         """
         return self.__ip_address
@@ -98,7 +98,7 @@ class CustomerDevice(DataObject):
         | Locale of the client device/browser. Returned in the browser from the navigator.language property.
         
         | If you use the latest version of our JavaScript Client SDK, we will collect this data and include it in the encryptedCustomerInput property. We will then automatically populate this data if available.
-        
+
         Type: str
         """
         return self.__locale
@@ -113,7 +113,7 @@ class CustomerDevice(DataObject):
         | Offset in minutes of timezone of the client versus the UTC. Value is returned by the JavaScript getTimezoneOffset() Method.
         
         | If you use the latest version of our JavaScript Client SDK, we will collect this data and include it in the encryptedCustomerInput property. We will then automatically populate this data if available.
-        
+
         Type: str
         """
         return self.__timezone_offset_utc_minutes
@@ -128,7 +128,7 @@ class CustomerDevice(DataObject):
         | User-Agent of the client device/browser from the HTTP Headers.
         
         | As a fall-back we will use the userAgent that might be included in the encryptedCustomerInput, but this is captured client side using JavaScript and might be different.
-        
+
         Type: str
         """
         return self.__user_agent

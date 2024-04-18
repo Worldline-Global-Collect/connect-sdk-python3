@@ -18,7 +18,7 @@ class RetailDecisionsCCFraudCheckOutput(DataObject):
     def fraud_code(self) -> Optional[str]:
         """
         | Provides additional information about the fraud result
-        
+
         Type: str
         """
         return self.__fraud_code
@@ -31,7 +31,7 @@ class RetailDecisionsCCFraudCheckOutput(DataObject):
     def fraud_neural(self) -> Optional[str]:
         """
         | The raw score returned by the Neural check returned by the evaluation of the transaction
-        
+
         Type: str
         """
         return self.__fraud_neural
@@ -44,7 +44,7 @@ class RetailDecisionsCCFraudCheckOutput(DataObject):
     def fraud_rcf(self) -> Optional[str]:
         """
         | List of RuleCategoryFlags as setup in the Retail Decisions system that lead to the result
-        
+
         Type: str
         """
         return self.__fraud_rcf

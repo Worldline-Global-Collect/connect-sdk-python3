@@ -24,7 +24,7 @@ class HostedMandateInfo(DataObject):
         | An alias for the mandate. This can be used to visually represent the mandate.
         | Do not include any unobfuscated sensitive data in the alias.
         | Default value if not provided is the obfuscated IBAN of the customer.
-        
+
         Type: str
         """
         return self.__alias
@@ -37,7 +37,7 @@ class HostedMandateInfo(DataObject):
     def customer(self) -> Optional[MandateCustomer]:
         """
         | Customer object containing customer specific inputs
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mandate_customer.MandateCustomer`
         """
         return self.__customer
@@ -50,7 +50,7 @@ class HostedMandateInfo(DataObject):
     def customer_reference(self) -> Optional[str]:
         """
         | The unique identifier of a customer
-        
+
         Type: str
         """
         return self.__customer_reference
@@ -66,7 +66,7 @@ class HostedMandateInfo(DataObject):
         |  
         * UNIQUE
         * RECURRING
-        
+
         Type: str
         """
         return self.__recurrence_type
@@ -82,7 +82,7 @@ class HostedMandateInfo(DataObject):
         |  
         * UNSIGNED
         * SMS
-        
+
         Type: str
         """
         return self.__signature_type
@@ -95,7 +95,7 @@ class HostedMandateInfo(DataObject):
     def unique_mandate_reference(self) -> Optional[str]:
         """
         | The unique identifier of the mandate
-        
+
         Type: str
         """
         return self.__unique_mandate_reference

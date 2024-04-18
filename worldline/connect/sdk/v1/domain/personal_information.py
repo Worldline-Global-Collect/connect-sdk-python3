@@ -22,7 +22,7 @@ class PersonalInformation(DataObject):
         """
         | The date of birth of the customer
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__date_of_birth
@@ -39,7 +39,7 @@ class PersonalInformation(DataObject):
         * male
         * female
         * unknown or empty
-        
+
         Type: str
         """
         return self.__gender
@@ -52,7 +52,7 @@ class PersonalInformation(DataObject):
     def identification(self) -> Optional[PersonalIdentification]:
         """
         | Object containing identification documents information
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.personal_identification.PersonalIdentification`
         """
         return self.__identification
@@ -65,7 +65,7 @@ class PersonalInformation(DataObject):
     def name(self) -> Optional[PersonalName]:
         """
         | Object containing the name details of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.personal_name.PersonalName`
         """
         return self.__name

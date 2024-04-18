@@ -37,7 +37,7 @@ class PaymentOutput(OrderOutput):
     def amount_paid(self) -> Optional[int]:
         """
         | Amount that has been paid
-        
+
         Type: int
         """
         return self.__amount_paid
@@ -50,7 +50,7 @@ class PaymentOutput(OrderOutput):
     def amount_reversed(self) -> Optional[int]:
         """
         | Amount that has been reversed
-        
+
         Type: int
         """
         return self.__amount_reversed
@@ -63,7 +63,7 @@ class PaymentOutput(OrderOutput):
     def bank_transfer_payment_method_specific_output(self) -> Optional[BankTransferPaymentMethodSpecificOutput]:
         """
         | Object containing the bank transfer payment method details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_transfer_payment_method_specific_output.BankTransferPaymentMethodSpecificOutput`
         """
         return self.__bank_transfer_payment_method_specific_output
@@ -76,7 +76,7 @@ class PaymentOutput(OrderOutput):
     def card_payment_method_specific_output(self) -> Optional[CardPaymentMethodSpecificOutput]:
         """
         | Object containing the card payment method details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput`
         """
         return self.__card_payment_method_specific_output
@@ -89,7 +89,7 @@ class PaymentOutput(OrderOutput):
     def cash_payment_method_specific_output(self) -> Optional[CashPaymentMethodSpecificOutput]:
         """
         | Object containing the cash payment method details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.cash_payment_method_specific_output.CashPaymentMethodSpecificOutput`
         """
         return self.__cash_payment_method_specific_output
@@ -102,7 +102,7 @@ class PaymentOutput(OrderOutput):
     def direct_debit_payment_method_specific_output(self) -> Optional[NonSepaDirectDebitPaymentMethodSpecificOutput]:
         """
         | Object containing the non SEPA direct debit payment method details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.non_sepa_direct_debit_payment_method_specific_output.NonSepaDirectDebitPaymentMethodSpecificOutput`
         """
         return self.__direct_debit_payment_method_specific_output
@@ -115,7 +115,7 @@ class PaymentOutput(OrderOutput):
     def e_invoice_payment_method_specific_output(self) -> Optional[EInvoicePaymentMethodSpecificOutput]:
         """
         | Object containing the e-invoice payment method details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.e_invoice_payment_method_specific_output.EInvoicePaymentMethodSpecificOutput`
         """
         return self.__e_invoice_payment_method_specific_output
@@ -128,7 +128,7 @@ class PaymentOutput(OrderOutput):
     def invoice_payment_method_specific_output(self) -> Optional[InvoicePaymentMethodSpecificOutput]:
         """
         | Object containing the invoice payment method details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.invoice_payment_method_specific_output.InvoicePaymentMethodSpecificOutput`
         """
         return self.__invoice_payment_method_specific_output
@@ -141,7 +141,7 @@ class PaymentOutput(OrderOutput):
     def mobile_payment_method_specific_output(self) -> Optional[MobilePaymentMethodSpecificOutput]:
         """
         | Object containing the mobile payment method details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput`
         """
         return self.__mobile_payment_method_specific_output
@@ -163,7 +163,7 @@ class PaymentOutput(OrderOutput):
         * eInvoice
         * invoice
         * redirect
-        
+
         Type: str
         """
         return self.__payment_method
@@ -176,7 +176,7 @@ class PaymentOutput(OrderOutput):
     def redirect_payment_method_specific_output(self) -> Optional[RedirectPaymentMethodSpecificOutput]:
         """
         | Object containing the redirect payment product details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_method_specific_output.RedirectPaymentMethodSpecificOutput`
         """
         return self.__redirect_payment_method_specific_output
@@ -189,7 +189,7 @@ class PaymentOutput(OrderOutput):
     def reversal_reason(self) -> Optional[str]:
         """
         | The reason description given for the reversedAmount property.
-        
+
         Type: str
         """
         return self.__reversal_reason
@@ -202,7 +202,7 @@ class PaymentOutput(OrderOutput):
     def sepa_direct_debit_payment_method_specific_output(self) -> Optional[SepaDirectDebitPaymentMethodSpecificOutput]:
         """
         | Object containing the SEPA direct debit details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.sepa_direct_debit_payment_method_specific_output.SepaDirectDebitPaymentMethodSpecificOutput`
         """
         return self.__sepa_direct_debit_payment_method_specific_output

@@ -16,7 +16,7 @@ class TokenEWalletData(DataObject):
     def billing_agreement_id(self) -> Optional[str]:
         """
         | Identification of the PayPal recurring billing agreement
-        
+
         Type: str
         """
         return self.__billing_agreement_id

@@ -17,7 +17,7 @@ class RangeValidator(DataObject):
     def max_value(self) -> Optional[int]:
         """
         | Upper value of the range that is still valid
-        
+
         Type: int
         """
         return self.__max_value
@@ -30,7 +30,7 @@ class RangeValidator(DataObject):
     def min_value(self) -> Optional[int]:
         """
         | Lower value of the range that is still valid
-        
+
         Type: int
         """
         return self.__min_value

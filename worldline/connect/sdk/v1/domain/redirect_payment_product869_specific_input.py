@@ -18,7 +18,7 @@ class RedirectPaymentProduct869SpecificInput(DataObject):
     def issuer_id(self) -> Optional[str]:
         """
         | ID of the issuing bank of the customer. A list of available issuerIDs can be obtained by using the retrieve payment product directory API.
-        
+
         Type: str
         """
         return self.__issuer_id
@@ -31,7 +31,7 @@ class RedirectPaymentProduct869SpecificInput(DataObject):
     def resident_id_name(self) -> Optional[str]:
         """
         | The name as described on the Resident Identity Card of the People's Republic of China.
-        
+
         Type: str
         """
         return self.__resident_id_name
@@ -44,7 +44,7 @@ class RedirectPaymentProduct869SpecificInput(DataObject):
     def resident_id_number(self) -> Optional[str]:
         """
         | The identification number as described on the Resident Identity Card of the People's Republic of China.
-        
+
         Type: str
         """
         return self.__resident_id_number

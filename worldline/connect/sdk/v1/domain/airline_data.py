@@ -42,7 +42,7 @@ class AirlineData(DataObject):
     def agent_numeric_code(self) -> Optional[str]:
         """
         | Numeric code identifying the agent
-        
+
         Type: str
         """
         return self.__agent_numeric_code
@@ -55,7 +55,7 @@ class AirlineData(DataObject):
     def code(self) -> Optional[str]:
         """
         | Airline numeric code
-        
+
         Type: str
         """
         return self.__code
@@ -69,7 +69,7 @@ class AirlineData(DataObject):
         """
         | Date of the Flight
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__flight_date
@@ -82,7 +82,7 @@ class AirlineData(DataObject):
     def flight_legs(self) -> Optional[List[AirlineFlightLeg]]:
         """
         | Object that holds the data on the individual legs of the ticket
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.airline_flight_leg.AirlineFlightLeg`]
         """
         return self.__flight_legs
@@ -95,7 +95,7 @@ class AirlineData(DataObject):
     def invoice_number(self) -> Optional[str]:
         """
         | Airline tracing number
-        
+
         Type: str
         """
         return self.__invoice_number
@@ -109,7 +109,7 @@ class AirlineData(DataObject):
         """
         * true = The ticket is an E-Ticket
         * false = the ticket is not an E-Ticket
-        
+
         Type: bool
         """
         return self.__is_e_ticket
@@ -123,9 +123,9 @@ class AirlineData(DataObject):
         """
         * true = a registered known customer
         * false = unknown customer
-        
+
         Type: bool
-        
+
         Deprecated; Use Order.customer.accountType instead
         """
         return self.__is_registered_customer
@@ -139,7 +139,7 @@ class AirlineData(DataObject):
         """
         * true - Restricted, the ticket is non-refundable
         * false - No restrictions, the ticket is (partially) refundable
-        
+
         Type: bool
         """
         return self.__is_restricted_ticket
@@ -153,7 +153,7 @@ class AirlineData(DataObject):
         """
         * true - The payer is the ticket holder
         * false - The payer is not the ticket holder
-        
+
         Type: bool
         """
         return self.__is_third_party
@@ -167,7 +167,7 @@ class AirlineData(DataObject):
         """
         | This is the date of issue recorded in the airline systemIn a case of multiple issuances of the same ticket to a cardholder, you should use the last ticket date.
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__issue_date
@@ -180,7 +180,7 @@ class AirlineData(DataObject):
     def merchant_customer_id(self) -> Optional[str]:
         """
         | Your ID of the customer in the context of the airline data
-        
+
         Type: str
         """
         return self.__merchant_customer_id
@@ -193,7 +193,7 @@ class AirlineData(DataObject):
     def name(self) -> Optional[str]:
         """
         | Name of the airline
-        
+
         Type: str
         """
         return self.__name
@@ -206,7 +206,7 @@ class AirlineData(DataObject):
     def number_in_party(self) -> Optional[int]:
         """
         | Total number of passengers in the party. If the the property numberInParty is not present, then the number of passengers will be used on the WL Online Payment Acceptance Platform.
-        
+
         Type: int
         """
         return self.__number_in_party
@@ -219,7 +219,7 @@ class AirlineData(DataObject):
     def passenger_name(self) -> Optional[str]:
         """
         | Name of passenger
-        
+
         Type: str
         """
         return self.__passenger_name
@@ -232,7 +232,7 @@ class AirlineData(DataObject):
     def passengers(self) -> Optional[List[AirlinePassenger]]:
         """
         | Object that holds the data on the individual passengers (this object is used for fraud screening on the Ogone Payment Platform)
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.airline_passenger.AirlinePassenger`]
         """
         return self.__passengers
@@ -246,7 +246,7 @@ class AirlineData(DataObject):
         """
         | Place of issue
         | For sales in the US the last two characters (pos 14-15) must be the US state code.
-        
+
         Type: str
         """
         return self.__place_of_issue
@@ -259,7 +259,7 @@ class AirlineData(DataObject):
     def pnr(self) -> Optional[str]:
         """
         | Passenger name record
-        
+
         Type: str
         """
         return self.__pnr
@@ -272,7 +272,7 @@ class AirlineData(DataObject):
     def point_of_sale(self) -> Optional[str]:
         """
         | IATA point of sale name
-        
+
         Type: str
         """
         return self.__point_of_sale
@@ -285,7 +285,7 @@ class AirlineData(DataObject):
     def pos_city_code(self) -> Optional[str]:
         """
         | city code of the point of sale
-        
+
         Type: str
         """
         return self.__pos_city_code
@@ -304,7 +304,7 @@ class AirlineData(DataObject):
         * airport-ticket-office
         * ticket-by-mail
         * ticket-on-departure
-        
+
         Type: str
         """
         return self.__ticket_delivery_method
@@ -318,12 +318,11 @@ class AirlineData(DataObject):
         """
         | The ticket or document number. On the Ogone Payment Platform  and the GlobalCollect Payment Platform it contains:
         
-        
         * Airline code: 3-digit airline code number
         * Form code: A maximum of 3 digits indicating the type of document, the source of issue and the number of coupons it contains
         * Serial number: A maximum of 8 digits allocated on a sequential basis, provided that the total number of digits allocated to the form code and serial number shall not exceed ten
         * TICKETNUMBER can be replaced with PNR if the ticket number is unavailable
-        
+
         Type: str
         """
         return self.__ticket_number
@@ -336,7 +335,7 @@ class AirlineData(DataObject):
     def total_fare(self) -> Optional[int]:
         """
         | Total fare for all legs on the ticket, excluding taxes and fees. If multiple tickets are purchased, this is the total fare for all tickets
-        
+
         Type: int
         """
         return self.__total_fare
@@ -349,7 +348,7 @@ class AirlineData(DataObject):
     def total_fee(self) -> Optional[int]:
         """
         | Total fee for all legs on the ticket. If multiple tickets are purchased, this is the total fee for all tickets
-        
+
         Type: int
         """
         return self.__total_fee
@@ -362,7 +361,7 @@ class AirlineData(DataObject):
     def total_taxes(self) -> Optional[int]:
         """
         | Total taxes for all legs on the ticket. If multiple tickets are purchased, this is the total taxes for all tickets
-        
+
         Type: int
         """
         return self.__total_taxes
@@ -375,7 +374,7 @@ class AirlineData(DataObject):
     def travel_agency_name(self) -> Optional[str]:
         """
         | Name of the travel agency issuing the ticket. For direct airline integration, leave this property blank on the Ogone Payment Platform.
-        
+
         Type: str
         """
         return self.__travel_agency_name

@@ -18,7 +18,7 @@ class GetHostedMandateManagementResponse(DataObject):
     def mandate(self) -> Optional[MandateResponse]:
         """
         | When a mandate has been created during the hosted mandate management session this object will return the details.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mandate_response.MandateResponse`
         """
         return self.__mandate
@@ -38,7 +38,7 @@ class GetHostedMandateManagementResponse(DataObject):
         * CANCELLED_BY_CONSUMER - The session was cancelled before a mandate was created
         
         | .
-        
+
         Type: str
         """
         return self.__status

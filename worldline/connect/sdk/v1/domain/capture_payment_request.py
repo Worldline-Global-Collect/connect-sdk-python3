@@ -20,7 +20,7 @@ class CapturePaymentRequest(DataObject):
         | The amount can be lower than the amount that was authorized, but not higher.
         | If left empty, the full amount will be captured and the request will be final.
         | If the full amount is captured, the request will also be final.
-        
+
         Type: int
         """
         return self.__amount
@@ -34,7 +34,7 @@ class CapturePaymentRequest(DataObject):
         """
         | This property indicates whether this will be the final capture of this transaction.
         | The default value for this property is false.
-        
+
         Type: bool
         """
         return self.__is_final

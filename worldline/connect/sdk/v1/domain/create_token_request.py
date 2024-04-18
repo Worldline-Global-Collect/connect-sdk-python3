@@ -25,7 +25,7 @@ class CreateTokenRequest(DataObject):
     def card(self) -> Optional[TokenCard]:
         """
         | Object containing card details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_card.TokenCard`
         """
         return self.__card
@@ -38,7 +38,7 @@ class CreateTokenRequest(DataObject):
     def e_wallet(self) -> Optional[TokenEWallet]:
         """
         | Object containing eWallet details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_e_wallet.TokenEWallet`
         """
         return self.__e_wallet
@@ -52,7 +52,7 @@ class CreateTokenRequest(DataObject):
         """
         | Data that was encrypted client side containing all customer entered data elements like card data.
         | Note: Because this data can only be submitted once to our system and contains encrypted card data you should not store it. As the data was captured within the context of a client session you also need to submit it to us before the session has expired.
-        
+
         Type: str
         """
         return self.__encrypted_customer_input
@@ -65,7 +65,7 @@ class CreateTokenRequest(DataObject):
     def non_sepa_direct_debit(self) -> Optional[TokenNonSepaDirectDebit]:
         """
         | Object containing non SEPA Direct Debit details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_non_sepa_direct_debit.TokenNonSepaDirectDebit`
         """
         return self.__non_sepa_direct_debit
@@ -79,7 +79,7 @@ class CreateTokenRequest(DataObject):
         """
         | Payment product identifier
         | Please see payment products <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/paymentproducts.html> for a full overview of possible values.
-        
+
         Type: int
         """
         return self.__payment_product_id
@@ -92,7 +92,7 @@ class CreateTokenRequest(DataObject):
     def sepa_direct_debit(self) -> Optional[TokenSepaDirectDebitWithoutCreditor]:
         """
         | Object containing SEPA Direct Debit details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_sepa_direct_debit_without_creditor.TokenSepaDirectDebitWithoutCreditor`
         """
         return self.__sepa_direct_debit

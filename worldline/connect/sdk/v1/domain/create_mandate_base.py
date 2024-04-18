@@ -25,7 +25,7 @@ class CreateMandateBase(DataObject):
         | An alias for the mandate. This can be used to visually represent the mandate.
         | Do not include any unobfuscated sensitive data in the alias.
         | Default value if not provided is the obfuscated IBAN of the customer.
-        
+
         Type: str
         """
         return self.__alias
@@ -38,7 +38,7 @@ class CreateMandateBase(DataObject):
     def customer(self) -> Optional[MandateCustomer]:
         """
         | Customer object containing customer specific inputs
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mandate_customer.MandateCustomer`
         """
         return self.__customer
@@ -51,7 +51,7 @@ class CreateMandateBase(DataObject):
     def customer_reference(self) -> Optional[str]:
         """
         | The unique identifier of a customer
-        
+
         Type: str
         """
         return self.__customer_reference
@@ -64,7 +64,7 @@ class CreateMandateBase(DataObject):
     def language(self) -> Optional[str]:
         """
         | The language code of the customer, one of de, en, es, fr, it, nl, si, sk, sv.
-        
+
         Type: str
         """
         return self.__language
@@ -80,7 +80,7 @@ class CreateMandateBase(DataObject):
         |  
         * UNIQUE
         * RECURRING
-        
+
         Type: str
         """
         return self.__recurrence_type
@@ -96,7 +96,7 @@ class CreateMandateBase(DataObject):
         |  
         * UNSIGNED
         * SMS
-        
+
         Type: str
         """
         return self.__signature_type
@@ -109,7 +109,7 @@ class CreateMandateBase(DataObject):
     def unique_mandate_reference(self) -> Optional[str]:
         """
         | The unique identifier of the mandate. If you do not provide one, we will generate one for you.
-        
+
         Type: str
         """
         return self.__unique_mandate_reference

@@ -24,7 +24,7 @@ class CustomerDeviceRiskAssessment(DataObject):
         * automatically - All fields filled automatically
         * automatically-but-modified - All fields filled automatically, but some fields were modified manually
         * manually - All fields were entered manually
-        
+
         Type: str
         """
         return self.__default_form_fill
@@ -37,7 +37,7 @@ class CustomerDeviceRiskAssessment(DataObject):
     def device_fingerprint_transaction_id(self) -> Optional[str]:
         """
         | One must set the deviceFingerprintTransactionId received by the response of the endpoint /{merchant}/products/{paymentProductId}/deviceFingerprint
-        
+
         Type: str
         """
         return self.__device_fingerprint_transaction_id

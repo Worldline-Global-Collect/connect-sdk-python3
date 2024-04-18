@@ -19,7 +19,7 @@ class PaymentProduct806SpecificOutput(DataObject):
     def billing_address(self) -> Optional[Address]:
         """
         | Object containing the billing address details of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.address.Address`
         """
         return self.__billing_address
@@ -32,7 +32,7 @@ class PaymentProduct806SpecificOutput(DataObject):
     def customer_account(self) -> Optional[TrustlyBankAccount]:
         """
         | Object containing the account details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.trustly_bank_account.TrustlyBankAccount`
         """
         return self.__customer_account

@@ -28,7 +28,7 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def authorisation_code(self) -> Optional[str]:
         """
         | Card Authorization code as returned by the acquirer
-        
+
         Type: str
         """
         return self.__authorisation_code
@@ -41,7 +41,7 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def card(self) -> Optional[CardEssentials]:
         """
         | Object containing card details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.card_essentials.CardEssentials`
         """
         return self.__card
@@ -54,7 +54,7 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def fraud_results(self) -> Optional[CardFraudResults]:
         """
         | Fraud results contained in the CardFraudResults object
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.card_fraud_results.CardFraudResults`
         """
         return self.__fraud_results
@@ -68,7 +68,7 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
         """
         | The unique scheme transactionId of the initial transaction that was performed with SCA.
         | Should be stored by the merchant to allow it to be submitted in future transactions.
-        
+
         Type: str
         """
         return self.__initial_scheme_transaction_id
@@ -82,7 +82,7 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
         """
         | The unique scheme transactionId of this transaction.
         | Should be stored by the merchant to allow it to be submitted in future transactions. Use this value in case the initialSchemeTransactionId property is empty.
-        
+
         Type: str
         """
         return self.__scheme_transaction_id
@@ -95,7 +95,7 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def three_d_secure_results(self) -> Optional[ThreeDSecureResults]:
         """
         | 3D Secure results object
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.three_d_secure_results.ThreeDSecureResults`
         """
         return self.__three_d_secure_results
@@ -108,7 +108,7 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def token(self) -> Optional[str]:
         """
         | If a token was used for or created during the payment, then the ID of that token.
-        
+
         Type: str
         """
         return self.__token

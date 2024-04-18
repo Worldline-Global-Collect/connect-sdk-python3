@@ -17,7 +17,7 @@ class ThirdPartyData(DataObject):
     def payment_product863(self) -> Optional[PaymentProduct863ThirdPartyData]:
         """
         | Contains the third party data for payment product 863 (WeChat Pay).
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product863_third_party_data.PaymentProduct863ThirdPartyData`
         """
         return self.__payment_product863

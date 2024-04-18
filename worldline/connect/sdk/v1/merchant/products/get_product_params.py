@@ -12,7 +12,7 @@ from worldline.connect.sdk.communication.request_param import RequestParam
 class GetProductParams(ParamRequest):
     """
     Query parameters for Get payment product
-    
+
     See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/products/get.html
     """
 
@@ -29,7 +29,7 @@ class GetProductParams(ParamRequest):
     def country_code(self) -> Optional[str]:
         """
         | ISO 3166-1 alpha-2 country code
-        
+
         Type: str
         """
         return self.__country_code
@@ -42,7 +42,7 @@ class GetProductParams(ParamRequest):
     def currency_code(self) -> Optional[str]:
         """
         | Three-letter ISO currency code representing the currency for the amount
-        
+
         Type: str
         """
         return self.__currency_code
@@ -55,7 +55,7 @@ class GetProductParams(ParamRequest):
     def locale(self) -> Optional[str]:
         """
         | Locale used in the GUI towards the consumer. Please make sure that a language pack is configured for the locale you are submitting. If you submit a locale that is not setup on your account we will use the default language pack for your account. You can easily upload additional language packs and set the default language pack in the Configuration Center.
-        
+
         Type: str
         """
         return self.__locale
@@ -68,7 +68,7 @@ class GetProductParams(ParamRequest):
     def amount(self) -> Optional[int]:
         """
         | Amount in cents and always having 2 decimals
-        
+
         Type: int
         """
         return self.__amount
@@ -86,7 +86,7 @@ class GetProductParams(ParamRequest):
         * false
         
         | If this is omitted all payment products are returned.
-        
+
         Type: bool
         """
         return self.__is_recurring
@@ -104,7 +104,7 @@ class GetProductParams(ParamRequest):
         * false
         
         | If this is omitted all payment products are returned.
-        
+
         Type: bool
         """
         return self.__is_installments
@@ -121,7 +121,7 @@ class GetProductParams(ParamRequest):
         * fields - Don't return any data on fields of the payment product
         * accountsOnFile - Don't return any accounts on file data
         * translations - Don't return any label texts associated with the payment products
-        
+
         Type: list[str]
         """
         return self.__hide
@@ -142,7 +142,7 @@ class GetProductParams(ParamRequest):
     def force_basic_flow(self) -> Optional[bool]:
         """
         | Relevant only for payment product 3012 (Bancontact). A boolean that indicates if you want to force the response to return the fields of the basic flow. This can be useful in corner cases where you have enabled the enhanced flow which supports payment with the Bancontact app, but need access to the product fields without creating a payment first.
-        
+
         Type: bool
         """
         return self.__force_basic_flow

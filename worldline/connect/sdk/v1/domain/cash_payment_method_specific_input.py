@@ -29,9 +29,9 @@ class CashPaymentMethodSpecificInput(AbstractCashPaymentMethodSpecificInput):
     def payment_product1503_specific_input(self) -> Optional[CashPaymentProduct1503SpecificInput]:
         """
         | Object that holds the specific data for Boleto Bancario in Brazil (payment product 1503)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.cash_payment_product1503_specific_input.CashPaymentProduct1503SpecificInput`
-        
+
         Deprecated; No replacement
         """
         return self.__payment_product1503_specific_input
@@ -44,7 +44,7 @@ class CashPaymentMethodSpecificInput(AbstractCashPaymentMethodSpecificInput):
     def payment_product1504_specific_input(self) -> Optional[CashPaymentProduct1504SpecificInput]:
         """
         | Object that holds the specific data for Konbini in Japan (payment product 1504)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.cash_payment_product1504_specific_input.CashPaymentProduct1504SpecificInput`
         """
         return self.__payment_product1504_specific_input
@@ -57,7 +57,7 @@ class CashPaymentMethodSpecificInput(AbstractCashPaymentMethodSpecificInput):
     def payment_product1521_specific_input(self) -> Optional[CashPaymentProduct1521SpecificInput]:
         """
         | Object that holds the specific data for e-Pay (payment product 1521).
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.cash_payment_product1521_specific_input.CashPaymentProduct1521SpecificInput`
         """
         return self.__payment_product1521_specific_input
@@ -70,7 +70,7 @@ class CashPaymentMethodSpecificInput(AbstractCashPaymentMethodSpecificInput):
     def payment_product1522_specific_input(self) -> Optional[CashPaymentProduct1522SpecificInput]:
         """
         | Object that holds the specific data for Tesco - Paysbuy Cash (payment product 1522).
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.cash_payment_product1522_specific_input.CashPaymentProduct1522SpecificInput`
         """
         return self.__payment_product1522_specific_input
@@ -83,7 +83,7 @@ class CashPaymentMethodSpecificInput(AbstractCashPaymentMethodSpecificInput):
     def payment_product1523_specific_input(self) -> Optional[CashPaymentProduct1523SpecificInput]:
         """
         | Object that holds the specific data for ATM Transfers Indonesia(payment product 1523).
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.cash_payment_product1523_specific_input.CashPaymentProduct1523SpecificInput`
         """
         return self.__payment_product1523_specific_input
@@ -96,7 +96,7 @@ class CashPaymentMethodSpecificInput(AbstractCashPaymentMethodSpecificInput):
     def payment_product1524_specific_input(self) -> Optional[CashPaymentProduct1524SpecificInput]:
         """
         | Object that holds the specific data for DragonPay (payment product 1524).
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.cash_payment_product1524_specific_input.CashPaymentProduct1524SpecificInput`
         """
         return self.__payment_product1524_specific_input
@@ -109,7 +109,7 @@ class CashPaymentMethodSpecificInput(AbstractCashPaymentMethodSpecificInput):
     def payment_product1526_specific_input(self) -> Optional[CashPaymentProduct1526SpecificInput]:
         """
         | Object that holds the specific data for 7-11 MOLPay Cash (payment product 1526).
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.cash_payment_product1526_specific_input.CashPaymentProduct1526SpecificInput`
         """
         return self.__payment_product1526_specific_input

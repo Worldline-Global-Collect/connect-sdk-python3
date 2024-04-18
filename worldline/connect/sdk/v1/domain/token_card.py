@@ -19,7 +19,7 @@ class TokenCard(AbstractToken):
     def customer(self) -> Optional[CustomerToken]:
         """
         | Object containing the details of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.customer_token.CustomerToken`
         """
         return self.__customer
@@ -32,7 +32,7 @@ class TokenCard(AbstractToken):
     def data(self) -> Optional[TokenCardData]:
         """
         | Object containing the card tokenizable details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_card_data.TokenCardData`
         """
         return self.__data

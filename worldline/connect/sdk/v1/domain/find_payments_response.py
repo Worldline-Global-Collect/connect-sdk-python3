@@ -20,7 +20,7 @@ class FindPaymentsResponse(DataObject):
     def limit(self) -> Optional[int]:
         """
         | The limit you used in the request.
-        
+
         Type: int
         """
         return self.__limit
@@ -33,7 +33,7 @@ class FindPaymentsResponse(DataObject):
     def offset(self) -> Optional[int]:
         """
         | The offset you used in the request.
-        
+
         Type: int
         """
         return self.__offset
@@ -46,7 +46,7 @@ class FindPaymentsResponse(DataObject):
     def payments(self) -> Optional[List[Payment]]:
         """
         | A list of payments that matched your filter, starting at the given offset and limited to the given limit.
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.payment.Payment`]
         """
         return self.__payments
@@ -59,7 +59,7 @@ class FindPaymentsResponse(DataObject):
     def total_count(self) -> Optional[int]:
         """
         | The total number of payments that matched your filter.
-        
+
         Type: int
         """
         return self.__total_count

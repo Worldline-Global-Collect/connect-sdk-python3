@@ -16,7 +16,7 @@ class MobilePaymentProductSession302SpecificOutput(DataObject):
     def session_object(self) -> Optional[str]:
         """
         | Object containing an opaque merchant session object.
-        
+
         Type: str
         """
         return self.__session_object

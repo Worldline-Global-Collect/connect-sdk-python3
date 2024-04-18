@@ -20,7 +20,7 @@ class DirectoryEntry(DataObject):
         """
         | Country name of the issuer, used to group issuers per country
         | Note: this is only filled if supported by the payment product.
-        
+
         Type: list[str]
         """
         return self.__country_names
@@ -33,7 +33,7 @@ class DirectoryEntry(DataObject):
     def issuer_id(self) -> Optional[str]:
         """
         | Unique ID of the issuing bank of the customer
-        
+
         Type: str
         """
         return self.__issuer_id
@@ -51,7 +51,7 @@ class DirectoryEntry(DataObject):
         * long - These issuers should be presented after the issuers marked as short
         
         | Note: this is only filled if supported by the payment product. Currently only iDeal (809) support this. Sorting within the groups should be done alphabetically.
-        
+
         Type: str
         """
         return self.__issuer_list
@@ -64,7 +64,7 @@ class DirectoryEntry(DataObject):
     def issuer_name(self) -> Optional[str]:
         """
         | Name of the issuing bank, as it should be presented to the customer
-        
+
         Type: str
         """
         return self.__issuer_name

@@ -17,7 +17,7 @@ class PaymentCreationReferences(DataObject):
     def additional_reference(self) -> Optional[str]:
         """
         | The additional reference identifier for this transaction. Data in this property will also be returned in our report files, allowing you to reconcile them.
-        
+
         Type: str
         """
         return self.__additional_reference
@@ -30,7 +30,7 @@ class PaymentCreationReferences(DataObject):
     def external_reference(self) -> Optional[str]:
         """
         | The external reference identifier for this transaction. Data in this property will also be returned in our report files, allowing you to reconcile them.
-        
+
         Type: str
         """
         return self.__external_reference

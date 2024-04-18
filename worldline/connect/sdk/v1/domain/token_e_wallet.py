@@ -19,7 +19,7 @@ class TokenEWallet(AbstractToken):
     def customer(self) -> Optional[CustomerToken]:
         """
         | Object containing the details of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.customer_token.CustomerToken`
         """
         return self.__customer
@@ -32,7 +32,7 @@ class TokenEWallet(AbstractToken):
     def data(self) -> Optional[TokenEWalletData]:
         """
         | Object containing the eWallet tokenizable data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_e_wallet_data.TokenEWalletData`
         """
         return self.__data

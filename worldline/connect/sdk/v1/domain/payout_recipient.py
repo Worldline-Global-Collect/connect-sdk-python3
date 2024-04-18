@@ -21,7 +21,7 @@ class PayoutRecipient(DataObject):
     def first_name(self) -> Optional[str]:
         """
         | Given name(s) or first name(s) of the customer
-        
+
         Type: str
         """
         return self.__first_name
@@ -34,7 +34,7 @@ class PayoutRecipient(DataObject):
     def surname(self) -> Optional[str]:
         """
         | Surname(s) or last name(s) of the customer
-        
+
         Type: str
         """
         return self.__surname
@@ -47,7 +47,7 @@ class PayoutRecipient(DataObject):
     def surname_prefix(self) -> Optional[str]:
         """
         | Middle name - In between first name and surname - of the customer
-        
+
         Type: str
         """
         return self.__surname_prefix

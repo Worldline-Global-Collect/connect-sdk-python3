@@ -33,7 +33,7 @@ class CustomerRiskAssessment(DataObject):
     def account(self) -> Optional[CustomerAccountRiskAssessment]:
         """
         | Object containing data related to the account the customer has with you
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.customer_account_risk_assessment.CustomerAccountRiskAssessment`
         """
         return self.__account
@@ -50,7 +50,7 @@ class CustomerRiskAssessment(DataObject):
         * none - The account that was used to place the order is a guest account or no account was used at all
         * created - The customer account was created during this transaction
         * existing - The customer account was an already existing account prior to this transaction
-        
+
         Type: str
         """
         return self.__account_type
@@ -63,7 +63,7 @@ class CustomerRiskAssessment(DataObject):
     def billing_address(self) -> Optional[Address]:
         """
         | Object containing billing address details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.address.Address`
         """
         return self.__billing_address
@@ -76,7 +76,7 @@ class CustomerRiskAssessment(DataObject):
     def contact_details(self) -> Optional[ContactDetailsRiskAssessment]:
         """
         | Object containing contact details like email address
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.contact_details_risk_assessment.ContactDetailsRiskAssessment`
         """
         return self.__contact_details
@@ -89,7 +89,7 @@ class CustomerRiskAssessment(DataObject):
     def device(self) -> Optional[CustomerDeviceRiskAssessment]:
         """
         | Object containing information on the device and browser of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.customer_device_risk_assessment.CustomerDeviceRiskAssessment`
         """
         return self.__device
@@ -105,7 +105,7 @@ class CustomerRiskAssessment(DataObject):
         
         * true - The customer is a known returning customer
         * false - The customer is new/unknown customer
-        
+
         Type: bool
         """
         return self.__is_previous_customer
@@ -118,7 +118,7 @@ class CustomerRiskAssessment(DataObject):
     def locale(self) -> Optional[str]:
         """
         | The locale that the customer should be addressed in (for 3rd parties). Note that some 3rd party providers only support the languageCode part of the locale, in those cases we will only use part of the locale provided.
-        
+
         Type: str
         """
         return self.__locale
@@ -131,7 +131,7 @@ class CustomerRiskAssessment(DataObject):
     def personal_information(self) -> Optional[PersonalInformationRiskAssessment]:
         """
         | Object containing personal information like name, date of birth and gender
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.personal_information_risk_assessment.PersonalInformationRiskAssessment`
         """
         return self.__personal_information
@@ -144,9 +144,9 @@ class CustomerRiskAssessment(DataObject):
     def shipping_address(self) -> Optional[AddressPersonal]:
         """
         | Object containing shipping address details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.address_personal.AddressPersonal`
-        
+
         Deprecated; Use Order.shipping.address instead
         """
         return self.__shipping_address

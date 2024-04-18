@@ -19,7 +19,7 @@ class TrustlyBankAccount(DataObject):
     def account_last_digits(self) -> Optional[str]:
         """
         | The last digits of the account number
-        
+
         Type: str
         """
         return self.__account_last_digits
@@ -32,7 +32,7 @@ class TrustlyBankAccount(DataObject):
     def bank_name(self) -> Optional[str]:
         """
         | The name of the bank
-        
+
         Type: str
         """
         return self.__bank_name
@@ -45,7 +45,7 @@ class TrustlyBankAccount(DataObject):
     def clearinghouse(self) -> Optional[str]:
         """
         | The country of the clearing house
-        
+
         Type: str
         """
         return self.__clearinghouse
@@ -58,7 +58,7 @@ class TrustlyBankAccount(DataObject):
     def person_identification_number(self) -> Optional[str]:
         """
         | The ID number of the account holder
-        
+
         Type: str
         """
         return self.__person_identification_number

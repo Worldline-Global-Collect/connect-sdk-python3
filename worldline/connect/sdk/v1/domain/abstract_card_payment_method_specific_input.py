@@ -86,7 +86,7 @@ class AbstractCardPaymentMethodSpecificInput(AbstractPaymentMethodSpecificInput)
     def recurring_payment_sequence_indicator(self) -> Optional[str]:
         """
         Type: str
-        
+
         Deprecated; Use recurring.recurringPaymentSequenceIndicator instead
         """
         return self.__recurring_payment_sequence_indicator
@@ -110,7 +110,7 @@ class AbstractCardPaymentMethodSpecificInput(AbstractPaymentMethodSpecificInput)
     def skip_authentication(self) -> Optional[bool]:
         """
         Type: bool
-        
+
         Deprecated; Use threeDSecure.skipAuthentication instead
         """
         return self.__skip_authentication
@@ -167,7 +167,7 @@ class AbstractCardPaymentMethodSpecificInput(AbstractPaymentMethodSpecificInput)
     def unscheduled_card_on_file_indicator(self) -> Optional[str]:
         """
         Type: str
-        
+
         Deprecated; Use unscheduledCardOnFileSequenceIndicator instead
         """
         return self.__unscheduled_card_on_file_indicator

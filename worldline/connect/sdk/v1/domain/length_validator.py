@@ -17,7 +17,7 @@ class LengthValidator(DataObject):
     def max_length(self) -> Optional[int]:
         """
         | The maximum allowed length
-        
+
         Type: int
         """
         return self.__max_length
@@ -30,7 +30,7 @@ class LengthValidator(DataObject):
     def min_length(self) -> Optional[int]:
         """
         | The minimum allowed length
-        
+
         Type: int
         """
         return self.__min_length

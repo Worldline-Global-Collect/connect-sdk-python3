@@ -17,7 +17,7 @@ class CompanyInformation(DataObject):
     def name(self) -> Optional[str]:
         """
         | Name of company, as a customer
-        
+
         Type: str
         """
         return self.__name
@@ -30,7 +30,7 @@ class CompanyInformation(DataObject):
     def vat_number(self) -> Optional[str]:
         """
         | Local VAT number of the company
-        
+
         Type: str
         """
         return self.__vat_number

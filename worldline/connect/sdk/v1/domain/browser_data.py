@@ -29,7 +29,7 @@ class BrowserData(DataObject):
         | If you use the latest version of our JavaScript Client SDK, we will collect this data and include it in the encryptedCustomerInput property. We will then automatically populate this data if available.
         
         | Note: This data can only be collected if JavaScript is enabled in the browser. This means that 3-D Secure version 2.1 requires the use of JavaScript to enabled. In the upcoming version 2.2 of the specification this is no longer a requirement. As we currently support version 2.1 it means that this property is required when cardPaymentMethodSpecifInput.threeDSecure.authenticationFlow is set to "browser".
-        
+
         Type: int
         """
         return self.__color_depth
@@ -42,7 +42,7 @@ class BrowserData(DataObject):
     def inner_height(self) -> Optional[str]:
         """
         | The innerHeight of the frame in case you are capturing your payments in a frame. We will use this to validate if the height provided in the cardPaymentMethodSpecifInput.threeDSecure.challengeCanvasSize will actually fit in the iFrame you use.
-        
+
         Type: str
         """
         return self.__inner_height
@@ -55,7 +55,7 @@ class BrowserData(DataObject):
     def inner_width(self) -> Optional[str]:
         """
         | The innerWidth of the frame in case you are capturing your payments in a frame. We will use this to validate if the width provided in the cardPaymentMethodSpecifInput.threeDSecure.challengeCanvasSize will actually fit in the iFrame you use.
-        
+
         Type: str
         """
         return self.__inner_width
@@ -76,7 +76,7 @@ class BrowserData(DataObject):
         | If you use the latest version of our JavaScript Client SDK, we will collect this data and include it in the encryptedCustomerInput property. We will then automatically populate this data if available.
         
         | Note: This data can only be collected if JavaScript is enabled in the browser. This means that 3-D Secure version 2.1 requires the use of JavaScript to enabled. In the upcoming version 2.2 of the specification this is no longer a requirement. As we currently support version 2.1 it means that this property is required when cardPaymentMethodSpecifInput.threeDSecure.authenticationFlow is set to "browser".
-        
+
         Type: bool
         """
         return self.__java_enabled
@@ -93,7 +93,7 @@ class BrowserData(DataObject):
         | false = JavaScript is not enabled in the browser
         
         | Note: Required in future 3-D Secure version 2.2.
-        
+
         Type: bool
         """
         return self.__java_script_enabled
@@ -110,7 +110,7 @@ class BrowserData(DataObject):
         | If you use the latest version of our JavaScript Client SDK, we will collect this data and include it in the encryptedCustomerInput property. We will then automatically populate this data if available.
         
         | Note: This data can only be collected if JavaScript is enabled in the browser. This means that 3-D Secure version 2.1 requires the use of JavaScript to enabled. In the upcoming version 2.2 of the specification this is no longer a requirement. As we currently support version 2.1 it means that this property is required when cardPaymentMethodSpecifInput.threeDSecure.authenticationFlow is set to "browser".
-        
+
         Type: str
         """
         return self.__screen_height
@@ -127,7 +127,7 @@ class BrowserData(DataObject):
         | If you use the latest version of our JavaScript Client SDK, we will collect this data and include it in the encryptedCustomerInput property. We will then automatically populate this data if available.
         
         | Note: This data can only be collected if JavaScript is enabled in the browser. This means that 3-D Secure version 2.1 requires the use of JavaScript to enabled. In the upcoming version 2.2 of the specification this is no longer a requirement. As we currently support version 2.1 it means that this property is required when cardPaymentMethodSpecifInput.threeDSecure.authenticationFlow is set to "browser".
-        
+
         Type: str
         """
         return self.__screen_width

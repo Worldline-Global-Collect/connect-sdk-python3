@@ -24,7 +24,7 @@ class AccountOnFile(DataObject):
     def attributes(self) -> Optional[List[AccountOnFileAttribute]]:
         """
         | Array containing the details of the stored token
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.account_on_file_attribute.AccountOnFileAttribute`]
         """
         return self.__attributes
@@ -37,7 +37,7 @@ class AccountOnFile(DataObject):
     def display_hints(self) -> Optional[AccountOnFileDisplayHints]:
         """
         | Object containing information for the client on how best to display this field
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.account_on_file_display_hints.AccountOnFileDisplayHints`
         """
         return self.__display_hints
@@ -50,7 +50,7 @@ class AccountOnFile(DataObject):
     def id(self) -> Optional[int]:
         """
         | ID of the account on file record
-        
+
         Type: int
         """
         return self.__id
@@ -64,7 +64,7 @@ class AccountOnFile(DataObject):
         """
         | Payment product identifier
         | Please see payment products <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/paymentproducts.html> for a full overview of possible values.
-        
+
         Type: int
         """
         return self.__payment_product_id

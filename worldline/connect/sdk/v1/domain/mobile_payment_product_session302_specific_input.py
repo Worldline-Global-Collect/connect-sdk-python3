@@ -18,7 +18,7 @@ class MobilePaymentProductSession302SpecificInput(DataObject):
     def display_name(self) -> Optional[str]:
         """
         | Used as an input for the Apple Pay payment button. Provide your company name in a human readable form.
-        
+
         Type: str
         """
         return self.__display_name
@@ -31,7 +31,7 @@ class MobilePaymentProductSession302SpecificInput(DataObject):
     def domain_name(self) -> Optional[str]:
         """
         | Provide a fully qualified domain name of your own payment page that will be showing an Apple Pay button.
-        
+
         Type: str
         """
         return self.__domain_name
@@ -44,7 +44,7 @@ class MobilePaymentProductSession302SpecificInput(DataObject):
     def validation_url(self) -> Optional[str]:
         """
         | Provide the validation URL that has been provided by Apple once you have started an Apple Pay session.
-        
+
         Type: str
         """
         return self.__validation_url

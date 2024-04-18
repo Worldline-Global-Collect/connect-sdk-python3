@@ -10,8 +10,7 @@ from worldline.connect.sdk.v1.domain.api_error import APIError
 
 class PlatformException(ApiException):
     """
-    Represents an error response from the Worldline Global Collect platform when something
-    went wrong at the Worldline Global Collect platform or further downstream.
+    Represents an error response from the Worldline Global Collect platform when something went wrong at the Worldline Global Collect platform or further downstream.
     """
 
     def __init__(self, status_code: int, response_body: str, error_id: Optional[str], errors: Optional[List[APIError]],

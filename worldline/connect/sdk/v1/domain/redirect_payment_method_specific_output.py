@@ -31,7 +31,7 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def bank_account_bban(self) -> Optional[BankAccountBban]:
         """
         | Object that holds the Basic Bank Account Number (BBAN) data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_bban.BankAccountBban`
         """
         return self.__bank_account_bban
@@ -44,7 +44,7 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def bank_account_iban(self) -> Optional[BankAccountIban]:
         """
         | Object containing account holder name and IBAN information
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_iban.BankAccountIban`
         """
         return self.__bank_account_iban
@@ -57,7 +57,7 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def bic(self) -> Optional[str]:
         """
         | The BIC is the Business Identifier Code, also known as SWIFT or Bank Identifier code. It is a code with an internationally agreed format to Identify a specific bank or even branch. The BIC contains 8 or 11 positions: the first 4 contain the bank code, followed by the country code and location code.
-        
+
         Type: str
         """
         return self.__bic
@@ -70,7 +70,7 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def fraud_results(self) -> Optional[FraudResults]:
         """
         | Object containing the results of the fraud screening
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.fraud_results.FraudResults`
         """
         return self.__fraud_results
@@ -83,7 +83,7 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def payment_product3201_specific_output(self) -> Optional[PaymentProduct3201SpecificOutput]:
         """
         | PostFinance Card (payment product 3201) specific details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product3201_specific_output.PaymentProduct3201SpecificOutput`
         """
         return self.__payment_product3201_specific_output
@@ -96,7 +96,7 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def payment_product806_specific_output(self) -> Optional[PaymentProduct806SpecificOutput]:
         """
         | Trustly (payment product 806) specific details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product806_specific_output.PaymentProduct806SpecificOutput`
         """
         return self.__payment_product806_specific_output
@@ -109,7 +109,7 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def payment_product836_specific_output(self) -> Optional[PaymentProduct836SpecificOutput]:
         """
         | Sofort (payment product 836) specific details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product836_specific_output.PaymentProduct836SpecificOutput`
         """
         return self.__payment_product836_specific_output
@@ -122,7 +122,7 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def payment_product840_specific_output(self) -> Optional[PaymentProduct840SpecificOutput]:
         """
         | PayPal (payment product 840) specific details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product840_specific_output.PaymentProduct840SpecificOutput`
         """
         return self.__payment_product840_specific_output
@@ -135,7 +135,7 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def token(self) -> Optional[str]:
         """
         | ID of the token. This property is populated when the payment was done with a token or when the payment was tokenized.
-        
+
         Type: str
         """
         return self.__token

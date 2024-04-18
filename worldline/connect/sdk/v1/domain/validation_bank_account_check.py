@@ -18,7 +18,7 @@ class ValidationBankAccountCheck(DataObject):
     def code(self) -> Optional[str]:
         """
         | Code of the bank account validation check
-        
+
         Type: str
         """
         return self.__code
@@ -31,7 +31,7 @@ class ValidationBankAccountCheck(DataObject):
     def description(self) -> Optional[str]:
         """
         | Description of check performed
-        
+
         Type: str
         """
         return self.__description
@@ -49,7 +49,7 @@ class ValidationBankAccountCheck(DataObject):
         * ERROR - The check did not pass
         * WARNING - Depending on your needs this either needs to be treated as a passed or error response. It depends on your business logic and for what purpose you want to use the validated bank account details.
         * NOTCHECKED - This check was not performed, usually because one of the earlier checks already caused an error response to be triggered
-        
+
         Type: str
         """
         return self.__result

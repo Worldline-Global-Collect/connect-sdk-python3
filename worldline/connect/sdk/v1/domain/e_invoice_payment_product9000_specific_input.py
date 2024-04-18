@@ -18,7 +18,7 @@ class EInvoicePaymentProduct9000SpecificInput(DataObject):
     def bank_account_iban(self) -> Optional[BankAccountIban]:
         """
         | Object containing the bank account details of the customer.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_iban.BankAccountIban`
         """
         return self.__bank_account_iban
@@ -31,7 +31,7 @@ class EInvoicePaymentProduct9000SpecificInput(DataObject):
     def installment_id(self) -> Optional[str]:
         """
         | The ID of the installment plan selected by the customer. Installment plans can be retrieved with Get payment product <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/products/get.html>.
-        
+
         Type: str
         """
         return self.__installment_id

@@ -21,7 +21,7 @@ class BankAccountBban(BankAccount):
     def account_number(self) -> Optional[str]:
         """
         | Bank account number
-        
+
         Type: str
         """
         return self.__account_number
@@ -34,7 +34,7 @@ class BankAccountBban(BankAccount):
     def bank_code(self) -> Optional[str]:
         """
         | Bank code
-        
+
         Type: str
         """
         return self.__bank_code
@@ -47,7 +47,7 @@ class BankAccountBban(BankAccount):
     def bank_name(self) -> Optional[str]:
         """
         | Name of the bank
-        
+
         Type: str
         """
         return self.__bank_name
@@ -60,7 +60,7 @@ class BankAccountBban(BankAccount):
     def branch_code(self) -> Optional[str]:
         """
         | Branch code
-        
+
         Type: str
         """
         return self.__branch_code
@@ -73,7 +73,7 @@ class BankAccountBban(BankAccount):
     def check_digit(self) -> Optional[str]:
         """
         | Bank check digit
-        
+
         Type: str
         """
         return self.__check_digit
@@ -87,7 +87,7 @@ class BankAccountBban(BankAccount):
         """
         | ISO 3166-1 alpha-2 country code of the country where the bank account is held
         | For UK payouts this value is automatically set to GB as only payouts to UK accounts are supported.
-        
+
         Type: str
         """
         return self.__country_code

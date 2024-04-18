@@ -16,7 +16,7 @@ class SdkDataOutput(DataObject):
     def sdk_transaction_id(self) -> Optional[str]:
         """
         | Universally unique transaction identifier assigned by the 3-D Secure SDK to identify this transaction.
-        
+
         Type: str
         """
         return self.__sdk_transaction_id

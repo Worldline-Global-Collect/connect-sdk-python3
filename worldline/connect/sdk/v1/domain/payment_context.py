@@ -23,7 +23,7 @@ class PaymentContext(DataObject):
     def amount_of_money(self) -> Optional[AmountOfMoney]:
         """
         | The payment amount
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
         """
         return self.__amount_of_money
@@ -36,7 +36,7 @@ class PaymentContext(DataObject):
     def country_code(self) -> Optional[str]:
         """
         | The country the payment takes place in
-        
+
         Type: str
         """
         return self.__country_code
@@ -49,7 +49,7 @@ class PaymentContext(DataObject):
     def is_installments(self) -> Optional[bool]:
         """
         | True if the payment is to be paid in multiple installments (numberOfInstallments &gt; 1 for the payment). When true only payment products that support installments will be allowed in context.
-        
+
         Type: bool
         """
         return self.__is_installments
@@ -62,7 +62,7 @@ class PaymentContext(DataObject):
     def is_recurring(self) -> Optional[bool]:
         """
         | True if the payment is recurring
-        
+
         Type: bool
         """
         return self.__is_recurring

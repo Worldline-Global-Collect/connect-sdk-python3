@@ -17,7 +17,7 @@ class MobilePaymentData(DataObject):
     def dpan(self) -> Optional[str]:
         """
         | The obfuscated DPAN. Only the last four digits are visible.
-        
+
         Type: str
         """
         return self.__dpan
@@ -31,7 +31,7 @@ class MobilePaymentData(DataObject):
         """
         | Expiry date of the tokenized card
         | Format: MMYY
-        
+
         Type: str
         """
         return self.__expiry_date

@@ -21,7 +21,7 @@ class SessionResponse(DataObject):
     def asset_url(self) -> Optional[str]:
         """
         | The datacenter-specific base url for assets. This value needs to be passed to the Client SDK to make sure that the client software connects to the right datacenter.
-        
+
         Type: str
         """
         return self.__asset_url
@@ -34,7 +34,7 @@ class SessionResponse(DataObject):
     def client_api_url(self) -> Optional[str]:
         """
         | The datacenter-specific base url for client requests. This value needs to be passed to the Client SDK to make sure that the client software connects to the right datacenter.
-        
+
         Type: str
         """
         return self.__client_api_url
@@ -47,7 +47,7 @@ class SessionResponse(DataObject):
     def client_session_id(self) -> Optional[str]:
         """
         | The identifier of the session that has been created.
-        
+
         Type: str
         """
         return self.__client_session_id
@@ -60,7 +60,7 @@ class SessionResponse(DataObject):
     def customer_id(self) -> Optional[str]:
         """
         | The session is build up around the customer in the form of the customerId. All of the Client APIs use this customerId in the URI to identify the customer.
-        
+
         Type: str
         """
         return self.__customer_id
@@ -73,7 +73,7 @@ class SessionResponse(DataObject):
     def invalid_tokens(self) -> Optional[List[str]]:
         """
         | Tokens that are submitted in the request are validated. In case any of the tokens can't be used anymore they are returned in this array. You should most likely remove those tokens from your system.
-        
+
         Type: list[str]
         """
         return self.__invalid_tokens
@@ -100,7 +100,7 @@ class SessionResponse(DataObject):
         * Android Client SDK v3.10.0
         
         | In case of the iOS and Android SDKs the version of the SDK used will be tightly coupled with the versions of your app that is still in active use. You are advised to pass this value to your clients in case you are unsure of the version used in your clients.
-        
+
         Type: str
         """
         return self.__region

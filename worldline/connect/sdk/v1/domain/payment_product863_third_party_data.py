@@ -22,7 +22,7 @@ class PaymentProduct863ThirdPartyData(DataObject):
     def app_id(self) -> Optional[str]:
         """
         | The appId to use in third party calls to WeChat.
-        
+
         Type: str
         """
         return self.__app_id
@@ -35,7 +35,7 @@ class PaymentProduct863ThirdPartyData(DataObject):
     def nonce_str(self) -> Optional[str]:
         """
         | The nonceStr to use in third party calls to WeChat
-        
+
         Type: str
         """
         return self.__nonce_str
@@ -48,7 +48,7 @@ class PaymentProduct863ThirdPartyData(DataObject):
     def package_sign(self) -> Optional[str]:
         """
         | The packageSign to use in third party calls to WeChat
-        
+
         Type: str
         """
         return self.__package_sign
@@ -61,7 +61,7 @@ class PaymentProduct863ThirdPartyData(DataObject):
     def pay_sign(self) -> Optional[str]:
         """
         | The paySign to use in third party calls to WeChat
-        
+
         Type: str
         """
         return self.__pay_sign
@@ -74,7 +74,7 @@ class PaymentProduct863ThirdPartyData(DataObject):
     def prepay_id(self) -> Optional[str]:
         """
         | The prepayId to use in third party calls to WeChat.
-        
+
         Type: str
         """
         return self.__prepay_id
@@ -87,7 +87,7 @@ class PaymentProduct863ThirdPartyData(DataObject):
     def sign_type(self) -> Optional[str]:
         """
         | The signType to use in third party calls to WeChat
-        
+
         Type: str
         """
         return self.__sign_type
@@ -100,7 +100,7 @@ class PaymentProduct863ThirdPartyData(DataObject):
     def time_stamp(self) -> Optional[str]:
         """
         | The timeStamp to use in third party calls to WeChat
-        
+
         Type: str
         """
         return self.__time_stamp

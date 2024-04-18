@@ -21,7 +21,7 @@ class CardPayoutMethodSpecificInput(AbstractPayoutMethodSpecificInput):
     def card(self) -> Optional[Card]:
         """
         | Object containing the card details.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.card.Card`
         """
         return self.__card
@@ -35,7 +35,7 @@ class CardPayoutMethodSpecificInput(AbstractPayoutMethodSpecificInput):
         """
         | Payment product identifier
         | Please see payment products <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/paymentproducts.html> for a full overview of possible values.
-        
+
         Type: int
         """
         return self.__payment_product_id
@@ -48,7 +48,7 @@ class CardPayoutMethodSpecificInput(AbstractPayoutMethodSpecificInput):
     def recipient(self) -> Optional[PayoutRecipient]:
         """
         | Object containing the details of the recipient of the payout
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payout_recipient.PayoutRecipient`
         """
         return self.__recipient
@@ -62,7 +62,7 @@ class CardPayoutMethodSpecificInput(AbstractPayoutMethodSpecificInput):
         """
         | ID of the token that holds previously stored card data.
         |  If both the token and card are provided, then the card takes precedence over the token.
-        
+
         Type: str
         """
         return self.__token

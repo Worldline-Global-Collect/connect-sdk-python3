@@ -22,7 +22,7 @@ class PaymentProduct840SpecificOutput(DataObject):
     def billing_address(self) -> Optional[Address]:
         """
         | Object containing the billing address details of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.address.Address`
         """
         return self.__billing_address
@@ -35,7 +35,7 @@ class PaymentProduct840SpecificOutput(DataObject):
     def customer_account(self) -> Optional[PaymentProduct840CustomerAccount]:
         """
         | Object containing the details of the PayPal account
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product840_customer_account.PaymentProduct840CustomerAccount`
         """
         return self.__customer_account
@@ -48,7 +48,7 @@ class PaymentProduct840SpecificOutput(DataObject):
     def customer_address(self) -> Optional[Address]:
         """
         | Object containing the address details of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.address.Address`
         """
         return self.__customer_address
@@ -61,7 +61,7 @@ class PaymentProduct840SpecificOutput(DataObject):
     def protection_eligibility(self) -> Optional[ProtectionEligibility]:
         """
         | Protection Eligibility data of the PayPal customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.protection_eligibility.ProtectionEligibility`
         """
         return self.__protection_eligibility

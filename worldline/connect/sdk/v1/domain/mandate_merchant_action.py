@@ -20,7 +20,7 @@ class MandateMerchantAction(DataObject):
         | Action merchants needs to take in the online mandate process. Possible values are:
         
         * REDIRECT - The customer needs to be redirected using the details found in redirectData
-        
+
         Type: str
         """
         return self.__action_type
@@ -33,7 +33,7 @@ class MandateMerchantAction(DataObject):
     def redirect_data(self) -> Optional[MandateRedirectData]:
         """
         | Object containing all data needed to redirect the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mandate_redirect_data.MandateRedirectData`
         """
         return self.__redirect_data

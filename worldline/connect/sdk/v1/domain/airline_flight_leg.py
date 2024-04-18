@@ -35,7 +35,7 @@ class AirlineFlightLeg(DataObject):
     def airline_class(self) -> Optional[str]:
         """
         | Reservation Booking Designator
-        
+
         Type: str
         """
         return self.__airline_class
@@ -48,7 +48,7 @@ class AirlineFlightLeg(DataObject):
     def arrival_airport(self) -> Optional[str]:
         """
         | Arrival airport/city code
-        
+
         Type: str
         """
         return self.__arrival_airport
@@ -62,7 +62,7 @@ class AirlineFlightLeg(DataObject):
         """
         | The arrival time in the local time zone 
         | Format: HH:MM
-        
+
         Type: str
         """
         return self.__arrival_time
@@ -75,7 +75,7 @@ class AirlineFlightLeg(DataObject):
     def carrier_code(self) -> Optional[str]:
         """
         | IATA carrier code
-        
+
         Type: str
         """
         return self.__carrier_code
@@ -88,7 +88,7 @@ class AirlineFlightLeg(DataObject):
     def conjunction_ticket(self) -> Optional[str]:
         """
         | Identifying number of a ticket issued to a passenger in conjunction with this ticket and that constitutes a single contract of carriage
-        
+
         Type: str
         """
         return self.__conjunction_ticket
@@ -101,7 +101,7 @@ class AirlineFlightLeg(DataObject):
     def coupon_number(self) -> Optional[str]:
         """
         | The coupon number associated with this leg of the trip. A ticket can contain several legs of travel, and each leg of travel requires a separate coupon
-        
+
         Type: str
         """
         return self.__coupon_number
@@ -115,7 +115,7 @@ class AirlineFlightLeg(DataObject):
         """
         | Date of the leg
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__date
@@ -129,7 +129,7 @@ class AirlineFlightLeg(DataObject):
         """
         | The departure time in the local time at the departure airport
         | Format: HH:MM
-        
+
         Type: str
         """
         return self.__departure_time
@@ -142,7 +142,7 @@ class AirlineFlightLeg(DataObject):
     def endorsement_or_restriction(self) -> Optional[str]:
         """
         | An endorsement can be an agency-added notation or a mandatory government required notation, such as value-added tax. A restriction is a limitation based on the type of fare, such as a ticket with a 3-day minimum stay
-        
+
         Type: str
         """
         return self.__endorsement_or_restriction
@@ -155,7 +155,7 @@ class AirlineFlightLeg(DataObject):
     def exchange_ticket(self) -> Optional[str]:
         """
         | New ticket number that is issued when a ticket is exchanged
-        
+
         Type: str
         """
         return self.__exchange_ticket
@@ -168,7 +168,7 @@ class AirlineFlightLeg(DataObject):
     def fare(self) -> Optional[str]:
         """
         | Fare of this leg
-        
+
         Type: str
         """
         return self.__fare
@@ -181,7 +181,7 @@ class AirlineFlightLeg(DataObject):
     def fare_basis(self) -> Optional[str]:
         """
         | Fare Basis/Ticket Designator
-        
+
         Type: str
         """
         return self.__fare_basis
@@ -194,7 +194,7 @@ class AirlineFlightLeg(DataObject):
     def fee(self) -> Optional[int]:
         """
         | Fee for this leg of the trip
-        
+
         Type: int
         """
         return self.__fee
@@ -208,7 +208,7 @@ class AirlineFlightLeg(DataObject):
         """
         | The flight number assigned by the airline carrier with no leading spaces 
         | Should be a numeric string
-        
+
         Type: str
         """
         return self.__flight_number
@@ -221,7 +221,7 @@ class AirlineFlightLeg(DataObject):
     def number(self) -> Optional[int]:
         """
         | Sequence number of the flight leg
-        
+
         Type: int
         """
         return self.__number
@@ -234,7 +234,7 @@ class AirlineFlightLeg(DataObject):
     def origin_airport(self) -> Optional[str]:
         """
         | Origin airport/city code
-        
+
         Type: str
         """
         return self.__origin_airport
@@ -247,7 +247,7 @@ class AirlineFlightLeg(DataObject):
     def passenger_class(self) -> Optional[str]:
         """
         | PassengerClass if this leg
-        
+
         Type: str
         """
         return self.__passenger_class
@@ -267,9 +267,9 @@ class AirlineFlightLeg(DataObject):
         * premium-economy
         * business
         * first
-        
+
         Type: str
-        
+
         Deprecated; Use passengerClass instead
         """
         return self.__service_class
@@ -285,7 +285,7 @@ class AirlineFlightLeg(DataObject):
         
         * permitted = Stopover permitted
         * non-permitted = Stopover not permitted
-        
+
         Type: str
         """
         return self.__stopover_code
@@ -298,7 +298,7 @@ class AirlineFlightLeg(DataObject):
     def taxes(self) -> Optional[int]:
         """
         | Taxes for this leg of the trip
-        
+
         Type: int
         """
         return self.__taxes

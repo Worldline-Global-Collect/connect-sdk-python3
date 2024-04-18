@@ -22,7 +22,7 @@ class RiskAssessment(DataObject):
     def fraud_fields(self) -> Optional[FraudFields]:
         """
         | Object containing additional data that will be used to assess the risk of fraud
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.fraud_fields.FraudFields`
         """
         return self.__fraud_fields
@@ -58,7 +58,7 @@ class RiskAssessment(DataObject):
         """
         | Payment product identifier
         | Please see payment products <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/paymentproducts.html> for a full overview of possible values.
-        
+
         Type: int
         """
         return self.__payment_product_id

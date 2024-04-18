@@ -12,7 +12,7 @@ from worldline.connect.sdk.communication.request_param import RequestParam
 class FindProductgroupsParams(ParamRequest):
     """
     Query parameters for Get payment product groups
-    
+
     See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/productgroups/find.html
     """
 
@@ -28,7 +28,7 @@ class FindProductgroupsParams(ParamRequest):
     def country_code(self) -> Optional[str]:
         """
         | ISO 3166-1 alpha-2 country code of the transaction
-        
+
         Type: str
         """
         return self.__country_code
@@ -41,7 +41,7 @@ class FindProductgroupsParams(ParamRequest):
     def currency_code(self) -> Optional[str]:
         """
         | Three-letter ISO currency code representing the currency for the amount
-        
+
         Type: str
         """
         return self.__currency_code
@@ -54,7 +54,7 @@ class FindProductgroupsParams(ParamRequest):
     def locale(self) -> Optional[str]:
         """
         | Locale used in the GUI towards the consumer. Please make sure that a language pack is configured for the locale you are submitting. If you submit a locale that is not set up on your account, we will use the default language pack for your account. You can easily upload additional language packs and set the default language pack in the Configuration Center.
-        
+
         Type: str
         """
         return self.__locale
@@ -67,7 +67,7 @@ class FindProductgroupsParams(ParamRequest):
     def amount(self) -> Optional[int]:
         """
         | Amount of the transaction in cents and always having 2 decimals
-        
+
         Type: int
         """
         return self.__amount
@@ -83,7 +83,7 @@ class FindProductgroupsParams(ParamRequest):
         
         * true
         * false
-        
+
         Type: bool
         """
         return self.__is_recurring
@@ -101,7 +101,7 @@ class FindProductgroupsParams(ParamRequest):
         * false
         
         | If this is omitted all payment products are returned.
-        
+
         Type: bool
         """
         return self.__is_installments
@@ -118,7 +118,7 @@ class FindProductgroupsParams(ParamRequest):
         * fields - Don't return any data on fields of the payment product
         * accountsOnFile - Don't return any accounts on file data
         * translations - Don't return any label texts associated with the payment products
-        
+
         Type: list[str]
         """
         return self.__hide

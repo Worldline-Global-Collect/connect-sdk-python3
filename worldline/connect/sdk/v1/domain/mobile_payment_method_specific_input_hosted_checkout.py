@@ -29,7 +29,7 @@ class MobilePaymentMethodSpecificInputHostedCheckout(AbstractPaymentMethodSpecif
         * SALE - The payment creation results in an authorization that is already captured at the moment of approval.
         
         | Only used with some acquirers, ingnored for acquirers that don't support this. In case the acquirer doesn't allow this to be specified the authorizationMode is 'unspecified', which behaves similar to a final authorization.
-        
+
         Type: str
         """
         return self.__authorization_mode
@@ -42,7 +42,7 @@ class MobilePaymentMethodSpecificInputHostedCheckout(AbstractPaymentMethodSpecif
     def customer_reference(self) -> Optional[str]:
         """
         | Reference of the customer for the payment (purchase order #, etc.). Only used with some acquirers.
-        
+
         Type: str
         """
         return self.__customer_reference
@@ -55,7 +55,7 @@ class MobilePaymentMethodSpecificInputHostedCheckout(AbstractPaymentMethodSpecif
     def payment_product302_specific_input(self) -> Optional[MobilePaymentProduct302SpecificInputHostedCheckout]:
         """
         | Object containing information specific to Apple Pay
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mobile_payment_product302_specific_input_hosted_checkout.MobilePaymentProduct302SpecificInputHostedCheckout`
         """
         return self.__payment_product302_specific_input
@@ -68,7 +68,7 @@ class MobilePaymentMethodSpecificInputHostedCheckout(AbstractPaymentMethodSpecif
     def payment_product320_specific_input(self) -> Optional[MobilePaymentProduct320SpecificInputHostedCheckout]:
         """
         | Object containing information specific to Google Pay (paymentProductId 320)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mobile_payment_product320_specific_input_hosted_checkout.MobilePaymentProduct320SpecificInputHostedCheckout`
         """
         return self.__payment_product320_specific_input
@@ -82,7 +82,7 @@ class MobilePaymentMethodSpecificInputHostedCheckout(AbstractPaymentMethodSpecif
         """
         * true = the payment requires approval before the funds will be captured using the Capture payment <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payments/approve.html> API
         * false = the payment does not require approval, and the funds will be captured automatically
-        
+
         Type: bool
         """
         return self.__requires_approval
@@ -98,7 +98,7 @@ class MobilePaymentMethodSpecificInputHostedCheckout(AbstractPaymentMethodSpecif
         * false = Fraud scoring will not be skipped for this transaction
         
         | Note: This is only possible if your account in our system is setup for Fraud scoring and if your configuration in our system allows you to override it per transaction.
-        
+
         Type: bool
         """
         return self.__skip_fraud_service

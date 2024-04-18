@@ -22,7 +22,7 @@ class ApprovePaymentRequest(DataObject):
     def amount(self) -> Optional[int]:
         """
         | In case you want to approve the capture of a different lower amount you can specify this here (specified in cents, where single digit currencies are presumed to have 2 digits)
-        
+
         Type: int
         """
         return self.__amount
@@ -35,7 +35,7 @@ class ApprovePaymentRequest(DataObject):
     def direct_debit_payment_method_specific_input(self) -> Optional[ApprovePaymentNonSepaDirectDebitPaymentMethodSpecificInput]:
         """
         | Object that holds non-SEPA Direct Debit specific input data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.approve_payment_non_sepa_direct_debit_payment_method_specific_input.ApprovePaymentNonSepaDirectDebitPaymentMethodSpecificInput`
         """
         return self.__direct_debit_payment_method_specific_input
@@ -48,7 +48,7 @@ class ApprovePaymentRequest(DataObject):
     def order(self) -> Optional[OrderApprovePayment]:
         """
         | Object that holds the order data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.order_approve_payment.OrderApprovePayment`
         """
         return self.__order
@@ -61,7 +61,7 @@ class ApprovePaymentRequest(DataObject):
     def sepa_direct_debit_payment_method_specific_input(self) -> Optional[ApprovePaymentSepaDirectDebitPaymentMethodSpecificInput]:
         """
         | Object that holds SEPA Direct Debit specific input data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.approve_payment_sepa_direct_debit_payment_method_specific_input.ApprovePaymentSepaDirectDebitPaymentMethodSpecificInput`
         """
         return self.__sepa_direct_debit_payment_method_specific_input

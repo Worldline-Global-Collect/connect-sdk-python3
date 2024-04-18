@@ -16,7 +16,7 @@ class RegularExpressionValidator(DataObject):
     def regular_expression(self) -> Optional[str]:
         """
         | Contains the regular expression that the value of the field needs to be validated against
-        
+
         Type: str
         """
         return self.__regular_expression

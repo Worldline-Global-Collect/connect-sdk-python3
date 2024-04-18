@@ -20,7 +20,7 @@ class PayoutErrorResponse(DataObject):
     def error_id(self) -> Optional[str]:
         """
         | Unique reference, for debugging purposes, of this error response
-        
+
         Type: str
         """
         return self.__error_id
@@ -33,7 +33,7 @@ class PayoutErrorResponse(DataObject):
     def errors(self) -> Optional[List[APIError]]:
         """
         | List of one or more errors
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.api_error.APIError`]
         """
         return self.__errors
@@ -46,7 +46,7 @@ class PayoutErrorResponse(DataObject):
     def payout_result(self) -> Optional[PayoutResult]:
         """
         | Object that contains details on the created payout in case one has been created
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payout_result.PayoutResult`
         """
         return self.__payout_result

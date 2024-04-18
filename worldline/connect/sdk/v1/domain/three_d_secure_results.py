@@ -35,7 +35,7 @@ class ThreeDSecureResults(DataObject):
     def acs_transaction_id(self) -> Optional[str]:
         """
         | Identifier of the authenticated transaction at the ACS/Issuer
-        
+
         Type: str
         """
         return self.__acs_transaction_id
@@ -48,7 +48,7 @@ class ThreeDSecureResults(DataObject):
     def applied_exemption(self) -> Optional[str]:
         """
         | Exemption code from Carte Bancaire (130) (unknown possible values so far -free format)
-        
+
         Type: str
         """
         return self.__applied_exemption
@@ -61,7 +61,7 @@ class ThreeDSecureResults(DataObject):
     def authentication_amount(self) -> Optional[AmountOfMoney]:
         """
         | The amount for which this transaction has been authenticated.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
         """
         return self.__authentication_amount
@@ -74,7 +74,7 @@ class ThreeDSecureResults(DataObject):
     def cavv(self) -> Optional[str]:
         """
         | CAVV or AVV result indicating authentication validation value
-        
+
         Type: str
         """
         return self.__cavv
@@ -87,7 +87,7 @@ class ThreeDSecureResults(DataObject):
     def directory_server_transaction_id(self) -> Optional[str]:
         """
         | The 3-D Secure Directory Server transaction ID that is used for the 3D Authentication
-        
+
         Type: str
         """
         return self.__directory_server_transaction_id
@@ -100,7 +100,7 @@ class ThreeDSecureResults(DataObject):
     def eci(self) -> Optional[str]:
         """
         | Indicates Authentication validation results returned after AuthenticationValidation
-        
+
         Type: str
         """
         return self.__eci
@@ -113,7 +113,7 @@ class ThreeDSecureResults(DataObject):
     def exemption_output(self) -> Optional[ExemptionOutput]:
         """
         | Object containing exemption output
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.exemption_output.ExemptionOutput`
         """
         return self.__exemption_output
@@ -126,7 +126,7 @@ class ThreeDSecureResults(DataObject):
     def scheme_risk_score(self) -> Optional[int]:
         """
         | Global score calculated by the Carte Bancaire (130) Scoring platform. Possible values from 0 to 99
-        
+
         Type: int
         """
         return self.__scheme_risk_score
@@ -139,7 +139,7 @@ class ThreeDSecureResults(DataObject):
     def sdk_data(self) -> Optional[SdkDataOutput]:
         """
         | Object containing 3-D Secure in-app SDK data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.sdk_data_output.SdkDataOutput`
         """
         return self.__sdk_data
@@ -152,7 +152,7 @@ class ThreeDSecureResults(DataObject):
     def three_d_secure_data(self) -> Optional[ThreeDSecureData]:
         """
         | Object containing data regarding the 3-D Secure authentication
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.three_d_secure_data.ThreeDSecureData`
         """
         return self.__three_d_secure_data
@@ -167,7 +167,7 @@ class ThreeDSecureResults(DataObject):
         | The 3-D Secure version used for the authentication.
         
         | This property is used in the communication with the acquirer
-        
+
         Type: str
         """
         return self.__three_d_secure_version
@@ -180,7 +180,7 @@ class ThreeDSecureResults(DataObject):
     def three_d_server_transaction_id(self) -> Optional[str]:
         """
         | The 3-D Secure Server transaction ID that is used for the 3-D Secure version 2 Authentication.
-        
+
         Type: str
         """
         return self.__three_d_server_transaction_id
@@ -193,7 +193,7 @@ class ThreeDSecureResults(DataObject):
     def xid(self) -> Optional[str]:
         """
         | Transaction ID for the Authentication
-        
+
         Type: str
         """
         return self.__xid

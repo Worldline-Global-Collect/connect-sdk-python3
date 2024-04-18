@@ -28,7 +28,7 @@ class LodgingRoom(DataObject):
         """
         | Daily room rate exclusive of any taxes and fees
         | Note: The currencyCode is presumed to be identical to the order.amountOfMoney.currencyCode.
-        
+
         Type: str
         """
         return self.__daily_room_rate
@@ -41,7 +41,7 @@ class LodgingRoom(DataObject):
     def daily_room_rate_currency_code(self) -> Optional[str]:
         """
         | Currency for Daily room rate. The code should be in 3 letter ISO format
-        
+
         Type: str
         """
         return self.__daily_room_rate_currency_code
@@ -55,7 +55,7 @@ class LodgingRoom(DataObject):
         """
         | Daily room tax
         | Note: The currencyCode is presumed to be identical to the order.amountOfMoney.currencyCode.
-        
+
         Type: str
         """
         return self.__daily_room_tax_amount
@@ -68,7 +68,7 @@ class LodgingRoom(DataObject):
     def daily_room_tax_amount_currency_code(self) -> Optional[str]:
         """
         | Currency for Daily room tax. The code should be in 3 letter ISO format
-        
+
         Type: str
         """
         return self.__daily_room_tax_amount_currency_code
@@ -81,7 +81,7 @@ class LodgingRoom(DataObject):
     def number_of_nights_at_room_rate(self) -> Optional[int]:
         """
         | Number of nights charged at the rate in the dailyRoomRate property
-        
+
         Type: int
         """
         return self.__number_of_nights_at_room_rate
@@ -94,7 +94,7 @@ class LodgingRoom(DataObject):
     def room_location(self) -> Optional[str]:
         """
         | Location of the room within the facility, e.g. Park or Garden etc.
-        
+
         Type: str
         """
         return self.__room_location
@@ -107,7 +107,7 @@ class LodgingRoom(DataObject):
     def room_number(self) -> Optional[str]:
         """
         | Room number
-        
+
         Type: str
         """
         return self.__room_number
@@ -120,7 +120,7 @@ class LodgingRoom(DataObject):
     def type_of_bed(self) -> Optional[str]:
         """
         | Size of bed, e.g., king, queen, double.
-        
+
         Type: str
         """
         return self.__type_of_bed
@@ -133,7 +133,7 @@ class LodgingRoom(DataObject):
     def type_of_room(self) -> Optional[str]:
         """
         | Describes the type of room, e.g., standard, deluxe, suite.
-        
+
         Type: str
         """
         return self.__type_of_room

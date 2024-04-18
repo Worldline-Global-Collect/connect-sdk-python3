@@ -17,7 +17,7 @@ class PaymentProducts(DataObject):
     def payment_products(self) -> Optional[List[PaymentProduct]]:
         """
         | Array containing payment products and their characteristics
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.payment_product.PaymentProduct`]
         """
         return self.__payment_products

@@ -21,7 +21,7 @@ class PayoutDetails(DataObject):
     def amount_of_money(self) -> Optional[AmountOfMoney]:
         """
         | Object containing amount and ISO currency code attributes
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
         """
         return self.__amount_of_money
@@ -34,7 +34,7 @@ class PayoutDetails(DataObject):
     def customer(self) -> Optional[PayoutCustomer]:
         """
         | Object containing the details of the customer.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payout_customer.PayoutCustomer`
         """
         return self.__customer
@@ -47,7 +47,7 @@ class PayoutDetails(DataObject):
     def references(self) -> Optional[PayoutReferences]:
         """
         | Object that holds all reference properties that are linked to this transaction
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payout_references.PayoutReferences`
         """
         return self.__references

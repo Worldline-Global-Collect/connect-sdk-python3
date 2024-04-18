@@ -91,8 +91,8 @@ class Communicator(LoggingCapable, ObfuscationCapable):
         :param request_headers: An optional list of request headers.
         :param request_parameters: An optional set of request parameters.
         :param context: The optional call context to use.
-        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform
-        :raise: ResponseException when an error response was received from the Worldline Global Collect platform
+        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform
+        :raise ResponseException: when an error response was received from the Worldline Global Collect platform
         """
         (status, headers, chunks) = self._get_with_binary_response(relative_path, request_headers, request_parameters, context)
         return self._process_binary_response(status, chunks, headers, relative_path, context)
@@ -109,8 +109,8 @@ class Communicator(LoggingCapable, ObfuscationCapable):
         :param request_parameters: An optional set of request parameters.
         :param response_type: The type of response to return.
         :param context: The optional call context to use.
-        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform
-        :raise: ResponseException when an error response was received from the Worldline Global Collect platform
+        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform
+        :raise ResponseException: when an error response was received from the Worldline Global Collect platform
         """
         (status, headers, chunks) = self._get_with_binary_response(relative_path, request_headers, request_parameters, context)
         return self._process_response(status, chunks, headers, relative_path, response_type, context)
@@ -139,8 +139,8 @@ class Communicator(LoggingCapable, ObfuscationCapable):
         :param request_headers: An optional list of request headers.
         :param request_parameters: An optional set of request parameters.
         :param context: The optional call context to use.
-        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform
-        :raise: ResponseException when an error response was received from the Worldline Global Collect platform
+        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform
+        :raise ResponseException: when an error response was received from the Worldline Global Collect platform
         """
         (status, headers, chunks) = self._delete_with_binary_response(relative_path, request_headers, request_parameters, context)
         return self._process_binary_response(status, chunks, headers, relative_path, context)
@@ -157,8 +157,8 @@ class Communicator(LoggingCapable, ObfuscationCapable):
         :param request_parameters: An optional set of request parameters.
         :param response_type: The type of response to return.
         :param context: The optional call context to use.
-        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform
-        :raise: ResponseException when an error response was received from the Worldline Global Collect platform
+        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform
+        :raise ResponseException: when an error response was received from the Worldline Global Collect platform
         """
         (status, headers, chunks) = self._delete_with_binary_response(relative_path, request_headers, request_parameters, context)
         return self._process_response(status, chunks, headers, relative_path, response_type, context)
@@ -201,8 +201,8 @@ class Communicator(LoggingCapable, ObfuscationCapable):
         :param request_parameters: An optional set of request parameters.
         :param request_body: The optional request body to send.
         :param context: The optional call context to use.
-        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform
-        :raise: ResponseException when an error response was received from the Worldline Global Collect platform
+        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform
+        :raise ResponseException: when an error response was received from the Worldline Global Collect platform
         """
         (status, headers, chunks) = self._post_with_binary_response(relative_path, request_headers, request_parameters, request_body, context)
         return self._process_binary_response(status, chunks, headers, relative_path, context)
@@ -220,8 +220,8 @@ class Communicator(LoggingCapable, ObfuscationCapable):
         :param request_body: The optional request body to send.
         :param response_type: The type of response to return.
         :param context: The optional call context to use.
-        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform
-        :raise: ResponseException when an error response was received from the Worldline Global Collect platform
+        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform
+        :raise ResponseException: when an error response was received from the Worldline Global Collect platform
         """
         (status, headers, chunks) = self._post_with_binary_response(relative_path, request_headers, request_parameters, request_body, context)
         return self._process_response(status, chunks, headers, relative_path, response_type, context)
@@ -263,8 +263,8 @@ class Communicator(LoggingCapable, ObfuscationCapable):
         :param request_parameters: An optional set of request parameters.
         :param request_body: The optional request body to send.
         :param context: The optional call context to use.
-        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform
-        :raise: ResponseException when an error response was received from the Worldline Global Collect platform
+        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform
+        :raise ResponseException: when an error response was received from the Worldline Global Collect platform
         """
         (status, headers, chunks) = self._put_with_binary_response(relative_path, request_headers, request_parameters, request_body, context)
         return self._process_binary_response(status, chunks, headers, relative_path, context)
@@ -282,8 +282,8 @@ class Communicator(LoggingCapable, ObfuscationCapable):
         :param request_body: The optional request body to send.
         :param response_type: The type of response to return.
         :param context: The optional call context to use.
-        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform
-        :raise: ResponseException when an error response was received from the Worldline Global Collect platform
+        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform
+        :raise ResponseException: when an error response was received from the Worldline Global Collect platform
         """
         (status, headers, chunks) = self._put_with_binary_response(relative_path, request_headers, request_parameters, request_body, context)
         return self._process_response(status, chunks, headers, relative_path, response_type, context)

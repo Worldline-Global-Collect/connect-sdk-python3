@@ -21,7 +21,7 @@ class SepaDirectDebitPaymentProduct771SpecificInput(AbstractSepaDirectDebitPayme
     def existing_unique_mandate_reference(self) -> Optional[str]:
         """
         | The unique reference of the existing mandate to use in this payment.
-        
+
         Type: str
         """
         return self.__existing_unique_mandate_reference
@@ -34,7 +34,7 @@ class SepaDirectDebitPaymentProduct771SpecificInput(AbstractSepaDirectDebitPayme
     def mandate(self) -> Optional[CreateMandateWithReturnUrl]:
         """
         | Object containing information to create a SEPA Direct Debit mandate.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.create_mandate_with_return_url.CreateMandateWithReturnUrl`
         """
         return self.__mandate

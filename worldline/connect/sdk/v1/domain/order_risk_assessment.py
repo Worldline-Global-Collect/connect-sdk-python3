@@ -23,7 +23,7 @@ class OrderRiskAssessment(DataObject):
     def additional_input(self) -> Optional[AdditionalOrderInputAirlineData]:
         """
         | Object containing additional input on the order
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.additional_order_input_airline_data.AdditionalOrderInputAirlineData`
         """
         return self.__additional_input
@@ -36,7 +36,7 @@ class OrderRiskAssessment(DataObject):
     def amount_of_money(self) -> Optional[AmountOfMoney]:
         """
         | Object containing amount and ISO currency code attributes
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
         """
         return self.__amount_of_money
@@ -49,7 +49,7 @@ class OrderRiskAssessment(DataObject):
     def customer(self) -> Optional[CustomerRiskAssessment]:
         """
         | Object containing the details of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.customer_risk_assessment.CustomerRiskAssessment`
         """
         return self.__customer
@@ -62,7 +62,7 @@ class OrderRiskAssessment(DataObject):
     def shipping(self) -> Optional[ShippingRiskAssessment]:
         """
         | Object containing information regarding shipping / delivery
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.shipping_risk_assessment.ShippingRiskAssessment`
         """
         return self.__shipping

@@ -21,7 +21,7 @@ class CompletePaymentRequest(DataObject):
     def card_payment_method_specific_input(self) -> Optional[CompletePaymentCardPaymentMethodSpecificInput]:
         """
         | Object containing the specific input details for card payments
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.complete_payment_card_payment_method_specific_input.CompletePaymentCardPaymentMethodSpecificInput`
         """
         return self.__card_payment_method_specific_input
@@ -34,7 +34,7 @@ class CompletePaymentRequest(DataObject):
     def merchant(self) -> Optional[Merchant]:
         """
         | Object containing information on you, the merchant
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.merchant.Merchant`
         """
         return self.__merchant
@@ -47,7 +47,7 @@ class CompletePaymentRequest(DataObject):
     def order(self) -> Optional[Order]:
         """
         | Order object containing order related data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.order.Order`
         """
         return self.__order
