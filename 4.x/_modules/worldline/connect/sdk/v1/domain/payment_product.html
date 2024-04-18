@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>worldline.connect.sdk.v1.domain.payment_product &#8212; connect-sdk-python3 4.0.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.payment_product &#8212; connect-sdk-python3 4.0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/alabaster.css?v=12dfc556" />
-    <script src="../../../../../../_static/documentation_options.js?v=3304f9e4"></script>
-    <script src="../../../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../../../_static/documentation_options.js?v=977c7dfd"></script>
+    <script src="../../../../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../../search.html" />
@@ -81,7 +81,7 @@
     <span class="k">def</span> <span class="nf">accounts_on_file</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">AccountOnFile</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | List of tokens for that payment product</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: list[:class:`worldline.connect.sdk.v1.domain.account_on_file.AccountOnFile`]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__accounts_on_file</span>
@@ -94,7 +94,7 @@
     <span class="k">def</span> <span class="nf">acquirer_country</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | ISO 3166-1 alpha-2 country code which indicates the most likely country code of the acquirer that will process the transaction. For Google Pay (paymentProductId 320) transactions this acquirerCountry is should be provided in the https://developers.google.com/pay/api/web/guides/resources/sca &lt;https://developers.google.com/pay/api/web/reference/request-objects#TransactionInfo&gt;</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__acquirer_country</span>
@@ -110,7 +110,7 @@
 <span class="sd">        </span>
 <span class="sd">        * true - This payment supports installments</span>
 <span class="sd">        * false - This payment does not support installments</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__allows_installments</span>
@@ -126,7 +126,7 @@
 <span class="sd">        </span>
 <span class="sd">        * true - This payment product supports recurring payments</span>
 <span class="sd">        * false - This payment product does not support recurring transactions and can only be used for one-off payments</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__allows_recurring</span>
@@ -142,7 +142,7 @@
 <span class="sd">        </span>
 <span class="sd">        * true - Payment details from payments done with this payment product can be tokenized for future re-use</span>
 <span class="sd">        * false - Payment details from payments done with this payment product can not be tokenized</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__allows_tokenization</span>
@@ -155,7 +155,7 @@
     <span class="k">def</span> <span class="nf">authentication_indicator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AuthenticationIndicator</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Indicates if the payment product supports 3D Security (mandatory, optional or not needed).</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.authentication_indicator.AuthenticationIndicator`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__authentication_indicator</span>
@@ -171,7 +171,7 @@
 <span class="sd">        </span>
 <span class="sd">        * true - Payment details from payments done with this payment product can be automatically tokenized for future re-use</span>
 <span class="sd">        * false - Payment details from payments done with this payment product can not be automatically tokenized</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__auto_tokenized</span>
@@ -187,7 +187,7 @@
 <span class="sd">        </span>
 <span class="sd">        * true - the third party allows their payment pages to be embedded in an iframe.</span>
 <span class="sd">        * false - the third party disallows their payment pages to be embedded in an iframe.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__can_be_iframed</span>
@@ -203,7 +203,7 @@
 <span class="sd">        </span>
 <span class="sd">        * true</span>
 <span class="sd">        * false</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__device_fingerprint_enabled</span>
@@ -216,7 +216,7 @@
     <span class="k">def</span> <span class="nf">display_hints</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PaymentProductDisplayHints</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing display hints like the order in which the product should be shown, the name of the product and the logo</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.payment_product_display_hints.PaymentProductDisplayHints`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__display_hints</span>
@@ -229,7 +229,7 @@
     <span class="k">def</span> <span class="nf">fields</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">PaymentProductField</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing all the fields and their details that are associated with this payment product. If you are not interested in the data in the fields you should have us filter them out (using filter=fields in the query-string)</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: list[:class:`worldline.connect.sdk.v1.domain.payment_product_field.PaymentProductField`]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__fields</span>
@@ -242,7 +242,7 @@
     <span class="k">def</span> <span class="nf">fields_warning</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | If one or more of the payment product fields could not be constructed, no payment product fields will be returned and a message will be present in this property stating why.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__fields_warning</span>
@@ -255,7 +255,7 @@
     <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The ID of the payment product in our system</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: int</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__id</span>
@@ -268,7 +268,7 @@
     <span class="k">def</span> <span class="nf">is_authentication_supported</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Indicates if the payment product supports 3D-Secure.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__is_authentication_supported</span>
@@ -284,7 +284,7 @@
 <span class="sd">        </span>
 <span class="sd">        * true - the payment product requires JavaScript to be enabled.</span>
 <span class="sd">        * false - the payment product does not require JavaScript to be enabled. This is the default value if the property is not present.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__is_java_script_required</span>
@@ -297,7 +297,7 @@
     <span class="k">def</span> <span class="nf">max_amount</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Maximum amount in cents (using 2 decimals, so 1 EUR becomes 100 cents) for transactions done with this payment product</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: int</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__max_amount</span>
@@ -310,7 +310,7 @@
     <span class="k">def</span> <span class="nf">min_amount</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Minimum amount in cents (using 2 decimals, so 1 EUR becomes 100 cents) for transactions done with this payment product</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: int</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__min_amount</span>
@@ -327,7 +327,7 @@
 <span class="sd">        * NO_SUPPORT - The payment product does not work at all on a mobile device</span>
 <span class="sd">        * BASIC_SUPPORT - The payment product has not optimized its user experience for devices with smaller screens</span>
 <span class="sd">        * OPTIMISED_SUPPORT - The payment product offers a user experience that has been optimized for devices with smaller screens</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mobile_integration_level</span>
@@ -348,7 +348,7 @@
 <span class="sd">        * eInvoice</span>
 <span class="sd">        * invoice</span>
 <span class="sd">        * redirect</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__payment_method</span>
@@ -361,7 +361,7 @@
     <span class="k">def</span> <span class="nf">payment_product302_specific_data</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PaymentProduct302SpecificData</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Apple Pay (payment product 302) specific details.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.payment_product302_specific_data.PaymentProduct302SpecificData`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__payment_product302_specific_data</span>
@@ -374,7 +374,7 @@
     <span class="k">def</span> <span class="nf">payment_product320_specific_data</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PaymentProduct320SpecificData</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Google Pay (payment product 320) specific details.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.payment_product320_specific_data.PaymentProduct320SpecificData`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__payment_product320_specific_data</span>
@@ -387,7 +387,7 @@
     <span class="k">def</span> <span class="nf">payment_product863_specific_data</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PaymentProduct863SpecificData</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | WeChat Pay (payment product 863) specific details.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.payment_product863_specific_data.PaymentProduct863SpecificData`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__payment_product863_specific_data</span>
@@ -402,7 +402,7 @@
 <span class="sd">        | The payment product group that has this payment product, if there is any. Not populated otherwise. Currently only one payment product group is supported:</span>
 <span class="sd">        </span>
 <span class="sd">        * cards</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__payment_product_group</span>
@@ -415,7 +415,7 @@
     <span class="k">def</span> <span class="nf">supports_mandates</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Indicates whether the payment product supports mandates.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__supports_mandates</span>
@@ -431,7 +431,7 @@
 <span class="sd">        </span>
 <span class="sd">        * true - Redirection is required</span>
 <span class="sd">        * false - No redirection is required</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__uses_redirection_to3rd_party</span>
@@ -613,7 +613,7 @@
   </ul></li>
 </ul>
 </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../../../../search.html" method="get">
@@ -621,7 +621,7 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
 
 
@@ -639,7 +639,7 @@
       &#169;Copyright (c) 2016 Global Collect Services B.V..
       
       |
-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.6</a>
       &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
       
     </div>

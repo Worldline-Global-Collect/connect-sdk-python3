@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>worldline.connect.sdk.v1.domain.lodging_data &#8212; connect-sdk-python3 4.0.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.lodging_data &#8212; connect-sdk-python3 4.0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/alabaster.css?v=12dfc556" />
-    <script src="../../../../../../_static/documentation_options.js?v=3304f9e4"></script>
-    <script src="../../../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../../../_static/documentation_options.js?v=977c7dfd"></script>
+    <script src="../../../../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../../search.html" />
@@ -70,7 +70,7 @@
     <span class="k">def</span> <span class="nf">charges</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">LodgingCharge</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object that holds lodging related charges</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: list[:class:`worldline.connect.sdk.v1.domain.lodging_charge.LodgingCharge`]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__charges</span>
@@ -84,7 +84,7 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The date the guest checks into (or plans to check in to) the facility. </span>
 <span class="sd">        | Format: YYYYMMDD</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__check_in_date</span>
@@ -98,7 +98,7 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The date the guest checks out of (or plans to check out of) the facility. </span>
 <span class="sd">        | Format: YYYYMMDD</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__check_out_date</span>
@@ -111,7 +111,7 @@
     <span class="k">def</span> <span class="nf">folio_number</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The Lodging Folio Number assigned to the itemized statement of charges and credits associated with this lodging stay, which can be any combination of characters and numerals defined by the Merchant or authorized Third Party Processor.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__folio_number</span>
@@ -127,7 +127,7 @@
 <span class="sd">        </span>
 <span class="sd">        * true - The room reservation is confirmed</span>
 <span class="sd">        * false - The room reservation is not confirmed</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__is_confirmed_reservation</span>
@@ -143,7 +143,7 @@
 <span class="sd">        </span>
 <span class="sd">        * true - The facility conform to the requirements</span>
 <span class="sd">        * false - The facility doesn&#39;t conform to the requirements</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__is_facility_fire_safety_conform</span>
@@ -159,7 +159,7 @@
 <span class="sd">        </span>
 <span class="sd">        * true - The customer is a no show</span>
 <span class="sd">        * false - Not applicable</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__is_no_show</span>
@@ -175,7 +175,7 @@
 <span class="sd">        </span>
 <span class="sd">        * true - A smoking room is preferred</span>
 <span class="sd">        * false - A non-smoking room is preferred</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__is_preference_smoking_room</span>
@@ -188,7 +188,7 @@
     <span class="k">def</span> <span class="nf">number_of_adults</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The total number of adult guests staying (or planning to stay) at the facility (i.e., all booked rooms)</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: int</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__number_of_adults</span>
@@ -201,7 +201,7 @@
     <span class="k">def</span> <span class="nf">number_of_nights</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The number of nights for the lodging stay</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: int</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__number_of_nights</span>
@@ -214,7 +214,7 @@
     <span class="k">def</span> <span class="nf">number_of_rooms</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The number of rooms rented for the lodging stay</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: int</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__number_of_rooms</span>
@@ -233,7 +233,7 @@
 <span class="sd">        * advancedDeposit - Submitted charges are for an Advanced Deposit to reserve one or more rooms</span>
 <span class="sd">        </span>
 <span class="sd">        | If no value is submitted the default value lodging is used.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__program_code</span>
@@ -246,7 +246,7 @@
     <span class="k">def</span> <span class="nf">property_customer_service_phone_number</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The international customer service phone number of the facility</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__property_customer_service_phone_number</span>
@@ -259,7 +259,7 @@
     <span class="k">def</span> <span class="nf">property_phone_number</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The local phone number of the facility in an international phone number format</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__property_phone_number</span>
@@ -272,7 +272,7 @@
     <span class="k">def</span> <span class="nf">renter_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Name of the person or business entity charged for the reservation and/or lodging stay</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__renter_name</span>
@@ -285,7 +285,7 @@
     <span class="k">def</span> <span class="nf">rooms</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">LodgingRoom</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object that holds lodging related room data</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: list[:class:`worldline.connect.sdk.v1.domain.lodging_room.LodgingRoom`]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__rooms</span>
@@ -416,7 +416,7 @@
   </ul></li>
 </ul>
 </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../../../../search.html" method="get">
@@ -424,7 +424,7 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
 
 
@@ -442,7 +442,7 @@
       &#169;Copyright (c) 2016 Global Collect Services B.V..
       
       |
-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.6</a>
       &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
       
     </div>
