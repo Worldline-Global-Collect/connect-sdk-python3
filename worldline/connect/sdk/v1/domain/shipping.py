@@ -20,6 +20,7 @@ class Shipping(DataObject):
     __email_address: Optional[str] = None
     __first_usage_date: Optional[str] = None
     __is_first_usage: Optional[bool] = None
+    __shipped_from_zip: Optional[str] = None
     __tracking_number: Optional[str] = None
     __type: Optional[str] = None
 
@@ -114,6 +115,19 @@ class Shipping(DataObject):
         self.__is_first_usage = value
 
     @property
+    def shipped_from_zip(self) -> Optional[str]:
+        """
+        | The zip/postal code of the location from which the goods were shipped.
+
+        Type: str
+        """
+        return self.__shipped_from_zip
+
+    @shipped_from_zip.setter
+    def shipped_from_zip(self, value: Optional[str]) -> None:
+        self.__shipped_from_zip = value
+
+    @property
     def tracking_number(self) -> Optional[str]:
         """
         | Shipment tracking number
@@ -162,6 +176,8 @@ class Shipping(DataObject):
             dictionary['firstUsageDate'] = self.first_usage_date
         if self.is_first_usage is not None:
             dictionary['isFirstUsage'] = self.is_first_usage
+        if self.shipped_from_zip is not None:
+            dictionary['shippedFromZip'] = self.shipped_from_zip
         if self.tracking_number is not None:
             dictionary['trackingNumber'] = self.tracking_number
         if self.type is not None:
@@ -185,6 +201,8 @@ class Shipping(DataObject):
             self.first_usage_date = dictionary['firstUsageDate']
         if 'isFirstUsage' in dictionary:
             self.is_first_usage = dictionary['isFirstUsage']
+        if 'shippedFromZip' in dictionary:
+            self.shipped_from_zip = dictionary['shippedFromZip']
         if 'trackingNumber' in dictionary:
             self.tracking_number = dictionary['trackingNumber']
         if 'type' in dictionary:
