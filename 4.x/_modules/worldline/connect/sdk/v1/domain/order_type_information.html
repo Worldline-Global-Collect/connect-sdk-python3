@@ -4,11 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>worldline.connect.sdk.v1.domain.order_type_information &#8212; connect-sdk-python3 4.1.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.order_type_information &#8212; connect-sdk-python3 4.2.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../../../../../_static/alabaster.css?v=12dfc556" />
-    <script src="../../../../../../_static/documentation_options.js?v=42d1b3bd"></script>
-    <script src="../../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../../../../../_static/documentation_options.js?v=d0ae6d56"></script>
+    <script src="../../../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../../search.html" />
@@ -45,6 +46,7 @@
 <span class="k">class</span> <span class="nc">OrderTypeInformation</span><span class="p">(</span><span class="n">DataObject</span><span class="p">):</span>
 
     <span class="n">__funding_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">__payment_code</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__purchase_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__transaction_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__usage_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
@@ -70,6 +72,101 @@
     <span class="nd">@funding_type</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">funding_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__funding_type</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">payment_code</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | Payment code to support account funding transactions. Possible values are:</span>
+<span class="sd">        </span>
+<span class="sd">        * accountManagement</span>
+<span class="sd">        * paymentAllowance</span>
+<span class="sd">        * settlementOfAnnuity</span>
+<span class="sd">        * unemploymentDisabilityBenefit</span>
+<span class="sd">        * businessExpenses</span>
+<span class="sd">        * bonusPayment</span>
+<span class="sd">        * busTransportRelatedBusiness</span>
+<span class="sd">        * cashManagementTransfer</span>
+<span class="sd">        * paymentOfCableTVBill</span>
+<span class="sd">        * governmentInstituteIssued</span>
+<span class="sd">        * creditCardPayment</span>
+<span class="sd">        * creditCardBill</span>
+<span class="sd">        * charity</span>
+<span class="sd">        * collectionPayment</span>
+<span class="sd">        * commercialPayment</span>
+<span class="sd">        * commission</span>
+<span class="sd">        * compensation</span>
+<span class="sd">        * copyright</span>
+<span class="sd">        * debitCardPayment</span>
+<span class="sd">        * deposit</span>
+<span class="sd">        * dividend</span>
+<span class="sd">        * studyFees</span>
+<span class="sd">        * electricityBill</span>
+<span class="sd">        * energies</span>
+<span class="sd">        * generalFees</span>
+<span class="sd">        * ferry</span>
+<span class="sd">        * foreignExchange</span>
+<span class="sd">        * gasBill</span>
+<span class="sd">        * unemployedCompensation</span>
+<span class="sd">        * governmentPayment</span>
+<span class="sd">        * healthInsurance</span>
+<span class="sd">        * reimbursementCreditCard</span>
+<span class="sd">        * reimbursementDebitCard</span>
+<span class="sd">        * carInsurancePremium</span>
+<span class="sd">        * insuranceClaim</span>
+<span class="sd">        * installment</span>
+<span class="sd">        * insurancePremium</span>
+<span class="sd">        * investmentPayment</span>
+<span class="sd">        * intraCompany</span>
+<span class="sd">        * interest</span>
+<span class="sd">        * incomeTax</span>
+<span class="sd">        * investment</span>
+<span class="sd">        * laborInsurance</span>
+<span class="sd">        * licenseFree</span>
+<span class="sd">        * lifeInsurance</span>
+<span class="sd">        * loan</span>
+<span class="sd">        * medicalServices</span>
+<span class="sd">        * mobilePersonToBusiness</span>
+<span class="sd">        * mobilePersonToPerson</span>
+<span class="sd">        * mobileTopUp</span>
+<span class="sd">        * notSpecified</span>
+<span class="sd">        * other</span>
+<span class="sd">        * anotherTelecomBill</span>
+<span class="sd">        * payroll</span>
+<span class="sd">        * pensionFundContribution</span>
+<span class="sd">        * pensionPayment</span>
+<span class="sd">        * telephoneBill</span>
+<span class="sd">        * propertyInsurance</span>
+<span class="sd">        * generalLease</span>
+<span class="sd">        * rent</span>
+<span class="sd">        * railwayPayment</span>
+<span class="sd">        * royalties</span>
+<span class="sd">        * salary</span>
+<span class="sd">        * savingsPayment</span>
+<span class="sd">        * securities</span>
+<span class="sd">        * socialSecurity</span>
+<span class="sd">        * study</span>
+<span class="sd">        * subscription</span>
+<span class="sd">        * supplierPayment</span>
+<span class="sd">        * taxRefund</span>
+<span class="sd">        * taxPayment</span>
+<span class="sd">        * telecommunicationsBill</span>
+<span class="sd">        * tradeServices</span>
+<span class="sd">        * treasuryPayment</span>
+<span class="sd">        * travelPayment</span>
+<span class="sd">        * utilityBill</span>
+<span class="sd">        * valueAddedTaxPayment</span>
+<span class="sd">        * withHolding</span>
+<span class="sd">        * waterBill</span>
+<span class="sd">        </span>
+<span class="sd">        | .</span>
+
+<span class="sd">        Type: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__payment_code</span>
+
+    <span class="nd">@payment_code</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">payment_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__payment_code</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">purchase_type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
@@ -128,6 +225,8 @@
         <span class="n">dictionary</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">OrderTypeInformation</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">funding_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;fundingType&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">funding_type</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">payment_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentCode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">payment_code</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">purchase_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;purchaseType&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">purchase_type</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">transaction_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -143,6 +242,8 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">OrderTypeInformation</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
         <span class="k">if</span> <span class="s1">&#39;fundingType&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">funding_type</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;fundingType&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;paymentCode&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">payment_code</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentCode&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;purchaseType&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">purchase_type</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;purchaseType&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;transactionType&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
@@ -158,7 +259,7 @@
           
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
 <h1 class="logo"><a href="../../../../../../index.html">connect-sdk-python3</a></h1>
 
@@ -169,7 +270,16 @@
 
 
 
-<h3>Navigation</h3>
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
 
 <div class="relations">
 <h3>Related Topics</h3>
@@ -180,16 +290,6 @@
   </ul></li>
 </ul>
 </div>
-<search id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script>
 
 
 
@@ -206,8 +306,8 @@
       &#169;Copyright (c) 2016 Global Collect Services B.V..
       
       |
-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
-      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
       
     </div>
 
