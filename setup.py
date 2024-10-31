@@ -21,7 +21,7 @@ def test_collector():
 
 setup(
     name="connect-sdk-python3",
-    version="4.1.0",
+    version="4.2.0",
     author="Worldline Global Collect",
     author_email="github.connect@worldline.com",
     description="SDK to communicate with the Worldline Global Collect platform using the Worldline Connect Server API",
@@ -54,6 +54,7 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
         "Topic :: Office/Business :: Financial",
         "License :: OSI Approved :: MIT License"
     ],
