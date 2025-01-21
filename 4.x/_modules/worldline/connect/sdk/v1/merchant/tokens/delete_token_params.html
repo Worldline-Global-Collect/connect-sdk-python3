@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>worldline.connect.sdk.v1.merchant.tokens.delete_token_params &#8212; connect-sdk-python3 4.2.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../../../../../../_static/pygments.css?v=fa44fd50" />
+    <title>worldline.connect.sdk.v1.merchant.tokens.delete_token_params &#8212; connect-sdk-python3 4.3.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../../../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../../../../../_static/basic.css?v=686e5160" />
     <link rel="stylesheet" type="text/css" href="../../../../../../../_static/alabaster.css?v=27fed22d" />
-    <script src="../../../../../../../_static/documentation_options.js?v=d0ae6d56"></script>
+    <script src="../../../../../../../_static/documentation_options.js?v=a17b270f"></script>
     <script src="../../../../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../../../../../../genindex.html" />
@@ -36,15 +36,15 @@
 <span class="c1"># This class was auto-generated from the API references found at</span>
 <span class="c1"># https://apireference.connect.worldline-solutions.com/</span>
 <span class="c1">#</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
 
-<span class="kn">from</span> <span class="nn">worldline.connect.sdk.communication.param_request</span> <span class="kn">import</span> <span class="n">ParamRequest</span>
-<span class="kn">from</span> <span class="nn">worldline.connect.sdk.communication.request_param</span> <span class="kn">import</span> <span class="n">RequestParam</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">worldline.connect.sdk.communication.param_request</span><span class="w"> </span><span class="kn">import</span> <span class="n">ParamRequest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">worldline.connect.sdk.communication.request_param</span><span class="w"> </span><span class="kn">import</span> <span class="n">RequestParam</span>
 
 
 <div class="viewcode-block" id="DeleteTokenParams">
 <a class="viewcode-back" href="../../../../../../../index.html#worldline.connect.sdk.v1.merchant.tokens.delete_token_params.DeleteTokenParams">[docs]</a>
-<span class="k">class</span> <span class="nc">DeleteTokenParams</span><span class="p">(</span><span class="n">ParamRequest</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">DeleteTokenParams</span><span class="p">(</span><span class="n">ParamRequest</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Query parameters for Delete token</span>
 
@@ -54,7 +54,7 @@
     <span class="n">__mandate_cancel_date</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mandate_cancel_date</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mandate_cancel_date</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Date of the mandate cancellation</span>
 <span class="sd">        | Format: YYYYMMDD</span>
@@ -64,12 +64,12 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mandate_cancel_date</span>
 
     <span class="nd">@mandate_cancel_date</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">mandate_cancel_date</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mandate_cancel_date</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__mandate_cancel_date</span> <span class="o">=</span> <span class="n">value</span>
 
 <div class="viewcode-block" id="DeleteTokenParams.to_request_parameters">
 <a class="viewcode-back" href="../../../../../../../index.html#worldline.connect.sdk.v1.merchant.tokens.delete_token_params.DeleteTokenParams.to_request_parameters">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_request_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">RequestParam</span><span class="p">]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_request_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">RequestParam</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :return: list[RequestParam]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
