@@ -6,15 +6,30 @@
 from typing import Optional
 
 from worldline.connect.sdk.domain.data_object import DataObject
+from worldline.connect.sdk.v1.domain.cybersource_decision_manager import CybersourceDecisionManager
 from worldline.connect.sdk.v1.domain.in_auth import InAuth
 from worldline.connect.sdk.v1.domain.microsoft_fraud_results import MicrosoftFraudResults
 
 
 class FraudResults(DataObject):
 
+    __cybersource_decision_manager: Optional[CybersourceDecisionManager] = None
     __fraud_service_result: Optional[str] = None
     __in_auth: Optional[InAuth] = None
     __microsoft_fraud_protection: Optional[MicrosoftFraudResults] = None
+
+    @property
+    def cybersource_decision_manager(self) -> Optional[CybersourceDecisionManager]:
+        """
+        | This object contains the results of the Cybersource Decision Manager assessment. Cybersource is a fraud detection tool leveraging data networks, configurable rules, intelligence, and device fingerprinting to identify risky transactions.
+
+        Type: :class:`worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager`
+        """
+        return self.__cybersource_decision_manager
+
+    @cybersource_decision_manager.setter
+    def cybersource_decision_manager(self, value: Optional[CybersourceDecisionManager]) -> None:
+        self.__cybersource_decision_manager = value
 
     @property
     def fraud_service_result(self) -> Optional[str]:
@@ -63,6 +78,8 @@ class FraudResults(DataObject):
 
     def to_dictionary(self) -> dict:
         dictionary = super(FraudResults, self).to_dictionary()
+        if self.cybersource_decision_manager is not None:
+            dictionary['cybersourceDecisionManager'] = self.cybersource_decision_manager.to_dictionary()
         if self.fraud_service_result is not None:
             dictionary['fraudServiceResult'] = self.fraud_service_result
         if self.in_auth is not None:
@@ -73,6 +90,11 @@ class FraudResults(DataObject):
 
     def from_dictionary(self, dictionary: dict) -> 'FraudResults':
         super(FraudResults, self).from_dictionary(dictionary)
+        if 'cybersourceDecisionManager' in dictionary:
+            if not isinstance(dictionary['cybersourceDecisionManager'], dict):
+                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['cybersourceDecisionManager']))
+            value = CybersourceDecisionManager()
+            self.cybersource_decision_manager = value.from_dictionary(dictionary['cybersourceDecisionManager'])
         if 'fraudServiceResult' in dictionary:
             self.fraud_service_result = dictionary['fraudServiceResult']
         if 'inAuth' in dictionary:
