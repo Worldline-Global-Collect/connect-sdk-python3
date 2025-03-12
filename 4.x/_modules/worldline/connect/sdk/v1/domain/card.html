@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>worldline.connect.sdk.v1.domain.card &#8212; connect-sdk-python3 4.3.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.card &#8212; connect-sdk-python3 4.4.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../../../../../_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/basic.css?v=b08954a9" />
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/alabaster.css?v=27fed22d" />
-    <script src="../../../../../../_static/documentation_options.js?v=a17b270f"></script>
+    <script src="../../../../../../_static/documentation_options.js?v=2f20d6c1"></script>
     <script src="../../../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../../../../../genindex.html" />
@@ -64,7 +64,18 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">partial_pin</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        | The first 2 digits of the card&#39;s PIN code. May be optionally submitted for South Korean cards (paymentProductIds 180, 181, 182, 183, 184, 185 and 186). Submitting this property may improve your authorization rate.</span>
+<span class="sd">        | The first 2 digits of the card&#39;s PIN code. May be optionally submitted for the following payment products:</span>
+<span class="sd">        </span>
+<span class="sd">        * BC Card (paymentProductId 180)</span>
+<span class="sd">        * Hana Card (paymentProductId 181)</span>
+<span class="sd">        * Hyundai Card (paymentProductId 182)</span>
+<span class="sd">        * KB Card (paymentProductId 183)</span>
+<span class="sd">        * Lotte Card (paymentProductId 184)</span>
+<span class="sd">        * NH Card (paymentProductId 185)</span>
+<span class="sd">        * Samsung Card (paymentProductId 186)</span>
+<span class="sd">        * Shinhan Card (paymentProductId 187)</span>
+<span class="sd">        </span>
+<span class="sd">        | Submitting this property may improve your authorization rate.</span>
 
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -149,7 +160,7 @@
       &#169;Copyright (c) 2016 Global Collect Services B.V..
       
       |
-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
       &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
       
     </div>
