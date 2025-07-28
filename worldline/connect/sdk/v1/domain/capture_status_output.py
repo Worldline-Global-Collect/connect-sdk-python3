@@ -10,15 +10,36 @@ from worldline.connect.sdk.v1.domain.key_value_pair import KeyValuePair
 
 
 class CaptureStatusOutput(DataObject):
+    """
+    | This object has the numeric representation of the current capture status, timestamp of last status change and performable action on the current capture resource. In case of failed captures and negative scenarios, detailed error information is listed.
+    """
 
+    __is_refundable: Optional[bool] = None
     __is_retriable: Optional[bool] = None
     __provider_raw_output: Optional[List[KeyValuePair]] = None
     __status_code: Optional[int] = None
+    __status_code_change_date_time: Optional[str] = None
+
+    @property
+    def is_refundable(self) -> Optional[bool]:
+        """
+        | Flag indicating if a capture can be refunded 
+        
+        * true
+        * false
+
+        Type: bool
+        """
+        return self.__is_refundable
+
+    @is_refundable.setter
+    def is_refundable(self, value: Optional[bool]) -> None:
+        self.__is_refundable = value
 
     @property
     def is_retriable(self) -> Optional[bool]:
         """
-        | Flag indicating whether a rejected payment may be retried by the merchant without incurring a fee 
+        | Flag indicating whether a rejected capture may be retried by you without incurring a fee 
         
         * true
         * false
@@ -57,8 +78,24 @@ class CaptureStatusOutput(DataObject):
     def status_code(self, value: Optional[int]) -> None:
         self.__status_code = value
 
+    @property
+    def status_code_change_date_time(self) -> Optional[str]:
+        """
+        | Date and time of capture
+        |  Format: YYYYMMDDHH24MISS
+
+        Type: str
+        """
+        return self.__status_code_change_date_time
+
+    @status_code_change_date_time.setter
+    def status_code_change_date_time(self, value: Optional[str]) -> None:
+        self.__status_code_change_date_time = value
+
     def to_dictionary(self) -> dict:
         dictionary = super(CaptureStatusOutput, self).to_dictionary()
+        if self.is_refundable is not None:
+            dictionary['isRefundable'] = self.is_refundable
         if self.is_retriable is not None:
             dictionary['isRetriable'] = self.is_retriable
         if self.provider_raw_output is not None:
@@ -68,10 +105,14 @@ class CaptureStatusOutput(DataObject):
                     dictionary['providerRawOutput'].append(element.to_dictionary())
         if self.status_code is not None:
             dictionary['statusCode'] = self.status_code
+        if self.status_code_change_date_time is not None:
+            dictionary['statusCodeChangeDateTime'] = self.status_code_change_date_time
         return dictionary
 
     def from_dictionary(self, dictionary: dict) -> 'CaptureStatusOutput':
         super(CaptureStatusOutput, self).from_dictionary(dictionary)
+        if 'isRefundable' in dictionary:
+            self.is_refundable = dictionary['isRefundable']
         if 'isRetriable' in dictionary:
             self.is_retriable = dictionary['isRetriable']
         if 'providerRawOutput' in dictionary:
@@ -83,4 +124,6 @@ class CaptureStatusOutput(DataObject):
                 self.provider_raw_output.append(value.from_dictionary(element))
         if 'statusCode' in dictionary:
             self.status_code = dictionary['statusCode']
+        if 'statusCodeChangeDateTime' in dictionary:
+            self.status_code_change_date_time = dictionary['statusCodeChangeDateTime']
         return self

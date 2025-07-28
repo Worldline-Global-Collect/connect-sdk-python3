@@ -8,10 +8,6 @@ from typing import Optional
 from worldline.connect.sdk.v1.domain.bank_transfer_payment_method_specific_output import BankTransferPaymentMethodSpecificOutput
 from worldline.connect.sdk.v1.domain.card_payment_method_specific_output import CardPaymentMethodSpecificOutput
 from worldline.connect.sdk.v1.domain.cash_payment_method_specific_output import CashPaymentMethodSpecificOutput
-from worldline.connect.sdk.v1.domain.e_invoice_payment_method_specific_output import EInvoicePaymentMethodSpecificOutput
-from worldline.connect.sdk.v1.domain.invoice_payment_method_specific_output import InvoicePaymentMethodSpecificOutput
-from worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output import MobilePaymentMethodSpecificOutput
-from worldline.connect.sdk.v1.domain.non_sepa_direct_debit_payment_method_specific_output import NonSepaDirectDebitPaymentMethodSpecificOutput
 from worldline.connect.sdk.v1.domain.order_output import OrderOutput
 from worldline.connect.sdk.v1.domain.redirect_payment_method_specific_output import RedirectPaymentMethodSpecificOutput
 from worldline.connect.sdk.v1.domain.sepa_direct_debit_payment_method_specific_output import SepaDirectDebitPaymentMethodSpecificOutput
@@ -24,10 +20,6 @@ class CaptureOutput(OrderOutput):
     __bank_transfer_payment_method_specific_output: Optional[BankTransferPaymentMethodSpecificOutput] = None
     __card_payment_method_specific_output: Optional[CardPaymentMethodSpecificOutput] = None
     __cash_payment_method_specific_output: Optional[CashPaymentMethodSpecificOutput] = None
-    __direct_debit_payment_method_specific_output: Optional[NonSepaDirectDebitPaymentMethodSpecificOutput] = None
-    __e_invoice_payment_method_specific_output: Optional[EInvoicePaymentMethodSpecificOutput] = None
-    __invoice_payment_method_specific_output: Optional[InvoicePaymentMethodSpecificOutput] = None
-    __mobile_payment_method_specific_output: Optional[MobilePaymentMethodSpecificOutput] = None
     __payment_method: Optional[str] = None
     __redirect_payment_method_specific_output: Optional[RedirectPaymentMethodSpecificOutput] = None
     __reversal_reason: Optional[str] = None
@@ -97,58 +89,6 @@ class CaptureOutput(OrderOutput):
     @cash_payment_method_specific_output.setter
     def cash_payment_method_specific_output(self, value: Optional[CashPaymentMethodSpecificOutput]) -> None:
         self.__cash_payment_method_specific_output = value
-
-    @property
-    def direct_debit_payment_method_specific_output(self) -> Optional[NonSepaDirectDebitPaymentMethodSpecificOutput]:
-        """
-        | Object containing the non SEPA direct debit payment method details
-
-        Type: :class:`worldline.connect.sdk.v1.domain.non_sepa_direct_debit_payment_method_specific_output.NonSepaDirectDebitPaymentMethodSpecificOutput`
-        """
-        return self.__direct_debit_payment_method_specific_output
-
-    @direct_debit_payment_method_specific_output.setter
-    def direct_debit_payment_method_specific_output(self, value: Optional[NonSepaDirectDebitPaymentMethodSpecificOutput]) -> None:
-        self.__direct_debit_payment_method_specific_output = value
-
-    @property
-    def e_invoice_payment_method_specific_output(self) -> Optional[EInvoicePaymentMethodSpecificOutput]:
-        """
-        | Object containing the e-invoice payment method details
-
-        Type: :class:`worldline.connect.sdk.v1.domain.e_invoice_payment_method_specific_output.EInvoicePaymentMethodSpecificOutput`
-        """
-        return self.__e_invoice_payment_method_specific_output
-
-    @e_invoice_payment_method_specific_output.setter
-    def e_invoice_payment_method_specific_output(self, value: Optional[EInvoicePaymentMethodSpecificOutput]) -> None:
-        self.__e_invoice_payment_method_specific_output = value
-
-    @property
-    def invoice_payment_method_specific_output(self) -> Optional[InvoicePaymentMethodSpecificOutput]:
-        """
-        | Object containing the invoice payment method details
-
-        Type: :class:`worldline.connect.sdk.v1.domain.invoice_payment_method_specific_output.InvoicePaymentMethodSpecificOutput`
-        """
-        return self.__invoice_payment_method_specific_output
-
-    @invoice_payment_method_specific_output.setter
-    def invoice_payment_method_specific_output(self, value: Optional[InvoicePaymentMethodSpecificOutput]) -> None:
-        self.__invoice_payment_method_specific_output = value
-
-    @property
-    def mobile_payment_method_specific_output(self) -> Optional[MobilePaymentMethodSpecificOutput]:
-        """
-        | Object containing the mobile payment method details
-
-        Type: :class:`worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput`
-        """
-        return self.__mobile_payment_method_specific_output
-
-    @mobile_payment_method_specific_output.setter
-    def mobile_payment_method_specific_output(self, value: Optional[MobilePaymentMethodSpecificOutput]) -> None:
-        self.__mobile_payment_method_specific_output = value
 
     @property
     def payment_method(self) -> Optional[str]:
@@ -223,14 +163,6 @@ class CaptureOutput(OrderOutput):
             dictionary['cardPaymentMethodSpecificOutput'] = self.card_payment_method_specific_output.to_dictionary()
         if self.cash_payment_method_specific_output is not None:
             dictionary['cashPaymentMethodSpecificOutput'] = self.cash_payment_method_specific_output.to_dictionary()
-        if self.direct_debit_payment_method_specific_output is not None:
-            dictionary['directDebitPaymentMethodSpecificOutput'] = self.direct_debit_payment_method_specific_output.to_dictionary()
-        if self.e_invoice_payment_method_specific_output is not None:
-            dictionary['eInvoicePaymentMethodSpecificOutput'] = self.e_invoice_payment_method_specific_output.to_dictionary()
-        if self.invoice_payment_method_specific_output is not None:
-            dictionary['invoicePaymentMethodSpecificOutput'] = self.invoice_payment_method_specific_output.to_dictionary()
-        if self.mobile_payment_method_specific_output is not None:
-            dictionary['mobilePaymentMethodSpecificOutput'] = self.mobile_payment_method_specific_output.to_dictionary()
         if self.payment_method is not None:
             dictionary['paymentMethod'] = self.payment_method
         if self.redirect_payment_method_specific_output is not None:
@@ -262,26 +194,6 @@ class CaptureOutput(OrderOutput):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['cashPaymentMethodSpecificOutput']))
             value = CashPaymentMethodSpecificOutput()
             self.cash_payment_method_specific_output = value.from_dictionary(dictionary['cashPaymentMethodSpecificOutput'])
-        if 'directDebitPaymentMethodSpecificOutput' in dictionary:
-            if not isinstance(dictionary['directDebitPaymentMethodSpecificOutput'], dict):
-                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['directDebitPaymentMethodSpecificOutput']))
-            value = NonSepaDirectDebitPaymentMethodSpecificOutput()
-            self.direct_debit_payment_method_specific_output = value.from_dictionary(dictionary['directDebitPaymentMethodSpecificOutput'])
-        if 'eInvoicePaymentMethodSpecificOutput' in dictionary:
-            if not isinstance(dictionary['eInvoicePaymentMethodSpecificOutput'], dict):
-                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['eInvoicePaymentMethodSpecificOutput']))
-            value = EInvoicePaymentMethodSpecificOutput()
-            self.e_invoice_payment_method_specific_output = value.from_dictionary(dictionary['eInvoicePaymentMethodSpecificOutput'])
-        if 'invoicePaymentMethodSpecificOutput' in dictionary:
-            if not isinstance(dictionary['invoicePaymentMethodSpecificOutput'], dict):
-                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['invoicePaymentMethodSpecificOutput']))
-            value = InvoicePaymentMethodSpecificOutput()
-            self.invoice_payment_method_specific_output = value.from_dictionary(dictionary['invoicePaymentMethodSpecificOutput'])
-        if 'mobilePaymentMethodSpecificOutput' in dictionary:
-            if not isinstance(dictionary['mobilePaymentMethodSpecificOutput'], dict):
-                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['mobilePaymentMethodSpecificOutput']))
-            value = MobilePaymentMethodSpecificOutput()
-            self.mobile_payment_method_specific_output = value.from_dictionary(dictionary['mobilePaymentMethodSpecificOutput'])
         if 'paymentMethod' in dictionary:
             self.payment_method = dictionary['paymentMethod']
         if 'redirectPaymentMethodSpecificOutput' in dictionary:

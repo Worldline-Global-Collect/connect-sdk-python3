@@ -10,6 +10,7 @@ from worldline.connect.sdk.domain.data_object import DataObject
 
 class PaymentReferences(DataObject):
 
+    __merchant_capture_reference: Optional[str] = None
     __merchant_order_id: Optional[int] = None
     __merchant_reference: Optional[str] = None
     __payment_reference: Optional[str] = None
@@ -17,6 +18,19 @@ class PaymentReferences(DataObject):
     __provider_merchant_id: Optional[str] = None
     __provider_reference: Optional[str] = None
     __reference_orig_payment: Optional[str] = None
+
+    @property
+    def merchant_capture_reference(self) -> Optional[str]:
+        """
+        | Your unique reference of the capture that is also returned in our report files. This is almost always used for your reconciliation of our report files.
+
+        Type: str
+        """
+        return self.__merchant_capture_reference
+
+    @merchant_capture_reference.setter
+    def merchant_capture_reference(self, value: Optional[str]) -> None:
+        self.__merchant_capture_reference = value
 
     @property
     def merchant_order_id(self) -> Optional[int]:
@@ -111,6 +125,8 @@ class PaymentReferences(DataObject):
 
     def to_dictionary(self) -> dict:
         dictionary = super(PaymentReferences, self).to_dictionary()
+        if self.merchant_capture_reference is not None:
+            dictionary['merchantCaptureReference'] = self.merchant_capture_reference
         if self.merchant_order_id is not None:
             dictionary['merchantOrderId'] = self.merchant_order_id
         if self.merchant_reference is not None:
@@ -129,6 +145,8 @@ class PaymentReferences(DataObject):
 
     def from_dictionary(self, dictionary: dict) -> 'PaymentReferences':
         super(PaymentReferences, self).from_dictionary(dictionary)
+        if 'merchantCaptureReference' in dictionary:
+            self.merchant_capture_reference = dictionary['merchantCaptureReference']
         if 'merchantOrderId' in dictionary:
             self.merchant_order_id = dictionary['merchantOrderId']
         if 'merchantReference' in dictionary:
