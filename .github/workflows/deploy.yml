@@ -24,7 +24,8 @@ jobs:
       - name: Build
         run: python setup.py sdist --formats gztar --dist-dir .
       - name: Rename for PEP 625 compatibility
-        run: mv "connect-sdk-python3-${SDK_VERSION}.tar.gz" "connect_sdk_python3-${SDK_VERSION}.tar.gz"
+        # Twine may or may not already correct the filename; only rename if the non-compatible filename exists
+        run: if [ -f "connect-sdk-python3-${SDK_VERSION}.tar.gz" ]; then mv "connect-sdk-python3-${SDK_VERSION}.tar.gz" "connect_sdk_python3-${SDK_VERSION}.tar.gz"; fi
       - name: Verify
         run: twine check "connect_sdk_python3-${SDK_VERSION}.tar.gz"
       - name: Deploy
