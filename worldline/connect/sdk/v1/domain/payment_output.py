@@ -3,7 +3,7 @@
 # This class was auto-generated from the API references found at
 # https://apireference.connect.worldline-solutions.com/
 #
-from typing import Optional
+from typing import List, Optional
 
 from worldline.connect.sdk.v1.domain.bank_transfer_payment_method_specific_output import BankTransferPaymentMethodSpecificOutput
 from worldline.connect.sdk.v1.domain.card_payment_method_specific_output import CardPaymentMethodSpecificOutput
@@ -13,13 +13,18 @@ from worldline.connect.sdk.v1.domain.invoice_payment_method_specific_output impo
 from worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output import MobilePaymentMethodSpecificOutput
 from worldline.connect.sdk.v1.domain.non_sepa_direct_debit_payment_method_specific_output import NonSepaDirectDebitPaymentMethodSpecificOutput
 from worldline.connect.sdk.v1.domain.order_output import OrderOutput
+from worldline.connect.sdk.v1.domain.payment_operation import PaymentOperation
 from worldline.connect.sdk.v1.domain.redirect_payment_method_specific_output import RedirectPaymentMethodSpecificOutput
 from worldline.connect.sdk.v1.domain.sepa_direct_debit_payment_method_specific_output import SepaDirectDebitPaymentMethodSpecificOutput
 
 
 class PaymentOutput(OrderOutput):
 
+    __amount_capture_requested: Optional[int] = None
+    __amount_captured: Optional[int] = None
     __amount_paid: Optional[int] = None
+    __amount_refund_requested: Optional[int] = None
+    __amount_refunded: Optional[int] = None
     __amount_reversed: Optional[int] = None
     __bank_transfer_payment_method_specific_output: Optional[BankTransferPaymentMethodSpecificOutput] = None
     __card_payment_method_specific_output: Optional[CardPaymentMethodSpecificOutput] = None
@@ -28,10 +33,37 @@ class PaymentOutput(OrderOutput):
     __e_invoice_payment_method_specific_output: Optional[EInvoicePaymentMethodSpecificOutput] = None
     __invoice_payment_method_specific_output: Optional[InvoicePaymentMethodSpecificOutput] = None
     __mobile_payment_method_specific_output: Optional[MobilePaymentMethodSpecificOutput] = None
+    __operations: Optional[List[PaymentOperation]] = None
     __payment_method: Optional[str] = None
     __redirect_payment_method_specific_output: Optional[RedirectPaymentMethodSpecificOutput] = None
     __reversal_reason: Optional[str] = None
     __sepa_direct_debit_payment_method_specific_output: Optional[SepaDirectDebitPaymentMethodSpecificOutput] = None
+
+    @property
+    def amount_capture_requested(self) -> Optional[int]:
+        """
+        | Amount that has been requested to be captured.
+
+        Type: int
+        """
+        return self.__amount_capture_requested
+
+    @amount_capture_requested.setter
+    def amount_capture_requested(self, value: Optional[int]) -> None:
+        self.__amount_capture_requested = value
+
+    @property
+    def amount_captured(self) -> Optional[int]:
+        """
+        | Amount that has been captured.
+
+        Type: int
+        """
+        return self.__amount_captured
+
+    @amount_captured.setter
+    def amount_captured(self, value: Optional[int]) -> None:
+        self.__amount_captured = value
 
     @property
     def amount_paid(self) -> Optional[int]:
@@ -45,6 +77,32 @@ class PaymentOutput(OrderOutput):
     @amount_paid.setter
     def amount_paid(self, value: Optional[int]) -> None:
         self.__amount_paid = value
+
+    @property
+    def amount_refund_requested(self) -> Optional[int]:
+        """
+        | Amount that has been requested to be refunded.
+
+        Type: int
+        """
+        return self.__amount_refund_requested
+
+    @amount_refund_requested.setter
+    def amount_refund_requested(self, value: Optional[int]) -> None:
+        self.__amount_refund_requested = value
+
+    @property
+    def amount_refunded(self) -> Optional[int]:
+        """
+        | Amount that has been refunded.
+
+        Type: int
+        """
+        return self.__amount_refunded
+
+    @amount_refunded.setter
+    def amount_refunded(self, value: Optional[int]) -> None:
+        self.__amount_refunded = value
 
     @property
     def amount_reversed(self) -> Optional[int]:
@@ -151,6 +209,19 @@ class PaymentOutput(OrderOutput):
         self.__mobile_payment_method_specific_output = value
 
     @property
+    def operations(self) -> Optional[List[PaymentOperation]]:
+        """
+        | An object array containing information of captures and refunds.
+
+        Type: list[:class:`worldline.connect.sdk.v1.domain.payment_operation.PaymentOperation`]
+        """
+        return self.__operations
+
+    @operations.setter
+    def operations(self, value: Optional[List[PaymentOperation]]) -> None:
+        self.__operations = value
+
+    @property
     def payment_method(self) -> Optional[str]:
         """
         | Payment method identifier used by the our payment engine with the following possible values:
@@ -213,8 +284,16 @@ class PaymentOutput(OrderOutput):
 
     def to_dictionary(self) -> dict:
         dictionary = super(PaymentOutput, self).to_dictionary()
+        if self.amount_capture_requested is not None:
+            dictionary['amountCaptureRequested'] = self.amount_capture_requested
+        if self.amount_captured is not None:
+            dictionary['amountCaptured'] = self.amount_captured
         if self.amount_paid is not None:
             dictionary['amountPaid'] = self.amount_paid
+        if self.amount_refund_requested is not None:
+            dictionary['amountRefundRequested'] = self.amount_refund_requested
+        if self.amount_refunded is not None:
+            dictionary['amountRefunded'] = self.amount_refunded
         if self.amount_reversed is not None:
             dictionary['amountReversed'] = self.amount_reversed
         if self.bank_transfer_payment_method_specific_output is not None:
@@ -231,6 +310,11 @@ class PaymentOutput(OrderOutput):
             dictionary['invoicePaymentMethodSpecificOutput'] = self.invoice_payment_method_specific_output.to_dictionary()
         if self.mobile_payment_method_specific_output is not None:
             dictionary['mobilePaymentMethodSpecificOutput'] = self.mobile_payment_method_specific_output.to_dictionary()
+        if self.operations is not None:
+            dictionary['operations'] = []
+            for element in self.operations:
+                if element is not None:
+                    dictionary['operations'].append(element.to_dictionary())
         if self.payment_method is not None:
             dictionary['paymentMethod'] = self.payment_method
         if self.redirect_payment_method_specific_output is not None:
@@ -243,8 +327,16 @@ class PaymentOutput(OrderOutput):
 
     def from_dictionary(self, dictionary: dict) -> 'PaymentOutput':
         super(PaymentOutput, self).from_dictionary(dictionary)
+        if 'amountCaptureRequested' in dictionary:
+            self.amount_capture_requested = dictionary['amountCaptureRequested']
+        if 'amountCaptured' in dictionary:
+            self.amount_captured = dictionary['amountCaptured']
         if 'amountPaid' in dictionary:
             self.amount_paid = dictionary['amountPaid']
+        if 'amountRefundRequested' in dictionary:
+            self.amount_refund_requested = dictionary['amountRefundRequested']
+        if 'amountRefunded' in dictionary:
+            self.amount_refunded = dictionary['amountRefunded']
         if 'amountReversed' in dictionary:
             self.amount_reversed = dictionary['amountReversed']
         if 'bankTransferPaymentMethodSpecificOutput' in dictionary:
@@ -282,6 +374,13 @@ class PaymentOutput(OrderOutput):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['mobilePaymentMethodSpecificOutput']))
             value = MobilePaymentMethodSpecificOutput()
             self.mobile_payment_method_specific_output = value.from_dictionary(dictionary['mobilePaymentMethodSpecificOutput'])
+        if 'operations' in dictionary:
+            if not isinstance(dictionary['operations'], list):
+                raise TypeError('value \'{}\' is not a list'.format(dictionary['operations']))
+            self.operations = []
+            for element in dictionary['operations']:
+                value = PaymentOperation()
+                self.operations.append(value.from_dictionary(element))
         if 'paymentMethod' in dictionary:
             self.payment_method = dictionary['paymentMethod']
         if 'redirectPaymentMethodSpecificOutput' in dictionary:

@@ -6,6 +6,7 @@
 from typing import Optional
 
 from worldline.connect.sdk.domain.data_object import DataObject
+from worldline.connect.sdk.v1.domain.capture_response import CaptureResponse
 from worldline.connect.sdk.v1.domain.dispute_response import DisputeResponse
 from worldline.connect.sdk.v1.domain.payment_response import PaymentResponse
 from worldline.connect.sdk.v1.domain.payout_response import PayoutResponse
@@ -16,6 +17,7 @@ from worldline.connect.sdk.v1.domain.token_response import TokenResponse
 class WebhooksEvent(DataObject):
 
     __api_version: Optional[str] = None
+    __capture: Optional[CaptureResponse] = None
     __created: Optional[str] = None
     __dispute: Optional[DisputeResponse] = None
     __id: Optional[str] = None
@@ -36,6 +38,17 @@ class WebhooksEvent(DataObject):
     @api_version.setter
     def api_version(self, value: Optional[str]) -> None:
         self.__api_version = value
+
+    @property
+    def capture(self) -> Optional[CaptureResponse]:
+        """
+        Type: :class:`worldline.connect.sdk.v1.domain.capture_response.CaptureResponse`
+        """
+        return self.__capture
+
+    @capture.setter
+    def capture(self, value: Optional[CaptureResponse]) -> None:
+        self.__capture = value
 
     @property
     def created(self) -> Optional[str]:
@@ -140,6 +153,8 @@ class WebhooksEvent(DataObject):
         dictionary = super(WebhooksEvent, self).to_dictionary()
         if self.api_version is not None:
             dictionary['apiVersion'] = self.api_version
+        if self.capture is not None:
+            dictionary['capture'] = self.capture.to_dictionary()
         if self.created is not None:
             dictionary['created'] = self.created
         if self.dispute is not None:
@@ -164,6 +179,11 @@ class WebhooksEvent(DataObject):
         super(WebhooksEvent, self).from_dictionary(dictionary)
         if 'apiVersion' in dictionary:
             self.api_version = dictionary['apiVersion']
+        if 'capture' in dictionary:
+            if not isinstance(dictionary['capture'], dict):
+                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['capture']))
+            value = CaptureResponse()
+            self.capture = value.from_dictionary(dictionary['capture'])
         if 'created' in dictionary:
             self.created = dictionary['created']
         if 'dispute' in dictionary:

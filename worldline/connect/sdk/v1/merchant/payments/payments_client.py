@@ -34,6 +34,7 @@ from worldline.connect.sdk.v1.domain.refunds_response import RefundsResponse
 from worldline.connect.sdk.v1.domain.third_party_status_response import ThirdPartyStatusResponse
 from worldline.connect.sdk.v1.domain.tokenize_payment_request import TokenizePaymentRequest
 from worldline.connect.sdk.v1.merchant.payments.find_payments_params import FindPaymentsParams
+from worldline.connect.sdk.v1.merchant.payments.get_payment_params import GetPaymentParams
 from worldline.connect.sdk.v1.exception_factory import create_exception
 
 
@@ -117,13 +118,14 @@ class PaymentsClient(ApiResource):
             error_object = self._communicator.marshaller.unmarshal(e.body, error_type)
             raise create_exception(e.status_code, e.body, error_object, context)
 
-    def get(self, payment_id: str, context: Optional[CallContext] = None) -> PaymentResponse:
+    def get(self, payment_id: str, query: GetPaymentParams, context: Optional[CallContext] = None) -> PaymentResponse:
         """
         Resource /{merchantId}/payments/{paymentId} - Get payment
 
         See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payments/get.html
 
         :param payment_id:  str
+        :param query:       :class:`worldline.connect.sdk.v1.merchant.payments.get_payment_params.GetPaymentParams`
         :param context:     :class:`worldline.connect.sdk.call_context.CallContext`
         :return: :class:`worldline.connect.sdk.v1.domain.payment_response.PaymentResponse`
         :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)
@@ -144,7 +146,7 @@ class PaymentsClient(ApiResource):
             return self._communicator.get(
                     uri,
                     self._client_headers,
-                    None,
+                    query,
                     PaymentResponse,
                     context)
 
