@@ -41,4 +41,4 @@ jobs:
           # mask the newly minted API token, so that we don't accidentally leak it
           echo "::add-mask::${api_token}"
 
-          twine upload --username "__token__" --password "${api_token}" "connect_sdk_python3-${SDK_VERSION}.tar.gz"
+          TWINE_USERNAME=__token__ TWINE_PASSWORD=${api_token} twine upload "connect_sdk_python3-${SDK_VERSION}.tar.gz"
