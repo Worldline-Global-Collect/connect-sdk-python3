@@ -18,6 +18,7 @@ class RefundRequest(DataObject):
     __bank_refund_method_specific_input: Optional[BankRefundMethodSpecificInput] = None
     __customer: Optional[RefundCustomer] = None
     __refund_date: Optional[str] = None
+    __refund_reason: Optional[str] = None
     __refund_references: Optional[RefundReferences] = None
 
     @property
@@ -74,6 +75,26 @@ class RefundRequest(DataObject):
         self.__refund_date = value
 
     @property
+    def refund_reason(self) -> Optional[str]:
+        """
+        | The reasons for the refund request. Possible values are: 
+        |  
+        * RETURN 
+        * CORRECTION 
+        * PRE_DISPUTE 
+        * SUBSCRIPTION 
+        * SERVICE_LATE_CANCELLATION 
+        * OTHER
+
+        Type: str
+        """
+        return self.__refund_reason
+
+    @refund_reason.setter
+    def refund_reason(self, value: Optional[str]) -> None:
+        self.__refund_reason = value
+
+    @property
     def refund_references(self) -> Optional[RefundReferences]:
         """
         | Object that holds all reference properties that are linked to this refund
@@ -96,6 +117,8 @@ class RefundRequest(DataObject):
             dictionary['customer'] = self.customer.to_dictionary()
         if self.refund_date is not None:
             dictionary['refundDate'] = self.refund_date
+        if self.refund_reason is not None:
+            dictionary['refundReason'] = self.refund_reason
         if self.refund_references is not None:
             dictionary['refundReferences'] = self.refund_references.to_dictionary()
         return dictionary
@@ -119,6 +142,8 @@ class RefundRequest(DataObject):
             self.customer = value.from_dictionary(dictionary['customer'])
         if 'refundDate' in dictionary:
             self.refund_date = dictionary['refundDate']
+        if 'refundReason' in dictionary:
+            self.refund_reason = dictionary['refundReason']
         if 'refundReferences' in dictionary:
             if not isinstance(dictionary['refundReferences'], dict):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['refundReferences']))
