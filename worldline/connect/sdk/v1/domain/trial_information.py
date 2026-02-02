@@ -19,6 +19,7 @@ class TrialInformation(DataObject):
     __amount_of_money_after_trial: Optional[AmountOfMoney] = None
     __end_date: Optional[str] = None
     __is_recurring: Optional[bool] = None
+    __start_date: Optional[str] = None
     __trial_period: Optional[TrialPeriod] = None
     __trial_period_recurring: Optional[Frequency] = None
 
@@ -68,6 +69,19 @@ class TrialInformation(DataObject):
         self.__is_recurring = value
 
     @property
+    def start_date(self) -> Optional[str]:
+        """
+        | The date that the trial period starts in YYYYMMDD format.
+
+        Type: str
+        """
+        return self.__start_date
+
+    @start_date.setter
+    def start_date(self, value: Optional[str]) -> None:
+        self.__start_date = value
+
+    @property
     def trial_period(self) -> Optional[TrialPeriod]:
         """
         | The object containing information on the trial period duration and the interval between payments during that period.
@@ -107,6 +121,8 @@ class TrialInformation(DataObject):
             dictionary['endDate'] = self.end_date
         if self.is_recurring is not None:
             dictionary['isRecurring'] = self.is_recurring
+        if self.start_date is not None:
+            dictionary['startDate'] = self.start_date
         if self.trial_period is not None:
             dictionary['trialPeriod'] = self.trial_period.to_dictionary()
         if self.trial_period_recurring is not None:
@@ -124,6 +140,8 @@ class TrialInformation(DataObject):
             self.end_date = dictionary['endDate']
         if 'isRecurring' in dictionary:
             self.is_recurring = dictionary['isRecurring']
+        if 'startDate' in dictionary:
+            self.start_date = dictionary['startDate']
         if 'trialPeriod' in dictionary:
             if not isinstance(dictionary['trialPeriod'], dict):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['trialPeriod']))
