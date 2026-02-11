@@ -7,6 +7,7 @@ from typing import List, Optional
 
 from worldline.connect.sdk.domain.data_object import DataObject
 from worldline.connect.sdk.v1.domain.account_on_file import AccountOnFile
+from worldline.connect.sdk.v1.domain.click_to_pay_configuration import ClickToPayConfiguration
 from worldline.connect.sdk.v1.domain.payment_product_display_hints import PaymentProductDisplayHints
 from worldline.connect.sdk.v1.domain.payment_product_field import PaymentProductField
 
@@ -17,7 +18,9 @@ class PaymentProductGroup(DataObject):
     """
 
     __accounts_on_file: Optional[List[AccountOnFile]] = None
+    __allows_click_to_pay: Optional[bool] = None
     __allows_installments: Optional[bool] = None
+    __click_to_pay_configuration: Optional[ClickToPayConfiguration] = None
     __device_fingerprint_enabled: Optional[bool] = None
     __display_hints: Optional[PaymentProductDisplayHints] = None
     __fields: Optional[List[PaymentProductField]] = None
@@ -37,6 +40,22 @@ class PaymentProductGroup(DataObject):
         self.__accounts_on_file = value
 
     @property
+    def allows_click_to_pay(self) -> Optional[bool]:
+        """
+        | Indicates if the product supports Click to Pay: 
+        
+        * true - This payment supports Click to Pay
+        * false - This payment does not support Click to Pay
+
+        Type: bool
+        """
+        return self.__allows_click_to_pay
+
+    @allows_click_to_pay.setter
+    def allows_click_to_pay(self, value: Optional[bool]) -> None:
+        self.__allows_click_to_pay = value
+
+    @property
     def allows_installments(self) -> Optional[bool]:
         """
         | Indicates if the product supports installments
@@ -51,6 +70,19 @@ class PaymentProductGroup(DataObject):
     @allows_installments.setter
     def allows_installments(self, value: Optional[bool]) -> None:
         self.__allows_installments = value
+
+    @property
+    def click_to_pay_configuration(self) -> Optional[ClickToPayConfiguration]:
+        """
+        | Object containing the configuration parameters for each scheme supporting Click to Pay for the provided country and currency combination. These parameters initialize SRC System SDK for the scheme. This object is only returned for card products with allowsClickToPay set to true.
+
+        Type: :class:`worldline.connect.sdk.v1.domain.click_to_pay_configuration.ClickToPayConfiguration`
+        """
+        return self.__click_to_pay_configuration
+
+    @click_to_pay_configuration.setter
+    def click_to_pay_configuration(self, value: Optional[ClickToPayConfiguration]) -> None:
+        self.__click_to_pay_configuration = value
 
     @property
     def device_fingerprint_enabled(self) -> Optional[bool]:
@@ -114,8 +146,12 @@ class PaymentProductGroup(DataObject):
             for element in self.accounts_on_file:
                 if element is not None:
                     dictionary['accountsOnFile'].append(element.to_dictionary())
+        if self.allows_click_to_pay is not None:
+            dictionary['allowsClickToPay'] = self.allows_click_to_pay
         if self.allows_installments is not None:
             dictionary['allowsInstallments'] = self.allows_installments
+        if self.click_to_pay_configuration is not None:
+            dictionary['clickToPayConfiguration'] = self.click_to_pay_configuration.to_dictionary()
         if self.device_fingerprint_enabled is not None:
             dictionary['deviceFingerprintEnabled'] = self.device_fingerprint_enabled
         if self.display_hints is not None:
@@ -138,8 +174,15 @@ class PaymentProductGroup(DataObject):
             for element in dictionary['accountsOnFile']:
                 value = AccountOnFile()
                 self.accounts_on_file.append(value.from_dictionary(element))
+        if 'allowsClickToPay' in dictionary:
+            self.allows_click_to_pay = dictionary['allowsClickToPay']
         if 'allowsInstallments' in dictionary:
             self.allows_installments = dictionary['allowsInstallments']
+        if 'clickToPayConfiguration' in dictionary:
+            if not isinstance(dictionary['clickToPayConfiguration'], dict):
+                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['clickToPayConfiguration']))
+            value = ClickToPayConfiguration()
+            self.click_to_pay_configuration = value.from_dictionary(dictionary['clickToPayConfiguration'])
         if 'deviceFingerprintEnabled' in dictionary:
             self.device_fingerprint_enabled = dictionary['deviceFingerprintEnabled']
         if 'displayHints' in dictionary:

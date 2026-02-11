@@ -13,9 +13,23 @@ class DeferredBillingDetails(BaseBillingDetails):
     | An object that contains details about the deferred payment.
     """
 
+    __deferred_payment_amount: Optional[int] = None
     __deferred_payment_date: Optional[str] = None
     __free_cancellation_date: Optional[str] = None
     __free_cancellation_date_time_zone: Optional[str] = None
+
+    @property
+    def deferred_payment_amount(self) -> Optional[int]:
+        """
+        | Amount in cents and always having 2 decimals. The amount to be paid on the deferred payment date. If omitted, defaults to the total order amount.
+
+        Type: int
+        """
+        return self.__deferred_payment_amount
+
+    @deferred_payment_amount.setter
+    def deferred_payment_amount(self, value: Optional[int]) -> None:
+        self.__deferred_payment_amount = value
 
     @property
     def deferred_payment_date(self) -> Optional[str]:
@@ -58,6 +72,8 @@ class DeferredBillingDetails(BaseBillingDetails):
 
     def to_dictionary(self) -> dict:
         dictionary = super(DeferredBillingDetails, self).to_dictionary()
+        if self.deferred_payment_amount is not None:
+            dictionary['deferredPaymentAmount'] = self.deferred_payment_amount
         if self.deferred_payment_date is not None:
             dictionary['deferredPaymentDate'] = self.deferred_payment_date
         if self.free_cancellation_date is not None:
@@ -68,6 +84,8 @@ class DeferredBillingDetails(BaseBillingDetails):
 
     def from_dictionary(self, dictionary: dict) -> 'DeferredBillingDetails':
         super(DeferredBillingDetails, self).from_dictionary(dictionary)
+        if 'deferredPaymentAmount' in dictionary:
+            self.deferred_payment_amount = dictionary['deferredPaymentAmount']
         if 'deferredPaymentDate' in dictionary:
             self.deferred_payment_date = dictionary['deferredPaymentDate']
         if 'freeCancellationDate' in dictionary:
