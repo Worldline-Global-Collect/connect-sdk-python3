@@ -9,13 +9,13 @@ class LogMessage(ABC):
     """
     A utility class to build log messages.
     """
-    __request_id: str = None
-    __headers: str = None
+    __request_id: str
+    __headers: str
     __body: Optional[str] = None
     __content_type: Optional[str] = None
-    __header_list: List[Tuple[str, str]] = None
-    __body_obfuscator: BodyObfuscator = None
-    __header_obfuscator: HeaderObfuscator = None
+    __header_list: List[Tuple[str, str]]
+    __body_obfuscator: BodyObfuscator
+    __header_obfuscator: HeaderObfuscator
 
     def __init__(self, request_id: str,
                  body_obfuscator: BodyObfuscator = BodyObfuscator.default_body_obfuscator(),

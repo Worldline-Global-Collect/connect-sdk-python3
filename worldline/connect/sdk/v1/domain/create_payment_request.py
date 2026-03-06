@@ -189,7 +189,7 @@ class CreatePaymentRequest(DataObject):
     @property
     def redirect_payment_method_specific_input(self) -> Optional[RedirectPaymentMethodSpecificInput]:
         """
-        | Object containing the specific input details for payments that involve redirects to 3rd parties to complete, like iDeal and PayPal
+        | Object containing the specific input details for payments that involve redirects to 3rd parties to complete, like iDEAL | Wero and PayPal
 
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_method_specific_input.RedirectPaymentMethodSpecificInput`
         """

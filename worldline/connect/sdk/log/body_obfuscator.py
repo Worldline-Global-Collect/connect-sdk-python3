@@ -11,8 +11,8 @@ class BodyObfuscator(object):
     A class that can be used to obfuscate properties in JSON bodies.
     """
 
-    __obfuscation_rules: Dict[str, ObfuscationRule] = None
-    __property_pattern: Pattern[AnyStr] = None
+    __obfuscation_rules: Dict[str, ObfuscationRule]
+    __property_pattern: Pattern[AnyStr]
 
     def __init__(self, additional_rules: Optional[Mapping[str, ObfuscationRule]] = None):
         """

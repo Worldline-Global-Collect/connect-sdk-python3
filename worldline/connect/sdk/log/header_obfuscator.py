@@ -8,7 +8,7 @@ class HeaderObfuscator(object):
     A class that can be used to obfuscate headers.
     """
 
-    __obfuscation_rules: Dict[str, ObfuscationRule] = None
+    __obfuscation_rules: Dict[str, ObfuscationRule]
 
     def __init__(self, additional_rules: Optional[Mapping[str, ObfuscationRule]] = None):
         """
