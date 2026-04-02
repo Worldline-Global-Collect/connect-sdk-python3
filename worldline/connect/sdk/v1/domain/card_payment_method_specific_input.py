@@ -7,6 +7,7 @@ from typing import Optional
 
 from worldline.connect.sdk.v1.domain.abstract_card_payment_method_specific_input import AbstractCardPaymentMethodSpecificInput
 from worldline.connect.sdk.v1.domain.card import Card
+from worldline.connect.sdk.v1.domain.click_to_pay_input import ClickToPayInput
 from worldline.connect.sdk.v1.domain.external_cardholder_authentication_data import ExternalCardholderAuthenticationData
 from worldline.connect.sdk.v1.domain.scheme_token_data import SchemeTokenData
 from worldline.connect.sdk.v1.domain.three_d_secure import ThreeDSecure
@@ -15,6 +16,7 @@ from worldline.connect.sdk.v1.domain.three_d_secure import ThreeDSecure
 class CardPaymentMethodSpecificInput(AbstractCardPaymentMethodSpecificInput):
 
     __card: Optional[Card] = None
+    __click_to_pay: Optional[ClickToPayInput] = None
     __external_cardholder_authentication_data: Optional[ExternalCardholderAuthenticationData] = None
     __is_recurring: Optional[bool] = None
     __merchant_initiated_reason_indicator: Optional[str] = None
@@ -34,6 +36,19 @@ class CardPaymentMethodSpecificInput(AbstractCardPaymentMethodSpecificInput):
     @card.setter
     def card(self, value: Optional[Card]) -> None:
         self.__card = value
+
+    @property
+    def click_to_pay(self) -> Optional[ClickToPayInput]:
+        """
+        | Object holding data that is required to process card transaction with Click to Pay.
+
+        Type: :class:`worldline.connect.sdk.v1.domain.click_to_pay_input.ClickToPayInput`
+        """
+        return self.__click_to_pay
+
+    @click_to_pay.setter
+    def click_to_pay(self, value: Optional[ClickToPayInput]) -> None:
+        self.__click_to_pay = value
 
     @property
     def external_cardholder_authentication_data(self) -> Optional[ExternalCardholderAuthenticationData]:
@@ -130,6 +145,8 @@ class CardPaymentMethodSpecificInput(AbstractCardPaymentMethodSpecificInput):
         dictionary = super(CardPaymentMethodSpecificInput, self).to_dictionary()
         if self.card is not None:
             dictionary['card'] = self.card.to_dictionary()
+        if self.click_to_pay is not None:
+            dictionary['clickToPay'] = self.click_to_pay.to_dictionary()
         if self.external_cardholder_authentication_data is not None:
             dictionary['externalCardholderAuthenticationData'] = self.external_cardholder_authentication_data.to_dictionary()
         if self.is_recurring is not None:
@@ -151,6 +168,11 @@ class CardPaymentMethodSpecificInput(AbstractCardPaymentMethodSpecificInput):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['card']))
             value = Card()
             self.card = value.from_dictionary(dictionary['card'])
+        if 'clickToPay' in dictionary:
+            if not isinstance(dictionary['clickToPay'], dict):
+                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['clickToPay']))
+            value = ClickToPayInput()
+            self.click_to_pay = value.from_dictionary(dictionary['clickToPay'])
         if 'externalCardholderAuthenticationData' in dictionary:
             if not isinstance(dictionary['externalCardholderAuthenticationData'], dict):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['externalCardholderAuthenticationData']))

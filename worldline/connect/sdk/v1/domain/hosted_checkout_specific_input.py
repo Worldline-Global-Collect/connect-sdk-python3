@@ -12,6 +12,7 @@ from worldline.connect.sdk.v1.domain.recurring_payments_data import RecurringPay
 
 class HostedCheckoutSpecificInput(DataObject):
 
+    __allow_click_to_pay: Optional[bool] = None
     __is_recurring: Optional[bool] = None
     __locale: Optional[str] = None
     __payment_product_filters: Optional[PaymentProductFiltersHostedCheckout] = None
@@ -22,6 +23,24 @@ class HostedCheckoutSpecificInput(DataObject):
     __tokens: Optional[str] = None
     __validate_shopping_cart: Optional[bool] = None
     __variant: Optional[str] = None
+
+    @property
+    def allow_click_to_pay(self) -> Optional[bool]:
+        """
+        | Controls whether the Click to Pay flow is initiated. 
+        
+        * true: initiate the Click to Pay user experience.
+        * false: do not initiate the Click to Pay user experience.
+        
+        |   Note: Effective only if you are onboarded to use Click to Pay.
+
+        Type: bool
+        """
+        return self.__allow_click_to_pay
+
+    @allow_click_to_pay.setter
+    def allow_click_to_pay(self, value: Optional[bool]) -> None:
+        self.__allow_click_to_pay = value
 
     @property
     def is_recurring(self) -> Optional[bool]:
@@ -170,6 +189,8 @@ class HostedCheckoutSpecificInput(DataObject):
 
     def to_dictionary(self) -> dict:
         dictionary = super(HostedCheckoutSpecificInput, self).to_dictionary()
+        if self.allow_click_to_pay is not None:
+            dictionary['allowClickToPay'] = self.allow_click_to_pay
         if self.is_recurring is not None:
             dictionary['isRecurring'] = self.is_recurring
         if self.locale is not None:
@@ -194,6 +215,8 @@ class HostedCheckoutSpecificInput(DataObject):
 
     def from_dictionary(self, dictionary: dict) -> 'HostedCheckoutSpecificInput':
         super(HostedCheckoutSpecificInput, self).from_dictionary(dictionary)
+        if 'allowClickToPay' in dictionary:
+            self.allow_click_to_pay = dictionary['allowClickToPay']
         if 'isRecurring' in dictionary:
             self.is_recurring = dictionary['isRecurring']
         if 'locale' in dictionary:
