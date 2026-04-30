@@ -8,12 +8,14 @@ from typing import Optional
 from worldline.connect.sdk.domain.data_object import DataObject
 from worldline.connect.sdk.v1.domain.capture_payment_order_additional_input import CapturePaymentOrderAdditionalInput
 from worldline.connect.sdk.v1.domain.capture_payment_order_references import CapturePaymentOrderReferences
+from worldline.connect.sdk.v1.domain.shipping import Shipping
 
 
 class CapturePaymentOrder(DataObject):
 
     __additional_input: Optional[CapturePaymentOrderAdditionalInput] = None
     __references: Optional[CapturePaymentOrderReferences] = None
+    __shipping: Optional[Shipping] = None
 
     @property
     def additional_input(self) -> Optional[CapturePaymentOrderAdditionalInput]:
@@ -41,12 +43,27 @@ class CapturePaymentOrder(DataObject):
     def references(self, value: Optional[CapturePaymentOrderReferences]) -> None:
         self.__references = value
 
+    @property
+    def shipping(self) -> Optional[Shipping]:
+        """
+        | Object containing shipping related data
+
+        Type: :class:`worldline.connect.sdk.v1.domain.shipping.Shipping`
+        """
+        return self.__shipping
+
+    @shipping.setter
+    def shipping(self, value: Optional[Shipping]) -> None:
+        self.__shipping = value
+
     def to_dictionary(self) -> dict:
         dictionary = super(CapturePaymentOrder, self).to_dictionary()
         if self.additional_input is not None:
             dictionary['additionalInput'] = self.additional_input.to_dictionary()
         if self.references is not None:
             dictionary['references'] = self.references.to_dictionary()
+        if self.shipping is not None:
+            dictionary['shipping'] = self.shipping.to_dictionary()
         return dictionary
 
     def from_dictionary(self, dictionary: dict) -> 'CapturePaymentOrder':
@@ -61,4 +78,9 @@ class CapturePaymentOrder(DataObject):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['references']))
             value = CapturePaymentOrderReferences()
             self.references = value.from_dictionary(dictionary['references'])
+        if 'shipping' in dictionary:
+            if not isinstance(dictionary['shipping'], dict):
+                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['shipping']))
+            value = Shipping()
+            self.shipping = value.from_dictionary(dictionary['shipping'])
         return self

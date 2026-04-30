@@ -22,6 +22,7 @@ class PaymentProduct(DataObject):
     __acquirer_country: Optional[str] = None
     __allows_click_to_pay: Optional[bool] = None
     __allows_installments: Optional[bool] = None
+    __allows_multiple_partial_captures: Optional[bool] = None
     __allows_recurring: Optional[bool] = None
     __allows_tokenization: Optional[bool] = None
     __authentication_indicator: Optional[AuthenticationIndicator] = None
@@ -103,6 +104,22 @@ class PaymentProduct(DataObject):
     @allows_installments.setter
     def allows_installments(self, value: Optional[bool]) -> None:
         self.__allows_installments = value
+
+    @property
+    def allows_multiple_partial_captures(self) -> Optional[bool]:
+        """
+        | Indicates if the payment product supports multiple partial captures
+        
+        * true - This payment product supports multiple partial captures
+        * false - This payment payment does not support multiple partial captures
+
+        Type: bool
+        """
+        return self.__allows_multiple_partial_captures
+
+    @allows_multiple_partial_captures.setter
+    def allows_multiple_partial_captures(self, value: Optional[bool]) -> None:
+        self.__allows_multiple_partial_captures = value
 
     @property
     def allows_recurring(self) -> Optional[bool]:
@@ -451,6 +468,8 @@ class PaymentProduct(DataObject):
             dictionary['allowsClickToPay'] = self.allows_click_to_pay
         if self.allows_installments is not None:
             dictionary['allowsInstallments'] = self.allows_installments
+        if self.allows_multiple_partial_captures is not None:
+            dictionary['allowsMultiplePartialCaptures'] = self.allows_multiple_partial_captures
         if self.allows_recurring is not None:
             dictionary['allowsRecurring'] = self.allows_recurring
         if self.allows_tokenization is not None:
@@ -517,6 +536,8 @@ class PaymentProduct(DataObject):
             self.allows_click_to_pay = dictionary['allowsClickToPay']
         if 'allowsInstallments' in dictionary:
             self.allows_installments = dictionary['allowsInstallments']
+        if 'allowsMultiplePartialCaptures' in dictionary:
+            self.allows_multiple_partial_captures = dictionary['allowsMultiplePartialCaptures']
         if 'allowsRecurring' in dictionary:
             self.allows_recurring = dictionary['allowsRecurring']
         if 'allowsTokenization' in dictionary:
