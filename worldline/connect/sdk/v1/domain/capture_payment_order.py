@@ -8,14 +8,14 @@ from typing import Optional
 from worldline.connect.sdk.domain.data_object import DataObject
 from worldline.connect.sdk.v1.domain.capture_payment_order_additional_input import CapturePaymentOrderAdditionalInput
 from worldline.connect.sdk.v1.domain.capture_payment_order_references import CapturePaymentOrderReferences
-from worldline.connect.sdk.v1.domain.shipping import Shipping
+from worldline.connect.sdk.v1.domain.capture_payment_shipping import CapturePaymentShipping
 
 
 class CapturePaymentOrder(DataObject):
 
     __additional_input: Optional[CapturePaymentOrderAdditionalInput] = None
     __references: Optional[CapturePaymentOrderReferences] = None
-    __shipping: Optional[Shipping] = None
+    __shipping: Optional[CapturePaymentShipping] = None
 
     @property
     def additional_input(self) -> Optional[CapturePaymentOrderAdditionalInput]:
@@ -44,16 +44,16 @@ class CapturePaymentOrder(DataObject):
         self.__references = value
 
     @property
-    def shipping(self) -> Optional[Shipping]:
+    def shipping(self) -> Optional[CapturePaymentShipping]:
         """
         | Object containing shipping related data
 
-        Type: :class:`worldline.connect.sdk.v1.domain.shipping.Shipping`
+        Type: :class:`worldline.connect.sdk.v1.domain.capture_payment_shipping.CapturePaymentShipping`
         """
         return self.__shipping
 
     @shipping.setter
-    def shipping(self, value: Optional[Shipping]) -> None:
+    def shipping(self, value: Optional[CapturePaymentShipping]) -> None:
         self.__shipping = value
 
     def to_dictionary(self) -> dict:
@@ -81,6 +81,6 @@ class CapturePaymentOrder(DataObject):
         if 'shipping' in dictionary:
             if not isinstance(dictionary['shipping'], dict):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['shipping']))
-            value = Shipping()
+            value = CapturePaymentShipping()
             self.shipping = value.from_dictionary(dictionary['shipping'])
         return self
