@@ -56,6 +56,8 @@ def create_exception(status_code: int, body: str, error_object: Any, context: Op
                                            response_body=body,
                                            response=error_object)
         return create_exception_from_response_fields(error_object.error_id, error_object.errors)
+    if error_object is None:
+        return create_exception_from_response_fields(None, [])
     if not isinstance(error_object, ErrorResponse):
         raise ValueError("Unsupported error object encountered: {}".format(error_object.__class__.__name__))
 
