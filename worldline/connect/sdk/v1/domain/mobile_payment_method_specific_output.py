@@ -17,10 +17,12 @@ class MobilePaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     __fraud_results: Optional[CardFraudResults] = None
     __initial_scheme_transaction_id: Optional[str] = None
     __network: Optional[str] = None
+    __original_transaction_link_id: Optional[str] = None
     __payment_data: Optional[MobilePaymentData] = None
     __scheme_transaction_id: Optional[str] = None
     __three_d_secure_results: Optional[ThreeDSecureResults] = None
     __token: Optional[str] = None
+    __transaction_link_id: Optional[str] = None
 
     @property
     def authorisation_code(self) -> Optional[str]:
@@ -76,6 +78,21 @@ class MobilePaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
         self.__network = value
 
     @property
+    def original_transaction_link_id(self) -> Optional[str]:
+        """
+        | The unique Mastercard transactionLinkId of the initial transaction. Strongly advised to be submitted for any merchantInitiated (unscheduledCardOnFileRequestor) or recurring transaction (recurringPaymentSequenceIndicator set to recurring or in case of a last recurring transaction to last).
+        
+        | If the originalTransactionLinkId is empty, we will, where possible, apply the best available match.
+
+        Type: str
+        """
+        return self.__original_transaction_link_id
+
+    @original_transaction_link_id.setter
+    def original_transaction_link_id(self, value: Optional[str]) -> None:
+        self.__original_transaction_link_id = value
+
+    @property
     def payment_data(self) -> Optional[MobilePaymentData]:
         """
         | Object containing payment details
@@ -128,6 +145,22 @@ class MobilePaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def token(self, value: Optional[str]) -> None:
         self.__token = value
 
+    @property
+    def transaction_link_id(self) -> Optional[str]:
+        """
+        | The unique Mastercard transactionLinkId of this transaction.
+        | Should be stored by you for a first cardholderInitiated (unscheduledCardOnFileRequestor) or zero-value authorization transaction.
+        
+        | Use this value as the originalTransactionLinkId for any subsequent merchantInitiated (unscheduledCardOnFileRequestor) or recurring transaction (recurringPaymentSequenceIndicator set to recurring or in case of a last recurring transaction to last).
+
+        Type: str
+        """
+        return self.__transaction_link_id
+
+    @transaction_link_id.setter
+    def transaction_link_id(self, value: Optional[str]) -> None:
+        self.__transaction_link_id = value
+
     def to_dictionary(self) -> dict:
         dictionary = super(MobilePaymentMethodSpecificOutput, self).to_dictionary()
         if self.authorisation_code is not None:
@@ -138,6 +171,8 @@ class MobilePaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
             dictionary['initialSchemeTransactionId'] = self.initial_scheme_transaction_id
         if self.network is not None:
             dictionary['network'] = self.network
+        if self.original_transaction_link_id is not None:
+            dictionary['originalTransactionLinkId'] = self.original_transaction_link_id
         if self.payment_data is not None:
             dictionary['paymentData'] = self.payment_data.to_dictionary()
         if self.scheme_transaction_id is not None:
@@ -146,6 +181,8 @@ class MobilePaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
             dictionary['threeDSecureResults'] = self.three_d_secure_results.to_dictionary()
         if self.token is not None:
             dictionary['token'] = self.token
+        if self.transaction_link_id is not None:
+            dictionary['transactionLinkId'] = self.transaction_link_id
         return dictionary
 
     def from_dictionary(self, dictionary: dict) -> 'MobilePaymentMethodSpecificOutput':
@@ -161,6 +198,8 @@ class MobilePaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
             self.initial_scheme_transaction_id = dictionary['initialSchemeTransactionId']
         if 'network' in dictionary:
             self.network = dictionary['network']
+        if 'originalTransactionLinkId' in dictionary:
+            self.original_transaction_link_id = dictionary['originalTransactionLinkId']
         if 'paymentData' in dictionary:
             if not isinstance(dictionary['paymentData'], dict):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['paymentData']))
@@ -175,4 +214,6 @@ class MobilePaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
             self.three_d_secure_results = value.from_dictionary(dictionary['threeDSecureResults'])
         if 'token' in dictionary:
             self.token = dictionary['token']
+        if 'transactionLinkId' in dictionary:
+            self.transaction_link_id = dictionary['transactionLinkId']
         return self
