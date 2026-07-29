@@ -10,43 +10,43 @@ from worldline.connect.sdk.domain.data_object import DataObject
 
 class AbstractRedirectPaymentProduct838SpecificInput(DataObject):
 
-    __interoperability_data: Optional[str] = None
-    __interoperability_token: Optional[str] = None
+    __network_data: Optional[str] = None
+    __network_session_token: Optional[str] = None
 
     @property
-    def interoperability_data(self) -> Optional[str]:
+    def network_data(self) -> Optional[str]:
         """
         Type: str
         """
-        return self.__interoperability_data
+        return self.__network_data
 
-    @interoperability_data.setter
-    def interoperability_data(self, value: Optional[str]) -> None:
-        self.__interoperability_data = value
+    @network_data.setter
+    def network_data(self, value: Optional[str]) -> None:
+        self.__network_data = value
 
     @property
-    def interoperability_token(self) -> Optional[str]:
+    def network_session_token(self) -> Optional[str]:
         """
         Type: str
         """
-        return self.__interoperability_token
+        return self.__network_session_token
 
-    @interoperability_token.setter
-    def interoperability_token(self, value: Optional[str]) -> None:
-        self.__interoperability_token = value
+    @network_session_token.setter
+    def network_session_token(self, value: Optional[str]) -> None:
+        self.__network_session_token = value
 
     def to_dictionary(self) -> dict:
         dictionary = super(AbstractRedirectPaymentProduct838SpecificInput, self).to_dictionary()
-        if self.interoperability_data is not None:
-            dictionary['interoperabilityData'] = self.interoperability_data
-        if self.interoperability_token is not None:
-            dictionary['interoperabilityToken'] = self.interoperability_token
+        if self.network_data is not None:
+            dictionary['networkData'] = self.network_data
+        if self.network_session_token is not None:
+            dictionary['networkSessionToken'] = self.network_session_token
         return dictionary
 
     def from_dictionary(self, dictionary: dict) -> 'AbstractRedirectPaymentProduct838SpecificInput':
         super(AbstractRedirectPaymentProduct838SpecificInput, self).from_dictionary(dictionary)
-        if 'interoperabilityData' in dictionary:
-            self.interoperability_data = dictionary['interoperabilityData']
-        if 'interoperabilityToken' in dictionary:
-            self.interoperability_token = dictionary['interoperabilityToken']
+        if 'networkData' in dictionary:
+            self.network_data = dictionary['networkData']
+        if 'networkSessionToken' in dictionary:
+            self.network_session_token = dictionary['networkSessionToken']
         return self
