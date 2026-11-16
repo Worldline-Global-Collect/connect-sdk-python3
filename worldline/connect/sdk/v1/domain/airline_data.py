@@ -205,7 +205,7 @@ class AirlineData(DataObject):
     @property
     def number_in_party(self) -> Optional[int]:
         """
-        | Total number of passengers in the party. If the the property numberInParty is not present, then the number of passengers will be used on the WL Online Payment Acceptance Platform.
+        | Total number of passengers in the party.
 
         Type: int
         """
