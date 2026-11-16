@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>worldline.connect.sdk.v1.domain.exemption_output &#8212; connect-sdk-python3 6.3.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.exemption_output &#8212; connect-sdk-python3 6.4.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/basic.css?v=b08954a9" />
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/alabaster.css?v=27fed22d" />
-    <script src="../../../../../../_static/documentation_options.js?v=80ea5fc2"></script>
+    <script src="../../../../../../_static/documentation_options.js?v=0eb1ae0c"></script>
     <script src="../../../../../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../../../../../../genindex.html" />
@@ -44,9 +44,9 @@
 <div class="viewcode-block" id="ExemptionOutput">
 <a class="viewcode-back" href="../../../../../../modules_api_versions.html#worldline.connect.sdk.v1.domain.exemption_output.ExemptionOutput">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ExemptionOutput</span><span class="p">(</span><span class="n">DataObject</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    | Object containing exemption output</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="n">__exemption_raised</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__exemption_rejection_reason</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
@@ -54,11 +54,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">exemption_raised</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Type of strong customer authentication (SCA) exemption that was raised towards the acquirer for this transaction.</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__exemption_raised</span>
 
     <span class="nd">@exemption_raised</span><span class="o">.</span><span class="n">setter</span>
@@ -67,11 +67,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">exemption_rejection_reason</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | The request exemption could not be granted. The reason why is returned in this property.</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__exemption_rejection_reason</span>
 
     <span class="nd">@exemption_rejection_reason</span><span class="o">.</span><span class="n">setter</span>
@@ -80,11 +80,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">exemption_request</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Type of strong customer authentication (SCA) exemption requested by you for this transaction.</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__exemption_request</span>
 
     <span class="nd">@exemption_request</span><span class="o">.</span><span class="n">setter</span>
@@ -96,24 +96,24 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
         <span class="n">dictionary</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">ExemptionOutput</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">exemption_raised</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;exemptionRaised&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exemption_raised</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'exemptionRaised'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exemption_raised</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">exemption_rejection_reason</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;exemptionRejectionReason&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exemption_rejection_reason</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'exemptionRejectionReason'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exemption_rejection_reason</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">exemption_request</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;exemptionRequest&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exemption_request</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'exemptionRequest'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exemption_request</span>
         <span class="k">return</span> <span class="n">dictionary</span></div>
 
 
 <div class="viewcode-block" id="ExemptionOutput.from_dictionary">
 <a class="viewcode-back" href="../../../../../../modules_api_versions.html#worldline.connect.sdk.v1.domain.exemption_output.ExemptionOutput.from_dictionary">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">from_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;ExemptionOutput&#39;</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'ExemptionOutput'</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">ExemptionOutput</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
-        <span class="k">if</span> <span class="s1">&#39;exemptionRaised&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">exemption_raised</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;exemptionRaised&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;exemptionRejectionReason&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">exemption_rejection_reason</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;exemptionRejectionReason&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;exemptionRequest&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">exemption_request</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;exemptionRequest&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'exemptionRaised'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">exemption_raised</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'exemptionRaised'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'exemptionRejectionReason'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">exemption_rejection_reason</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'exemptionRejectionReason'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'exemptionRequest'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">exemption_request</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'exemptionRequest'</span><span class="p">]</span>
         <span class="k">return</span> <span class="bp">self</span></div>
 </div>
 

@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>worldline.connect.sdk.v1.domain.lodging_room &#8212; connect-sdk-python3 6.3.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.lodging_room &#8212; connect-sdk-python3 6.4.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/basic.css?v=b08954a9" />
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/alabaster.css?v=27fed22d" />
-    <script src="../../../../../../_static/documentation_options.js?v=80ea5fc2"></script>
+    <script src="../../../../../../_static/documentation_options.js?v=0eb1ae0c"></script>
     <script src="../../../../../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../../../../../../genindex.html" />
@@ -44,9 +44,9 @@
 <div class="viewcode-block" id="LodgingRoom">
 <a class="viewcode-back" href="../../../../../../modules_api_versions.html#worldline.connect.sdk.v1.domain.lodging_room.LodgingRoom">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">LodgingRoom</span><span class="p">(</span><span class="n">DataObject</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    | Object that holds lodging related room data</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="n">__daily_room_rate</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__daily_room_rate_currency_code</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
@@ -60,12 +60,12 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">daily_room_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Daily room rate exclusive of any taxes and fees</span>
 <span class="sd">        | Note: The currencyCode is presumed to be identical to the order.amountOfMoney.currencyCode.</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__daily_room_rate</span>
 
     <span class="nd">@daily_room_rate</span><span class="o">.</span><span class="n">setter</span>
@@ -74,11 +74,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">daily_room_rate_currency_code</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Currency for Daily room rate. The code should be in 3 letter ISO format</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__daily_room_rate_currency_code</span>
 
     <span class="nd">@daily_room_rate_currency_code</span><span class="o">.</span><span class="n">setter</span>
@@ -87,12 +87,12 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">daily_room_tax_amount</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Daily room tax</span>
 <span class="sd">        | Note: The currencyCode is presumed to be identical to the order.amountOfMoney.currencyCode.</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__daily_room_tax_amount</span>
 
     <span class="nd">@daily_room_tax_amount</span><span class="o">.</span><span class="n">setter</span>
@@ -101,11 +101,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">daily_room_tax_amount_currency_code</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Currency for Daily room tax. The code should be in 3 letter ISO format</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__daily_room_tax_amount_currency_code</span>
 
     <span class="nd">@daily_room_tax_amount_currency_code</span><span class="o">.</span><span class="n">setter</span>
@@ -114,11 +114,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">number_of_nights_at_room_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Number of nights charged at the rate in the dailyRoomRate property</span>
 
 <span class="sd">        Type: int</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__number_of_nights_at_room_rate</span>
 
     <span class="nd">@number_of_nights_at_room_rate</span><span class="o">.</span><span class="n">setter</span>
@@ -127,11 +127,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">room_location</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Location of the room within the facility, e.g. Park or Garden etc.</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__room_location</span>
 
     <span class="nd">@room_location</span><span class="o">.</span><span class="n">setter</span>
@@ -140,11 +140,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">room_number</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Room number</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__room_number</span>
 
     <span class="nd">@room_number</span><span class="o">.</span><span class="n">setter</span>
@@ -153,11 +153,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">type_of_bed</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Size of bed, e.g., king, queen, double.</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__type_of_bed</span>
 
     <span class="nd">@type_of_bed</span><span class="o">.</span><span class="n">setter</span>
@@ -166,11 +166,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">type_of_room</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Describes the type of room, e.g., standard, deluxe, suite.</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__type_of_room</span>
 
     <span class="nd">@type_of_room</span><span class="o">.</span><span class="n">setter</span>
@@ -182,48 +182,48 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
         <span class="n">dictionary</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">LodgingRoom</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_rate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;dailyRoomRate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_rate</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'dailyRoomRate'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_rate</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_rate_currency_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;dailyRoomRateCurrencyCode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_rate_currency_code</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'dailyRoomRateCurrencyCode'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_rate_currency_code</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_tax_amount</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;dailyRoomTaxAmount&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_tax_amount</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'dailyRoomTaxAmount'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_tax_amount</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_tax_amount_currency_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;dailyRoomTaxAmountCurrencyCode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_tax_amount_currency_code</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'dailyRoomTaxAmountCurrencyCode'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_tax_amount_currency_code</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_nights_at_room_rate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;numberOfNightsAtRoomRate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_nights_at_room_rate</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'numberOfNightsAtRoomRate'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_nights_at_room_rate</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">room_location</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;roomLocation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">room_location</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'roomLocation'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">room_location</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">room_number</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;roomNumber&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">room_number</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'roomNumber'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">room_number</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type_of_bed</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;typeOfBed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">type_of_bed</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'typeOfBed'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">type_of_bed</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type_of_room</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;typeOfRoom&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">type_of_room</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'typeOfRoom'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">type_of_room</span>
         <span class="k">return</span> <span class="n">dictionary</span></div>
 
 
 <div class="viewcode-block" id="LodgingRoom.from_dictionary">
 <a class="viewcode-back" href="../../../../../../modules_api_versions.html#worldline.connect.sdk.v1.domain.lodging_room.LodgingRoom.from_dictionary">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">from_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;LodgingRoom&#39;</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'LodgingRoom'</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">LodgingRoom</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
-        <span class="k">if</span> <span class="s1">&#39;dailyRoomRate&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_rate</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;dailyRoomRate&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;dailyRoomRateCurrencyCode&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_rate_currency_code</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;dailyRoomRateCurrencyCode&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;dailyRoomTaxAmount&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_tax_amount</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;dailyRoomTaxAmount&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;dailyRoomTaxAmountCurrencyCode&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_tax_amount_currency_code</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;dailyRoomTaxAmountCurrencyCode&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;numberOfNightsAtRoomRate&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">number_of_nights_at_room_rate</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;numberOfNightsAtRoomRate&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;roomLocation&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">room_location</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;roomLocation&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;roomNumber&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">room_number</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;roomNumber&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;typeOfBed&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">type_of_bed</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;typeOfBed&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;typeOfRoom&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">type_of_room</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;typeOfRoom&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'dailyRoomRate'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_rate</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'dailyRoomRate'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'dailyRoomRateCurrencyCode'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_rate_currency_code</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'dailyRoomRateCurrencyCode'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'dailyRoomTaxAmount'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_tax_amount</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'dailyRoomTaxAmount'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'dailyRoomTaxAmountCurrencyCode'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daily_room_tax_amount_currency_code</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'dailyRoomTaxAmountCurrencyCode'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'numberOfNightsAtRoomRate'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">number_of_nights_at_room_rate</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'numberOfNightsAtRoomRate'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'roomLocation'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">room_location</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'roomLocation'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'roomNumber'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">room_number</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'roomNumber'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'typeOfBed'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type_of_bed</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'typeOfBed'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'typeOfRoom'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type_of_room</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'typeOfRoom'</span><span class="p">]</span>
         <span class="k">return</span> <span class="bp">self</span></div>
 </div>
 

@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>worldline.connect.sdk.v1.domain.get_hosted_checkout_response &#8212; connect-sdk-python3 6.3.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.get_hosted_checkout_response &#8212; connect-sdk-python3 6.4.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/basic.css?v=b08954a9" />
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/alabaster.css?v=27fed22d" />
-    <script src="../../../../../../_static/documentation_options.js?v=80ea5fc2"></script>
+    <script src="../../../../../../_static/documentation_options.js?v=0eb1ae0c"></script>
     <script src="../../../../../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../../../../../../genindex.html" />
@@ -51,11 +51,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">created_payment_output</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">CreatedPaymentOutput</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | When a payment has been created during the hosted checkout session this object will return the details.</span>
 
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.created_payment_output.CreatedPaymentOutput`</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__created_payment_output</span>
 
     <span class="nd">@created_payment_output</span><span class="o">.</span><span class="n">setter</span>
@@ -64,19 +64,19 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | This is the status of the hosted checkout. Possible values are:</span>
 <span class="sd">        </span>
 <span class="sd">        * IN_PROGRESS - The checkout is still in progress and has not finished yet</span>
 <span class="sd">        * PAYMENT_CREATED - A payment has been created</span>
 <span class="sd">        * CANCELLED_BY_CONSUMER - If a customer cancels the payment on the payment product detail page of the MyCheckout hosted payment pages, the status will change to IN_PROGRESS. Since we understand you want to be aware of a customer cancelling the payment on the page we host for you, you can choose to receive the status CANCELLED_BY_CONSUMER instead of the status IN_PROGRESS. In order to receive the status CANCELLED_BY_CONSUMER, you need to have the returnCancelState flag enabled in the Create hosted checkout &lt;https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/hostedcheckouts/create.html&gt; call.</span>
-<span class="sd">        * CLIENT_NOT_ELIGIBLE_FOR_SELECTED_PAYMENT_PRODUCT - With some payment products it might occur that the device of the user is not capable to complete the payment. If the Hosted Checkout Session was restricted to a single project that is not compatible to the user&#39;s device you will receive this Hosted Checkout status. This scenario applies to: Google Pay (Payment Product ID: 320).</span>
+<span class="sd">        * CLIENT_NOT_ELIGIBLE_FOR_SELECTED_PAYMENT_PRODUCT - With some payment products it might occur that the device of the user is not capable to complete the payment. If the Hosted Checkout Session was restricted to a single project that is not compatible to the user's device you will receive this Hosted Checkout status. This scenario applies to: Google Pay (Payment Product ID: 320).</span>
 <span class="sd">        </span>
 <span class="sd">        </span>
 <span class="sd">        | Please see Statuses &lt;https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/statuses.html&gt; for a full overview of possible values.</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__status</span>
 
     <span class="nd">@status</span><span class="o">.</span><span class="n">setter</span>
@@ -88,23 +88,23 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
         <span class="n">dictionary</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">GetHostedCheckoutResponse</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">created_payment_output</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;createdPaymentOutput&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">created_payment_output</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'createdPaymentOutput'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">created_payment_output</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'status'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span>
         <span class="k">return</span> <span class="n">dictionary</span></div>
 
 
 <div class="viewcode-block" id="GetHostedCheckoutResponse.from_dictionary">
 <a class="viewcode-back" href="../../../../../../modules_api_versions.html#worldline.connect.sdk.v1.domain.get_hosted_checkout_response.GetHostedCheckoutResponse.from_dictionary">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">from_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;GetHostedCheckoutResponse&#39;</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'GetHostedCheckoutResponse'</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">GetHostedCheckoutResponse</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
-        <span class="k">if</span> <span class="s1">&#39;createdPaymentOutput&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;createdPaymentOutput&#39;</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;value </span><span class="se">\&#39;</span><span class="si">{}</span><span class="se">\&#39;</span><span class="s1"> is not a dictionary&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;createdPaymentOutput&#39;</span><span class="p">]))</span>
+        <span class="k">if</span> <span class="s1">'createdPaymentOutput'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">'createdPaymentOutput'</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">'value </span><span class="se">\'</span><span class="si">{}</span><span class="se">\'</span><span class="s1"> is not a dictionary'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">'createdPaymentOutput'</span><span class="p">]))</span>
             <span class="n">value</span> <span class="o">=</span> <span class="n">CreatedPaymentOutput</span><span class="p">()</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">created_payment_output</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;createdPaymentOutput&#39;</span><span class="p">])</span>
-        <span class="k">if</span> <span class="s1">&#39;status&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">created_payment_output</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">'createdPaymentOutput'</span><span class="p">])</span>
+        <span class="k">if</span> <span class="s1">'status'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'status'</span><span class="p">]</span>
         <span class="k">return</span> <span class="bp">self</span></div>
 </div>
 

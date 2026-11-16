@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>worldline.connect.sdk.v1.domain.order_line_details &#8212; connect-sdk-python3 6.3.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.order_line_details &#8212; connect-sdk-python3 6.4.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/basic.css?v=b08954a9" />
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/alabaster.css?v=27fed22d" />
-    <script src="../../../../../../_static/documentation_options.js?v=80ea5fc2"></script>
+    <script src="../../../../../../_static/documentation_options.js?v=0eb1ae0c"></script>
     <script src="../../../../../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../../../../../../genindex.html" />
@@ -63,11 +63,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">discount_amount</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Discount on the line item, with the last two digits implied as decimal places</span>
 
 <span class="sd">        Type: int</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__discount_amount</span>
 
     <span class="nd">@discount_amount</span><span class="o">.</span><span class="n">setter</span>
@@ -76,11 +76,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">google_product_category_id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | The Google product category ID for the item.</span>
 
 <span class="sd">        Type: int</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__google_product_category_id</span>
 
     <span class="nd">@google_product_category_id</span><span class="o">.</span><span class="n">setter</span>
@@ -89,11 +89,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">line_amount_total</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Total amount for the line item</span>
 
 <span class="sd">        Type: int</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__line_amount_total</span>
 
     <span class="nd">@line_amount_total</span><span class="o">.</span><span class="n">setter</span>
@@ -102,11 +102,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">naics_commodity_code</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | The UNSPC commodity code of the item.</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__naics_commodity_code</span>
 
     <span class="nd">@naics_commodity_code</span><span class="o">.</span><span class="n">setter</span>
@@ -115,11 +115,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">product_category</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | The category of the product (i.e. home appliance). This property can be used for fraud screening on the Ogone Platform.</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__product_category</span>
 
     <span class="nd">@product_category</span><span class="o">.</span><span class="n">setter</span>
@@ -128,12 +128,12 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">product_code</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Product or UPC Code, left justified</span>
 <span class="sd">        | Note: Must not be all spaces or all zeros</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__product_code</span>
 
     <span class="nd">@product_code</span><span class="o">.</span><span class="n">setter</span>
@@ -142,11 +142,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">product_image_url</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | The URL of the image of the purchased product.</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__product_image_url</span>
 
     <span class="nd">@product_image_url</span><span class="o">.</span><span class="n">setter</span>
@@ -155,11 +155,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">product_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        | The name of the product. The &#39;+&#39; character is not allowed in this property for transactions that are processed by TechProcess Payment Platform.</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        | The name of the product. The '+' character is not allowed in this property for transactions that are processed by TechProcess Payment Platform.</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__product_name</span>
 
     <span class="nd">@product_name</span><span class="o">.</span><span class="n">setter</span>
@@ -168,11 +168,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">product_price</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | The price of one unit of the product, the value should be zero or greater</span>
 
 <span class="sd">        Type: int</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__product_price</span>
 
     <span class="nd">@product_price</span><span class="o">.</span><span class="n">setter</span>
@@ -181,11 +181,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">product_sku</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Product SKU number</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__product_sku</span>
 
     <span class="nd">@product_sku</span><span class="o">.</span><span class="n">setter</span>
@@ -194,12 +194,12 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">product_type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Code used to classify items that are purchased</span>
 <span class="sd">        | Note: Must not be all spaces or all zeros</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__product_type</span>
 
     <span class="nd">@product_type</span><span class="o">.</span><span class="n">setter</span>
@@ -208,11 +208,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">product_url</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | The URL of the product page on your website.</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__product_url</span>
 
     <span class="nd">@product_url</span><span class="o">.</span><span class="n">setter</span>
@@ -221,12 +221,12 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">quantity</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Quantity of the units being purchased, should be greater than zero</span>
 <span class="sd">        | Note: Must not be all spaces or all zeros</span>
 
 <span class="sd">        Type: int</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__quantity</span>
 
     <span class="nd">@quantity</span><span class="o">.</span><span class="n">setter</span>
@@ -235,11 +235,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">tax_amount</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Tax on the line item, with the last two digits implied as decimal places</span>
 
 <span class="sd">        Type: int</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__tax_amount</span>
 
     <span class="nd">@tax_amount</span><span class="o">.</span><span class="n">setter</span>
@@ -248,11 +248,11 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">unit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        | Indicates the line item unit of measure; for example: each, kit, pair, gallon, month, etc.</span>
 
 <span class="sd">        Type: str</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__unit</span>
 
     <span class="nd">@unit</span><span class="o">.</span><span class="n">setter</span>
@@ -264,72 +264,72 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
         <span class="n">dictionary</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">OrderLineDetails</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">discount_amount</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;discountAmount&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">discount_amount</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'discountAmount'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">discount_amount</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">google_product_category_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;googleProductCategoryId&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">google_product_category_id</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'googleProductCategoryId'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">google_product_category_id</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_amount_total</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;lineAmountTotal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_amount_total</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'lineAmountTotal'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_amount_total</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">naics_commodity_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;naicsCommodityCode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">naics_commodity_code</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'naicsCommodityCode'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">naics_commodity_code</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_category</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productCategory&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_category</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productCategory'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_category</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productCode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_code</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productCode'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_code</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_image_url</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productImageUrl&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_image_url</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productImageUrl'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_image_url</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productName&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_name</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productName'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_name</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_price</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productPrice&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_price</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productPrice'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_price</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_sku</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productSku&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_sku</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productSku'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_sku</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productType&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_type</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productType'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_type</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_url</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productUrl&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_url</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productUrl'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_url</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">quantity</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;quantity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">quantity</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'quantity'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">quantity</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tax_amount</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;taxAmount&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tax_amount</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'taxAmount'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tax_amount</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;unit&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">'unit'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit</span>
         <span class="k">return</span> <span class="n">dictionary</span></div>
 
 
 <div class="viewcode-block" id="OrderLineDetails.from_dictionary">
 <a class="viewcode-back" href="../../../../../../modules_api_versions.html#worldline.connect.sdk.v1.domain.order_line_details.OrderLineDetails.from_dictionary">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">from_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;OrderLineDetails&#39;</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'OrderLineDetails'</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">OrderLineDetails</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
-        <span class="k">if</span> <span class="s1">&#39;discountAmount&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">discount_amount</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;discountAmount&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;googleProductCategoryId&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">google_product_category_id</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;googleProductCategoryId&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;lineAmountTotal&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">line_amount_total</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;lineAmountTotal&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;naicsCommodityCode&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">naics_commodity_code</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;naicsCommodityCode&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;productCategory&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">product_category</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productCategory&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;productCode&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">product_code</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productCode&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;productImageUrl&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">product_image_url</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productImageUrl&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;productName&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">product_name</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productName&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;productPrice&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">product_price</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productPrice&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;productSku&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">product_sku</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productSku&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;productType&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">product_type</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productType&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;productUrl&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">product_url</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productUrl&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;quantity&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">quantity</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;quantity&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;taxAmount&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">tax_amount</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;taxAmount&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s1">&#39;unit&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">unit</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;unit&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'discountAmount'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">discount_amount</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'discountAmount'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'googleProductCategoryId'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">google_product_category_id</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'googleProductCategoryId'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'lineAmountTotal'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">line_amount_total</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'lineAmountTotal'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'naicsCommodityCode'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">naics_commodity_code</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'naicsCommodityCode'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'productCategory'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">product_category</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productCategory'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'productCode'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">product_code</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productCode'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'productImageUrl'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">product_image_url</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productImageUrl'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'productName'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">product_name</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productName'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'productPrice'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">product_price</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productPrice'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'productSku'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">product_sku</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productSku'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'productType'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">product_type</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productType'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'productUrl'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">product_url</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'productUrl'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'quantity'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">quantity</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'quantity'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'taxAmount'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tax_amount</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'taxAmount'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'unit'</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">unit</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">'unit'</span><span class="p">]</span>
         <span class="k">return</span> <span class="bp">self</span></div>
 </div>
 
